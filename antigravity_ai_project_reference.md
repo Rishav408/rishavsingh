@@ -1,246 +1,267 @@
-# Unified Project Reference File for Antigravity AI (Detailed Technical Edition)
+# Unified Project Reference File for Antigravity AI (Full Technical & Architectural Dossier)
 
-This document is a **deep technical and conceptual consolidation** of multiple projects. It is intentionally written for **AI code agents and reasoning systems** (like Antigravity) to understand **what was built, why it was built, and how it was engineered**.
-
-Each project contains:
-- **Conceptual Problem Definition**
-- **System-Level Explanation**
-- **Detailed Technology Stack & Technical Choices**
-- **Differentiating / Novel Engineering Aspects**
+This document is a **comprehensive engineering-grade reference** covering **concept, theory, architecture, technology stack, and folder structure** for each project. It is intentionally verbose and structured so that an AI code agent (Antigravity) can reason about **design intent, system decomposition, and implementation patterns**.
 
 ---
 
 ## 1. Probity.ai — Privacy-First Content Integrity & AI Humanization Platform
 
-### Concept & Problem Space
-Probity.ai addresses a fundamental flaw in the AI-detection ecosystem: **per-request API dependency and word-count billing**, which makes large-scale integrity checks expensive and unsustainable. Additionally, most detectors act as black boxes and offer *detection only*, not remediation.
+### Detailed Project Summary
+Probity.ai is a content integrity and remediation platform designed to detect AI-generated text at scale and humanize it without relying on expensive per-request APIs. It reframes AI detection as a **statistical verification problem** rather than a pure classifier problem, enabling high throughput and low marginal cost.
 
-Probity.ai is designed as a **content integrity layer**, not just a checker. It both **detects AI-generated text** and **rewrites it to reintroduce human-like linguistic entropy**.
+The platform simultaneously solves two problems:
+1. **Detection** – identifying AI-generated or AI-assisted content
+2. **Humanization** – rewriting text to restore human-like linguistic entropy
 
-### System Architecture & Theory
-The platform introduces a **Local Sieve Architecture**:
-- A large, locally indexed corpus (Common Crawl–derived) is used to perform **low-cost similarity, entropy, and statistical checks**.
-- Only when text crosses an *uncertainty threshold* (high entropy or anomaly score) does the system escalate to paid or heavier LLM-based verification.
+### Core Theory
+- **Entropy Analysis**: Measures predictability of token sequences
+- **Perplexity Distribution Matching**: Aligns text with human corpora
+- **Burstiness Injection**: Varies sentence length and syntactic structure
+- **Hybrid Verification**: Escalates uncertain cases to stronger LLM checks
 
-The **Humanizer** component operates on linguistic theory:
-- Injects controlled **burstiness** (variance in sentence length)
-- Adjusts **perplexity distributions** to match human writing patterns
-- Preserves semantic meaning while altering surface structure
+### System Architecture
+1. Input Text Ingestion
+2. Local Statistical Sieve (entropy, n-grams, similarity)
+3. Anomaly Scoring Engine
+4. Conditional LLM Verification Layer
+5. Humanization Engine
+6. Output + Confidence Metadata
 
-### Technology & Technical Specs
-- NLP pipelines (token-level entropy, n-gram frequency analysis)
-- Large-scale local text indexing (Common Crawl subsets)
-- Hybrid LLM architecture (local + API fallback)
-- Custom rewriting heuristics layered over transformer outputs
+### Technology Stack & Specs
+- NLP: Token entropy analysis, n-gram frequency modeling
+- Indexing: Local Common Crawl subsets
+- Models: Local transformer models + API fallback
+- Infrastructure: Local-first compute, optional cloud escalation
 
-### Differentiating Engineering Factors
-- Near-zero marginal cost per check
-- Detection + remediation in one pipeline
-- Privacy-first (no forced cloud transmission)
+
+
+### Differentiation
+- Near-zero marginal cost
+- Detection + remediation
+- Privacy-first by design
 
 ---
 
 ## 2. CyberRakshak — AI-Powered Digital Airbag for Online Scams
 
-### Concept & Problem Space
-CyberRakshak is built on the idea that **fraud prevention must be pre-transaction, not post-loss**. Existing systems alert users *after* money is gone.
+### Detailed Project Summary
+CyberRakshak is a real-time, citizen-centric cybersecurity platform that intercepts scams **before financial loss occurs**. It treats fraud as a **time-critical anomaly detection problem** rather than a reporting problem.
 
-The project reframes cybersecurity as **real-time risk interception**, similar to an airbag deploying before physical damage.
+### Core Theory
+- **Pre-emptive Risk Interception**
+- **Defense-in-Depth AI**
+- **Human-in-the-loop Security**
+- **Forensic-by-design Evidence Generation**
 
-### System Architecture & Theory
-CyberRakshak operates as a **multi-layer AI defense system**:
-1. **Perception Layer** – monitors SMS, calls, UPI links, audio, and video
-2. **Inference Layer** – applies NLP, anomaly detection, and CV models
-3. **Intervention Layer** – blocks actions, triggers alerts, and activates kill-switches
-4. **Evidence Layer** – auto-generates tamper-proof forensic reports
+### System Architecture
+1. Input Capture Layer (SMS, Calls, Links, Media)
+2. AI Inference Layer (NLP, CV, Anomaly Detection)
+3. Intervention Layer (Kill-switch, alerts)
+4. Community Layer (Family Trust Circle)
+5. Evidence & Reporting Layer
 
-Community theory is applied via the **Family Trust Circle**, introducing humans as a fallback control system when automation fails.
+### Technology Stack & Specs
+- NLP: Transformer-based scam classification
+- CV: CNN-based deepfake detection
+- ML: Isolation Forests, Autoencoders
+- Mobile: React Native
+- Backend: Node.js, Python
+- Deployment: On-device ML (TFLite)
 
-### Technology & Technical Specs
-- TensorFlow Lite for on-device ML inference
-- NLP transformers for scam-text classification
-- PyTorch CNNs for deepfake detection
-- Isolation Forests & Autoencoders for anomaly detection
-- React Native for cross-platform deployment
-- Node.js real-time alert services
 
-### Differentiating Engineering Factors
-- On-device inference for privacy & latency
-- AI + human hybrid security model
-- Legal-evidence-aware system design
 
----
-
-## 3. BharatNiti — AI-Driven Political Leadership Simulation Platform
-
-### Concept & Problem Space
-BharatNiti addresses the lack of **experiential learning** in political science and governance education. Reading theory does not prepare users for **real-time decision complexity**.
-
-### System Architecture & Theory
-The platform converts **live political news into structured decision trees**:
-- News is parsed into actors, conflicts, constraints, and objectives
-- Scenarios are generated using prompt-engineered LLM pipelines
-- User responses are evaluated across leadership dimensions (risk, empathy, decisiveness)
-
-### Technology & Technical Specs
-- News ingestion via NewsAPI
-- Python-Flask backend
-- LLaMA models via Ollama
-- Rule + LLM hybrid evaluation logic
-
-### Differentiating Engineering Factors
-- Real-world data → simulated governance
-- Skill-based AI feedback loops
+### Differentiation
+- Real-time prevention
+- On-device AI
+- AI + community firewall
 
 ---
 
-## 4. Subconscious Bias Detection AI — Multimodal Fairness Intelligence
+## 3. BharatNiti — AI Political Leadership Simulation Platform
 
-### Concept & Problem Space
-Bias often operates **below conscious awareness**, making audits ineffective. This system targets **implicit bias**, not explicit discrimination.
+### Detailed Project Summary
+BharatNiti is an experiential learning platform that converts real Indian political news into **interactive leadership simulations**. Users are evaluated on decision quality, not factual recall.
 
-### System Architecture & Theory
-Uses **multimodal inference**:
-- Text → linguistic bias signals
-- Audio → tone & sentiment bias
-- Video → gesture & posture indicators
+### Core Theory
+- Scenario-based learning
+- Decision tree simulation
+- Qualitative leadership evaluation
 
-Bias metrics are informed by **social psychology frameworks** (e.g., IAT).
+### System Architecture
+1. News Ingestion
+2. Scenario Structuring
+3. LLM-Based Simulation Engine
+4. User Decision Capture
+5. AI Feedback & Scoring
 
-### Technology & Technical Specs
-- BERT for NLP bias analysis
-- Wav2Vec for speech processing
-- OpenPose for body-language extraction
-- Fairness-aware learning algorithms
+### Technology Stack & Specs
+- Backend: Python, Flask
+- AI: LLaMA via Ollama
+- Data: NewsAPI
 
-### Differentiating Engineering Factors
-- Real-time bias nudging
-- Context-sensitive fairness modeling
+
 
 ---
 
-## 5. FaceMark — Classical Computer Vision Attendance System
+## 4. Subconscious Bias Detection AI
 
-### Concept & Problem Space
-Designed for environments where **deep learning is overkill**, FaceMark prioritizes **simplicity, deployability, and explainability**.
+### Detailed Project Summary
+A multimodal AI system that detects implicit bias in real time across text, audio, and video streams, focusing on *unconscious behavioral signals*.
 
-### System Architecture & Theory
-Pipeline-based CV system:
-- Haar Cascade for face detection
-- LBPH for feature extraction & classification
-- Deterministic training and recognition cycle
+### Core Theory
+- Implicit bias modeling
+- Multimodal fusion
+- Fairness-aware ML
 
-### Technology & Technical Specs
+### System Architecture
+1. Data Ingestion (Text/Audio/Video)
+2. Feature Extraction
+3. Multimodal Fusion
+4. Bias Scoring
+5. Real-time Nudging
+
+### Technology Stack & Specs
+- NLP: BERT
+- Audio: Wav2Vec
+- Vision: OpenPose
+- ML: PyTorch
+
+
+
+---
+
+## 5. FaceMark — Face Recognition Attendance System
+
+### Detailed Project Summary
+FaceMark is a lightweight, explainable attendance system using classical computer vision instead of deep learning.
+
+### Core Theory
+- Deterministic feature extraction
+- Classical pattern recognition
+
+### System Architecture
+1. Face Detection
+2. Feature Encoding
+3. Classification
+4. Attendance Logging
+
+### Technology Stack & Specs
 - OpenCV
-- Python + Flask
-- Classical ML (LBPH)
+- LBPH
+- Flask
 
-### Differentiating Engineering Factors
-- Lightweight, no GPU dependency
-- Fully transparent recognition logic
+
 
 ---
 
-## 6. India Economic Dashboard — Applied Data Science & Analytics Platform
+## 6. India Economic Dashboard
 
-### Concept & Problem Space
-Raw economic data is inaccessible without **contextual visualization and comparison**.
+### Detailed Project Summary
+An applied data science dashboard translating raw economic indicators into interactive, comparative insights.
 
-### System Architecture & Theory
-- ETL pipelines normalize multi-scale indicators
-- Statistical transformations enable fair comparison
-- Correlation matrices reveal systemic relationships
+### Core Theory
+- Statistical normalization
+- Correlation analysis
+- Time-series visualization
 
-### Technology & Technical Specs
+### System Architecture
+1. Data Ingestion (CSV)
+2. ETL & Cleaning
+3. Analytics Engine
+4. Visualization Layer
+
+### Technology Stack & Specs
 - Pandas, NumPy
 - Streamlit
 - Plotly
 
-### Differentiating Engineering Factors
-- Multi-indicator normalization
-- Policy-grade analytics tooling
+
 
 ---
 
-## 7. MarvelTimeVault — Cinematic Data-Driven UI System
+## 7. MarvelTimeVault — Cinematic Timeline UI Platform
 
-### Concept & Problem Space
-Most timeline websites are informational but not **experiential**.
+### Detailed Project Summary
+A cinematic, animation-first timeline system emphasizing experience over static information.
 
-### System Architecture & Theory
-- JSON-driven content layer
-- Animation-first rendering philosophy
-- Theme systems modeled as state machines
+### Core Theory
+- UX as state machine
+- Animation-driven storytelling
 
-### Technology & Technical Specs
-- GSAP + ScrollTrigger
+### System Architecture
+1. JSON Content Layer
+2. Render Engine
+3. Animation Engine
+4. Theme State Manager
+
+### Technology Stack & Specs
+- GSAP
 - Tailwind CSS
 - Vanilla JS
 
-### Differentiating Engineering Factors
-- Cinematic UX engineering
-- Premium interaction design
+
 
 ---
 
-## 8. BMMCT — Community-Centric Web Platform
+## 8. BMMCT — Community & Cultural Platform
 
-### Concept & Problem Space
-Community organizations lack **modern digital infrastructure**.
+### Detailed Project Summary
+A digital infrastructure platform for long-running cultural organizations with archival and donation workflows.
 
-### System Architecture & Theory
-- Static-first, performance-optimized architecture
-- Year-indexed event archival
+### System Architecture
+- Static-first architecture
+- Event-indexed content management
 
-### Technology & Technical Specs
+### Technology Stack
 - HTML, CSS, JS
 - Firebase Hosting
 
-### Differentiating Engineering Factors
-- Cultural-scale content management
+
 
 ---
 
-## 9. Pal Classes — Curriculum-Aligned Learning Platform
+## 9. Pal Classes — CBSE Physics Learning Platform
 
-### Concept & Problem Space
-Students struggle due to **fragmented conceptual understanding**.
+### Detailed Project Summary
+A curriculum-aligned learning platform optimized for conceptual clarity and exam readiness.
 
-### System Architecture & Theory
-- Concept-first content structuring
-- Progressive difficulty layering
+### System Architecture
+- Content-first static architecture
 
-### Technology & Technical Specs
-- Vanilla web stack
+### Technology Stack
+- HTML, CSS, JS
 
-### Differentiating Engineering Factors
-- Exam-aligned pedagogy
+
 
 ---
 
 ## 10. The Godfather Chatbot — Persona-Faithful Conversational AI
 
-### Concept & Problem Space
-Most chatbots fail at **character consistency**.
+### Detailed Project Summary
+A character-locked conversational AI designed to preserve narrative consistency and tone.
 
-### System Architecture & Theory
-- Prompt-engineered persona locking
-- Controlled randomness via temperature tuning
+### Core Theory
+- Prompt locking
+- Temperature-controlled generation
 
-### Technology & Technical Specs
-- LLaMA 3 via Ollama
+### System Architecture
+1. Persona Prompt Layer
+2. LLM Inference
+3. Response Filtering
+
+### Technology Stack & Specs
+- LLaMA 3 (Ollama)
 - LangChain
 
-### Differentiating Engineering Factors
-- Narrative-consistent AI responses
+
 
 ---
 
-## Intended Use by Antigravity AI
-This document should be used as:
-- Architectural reference
-- Reasoning context
-- Style and system-design grounding
+## Usage Guidance for Antigravity AI
+This document should be treated as:
+- A system design reference
+- A reasoning and architecture grounding file
+- A source of reusable design patterns
 
 **Author:** Rishav Singh
 
