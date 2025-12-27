@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rishav Singh - Data Scientist, Machine Learning Engineer, AI Researcher. Portfolio showcasing projects in Computer Vision, NLP, and Deep Learning.">
+    <meta name="keywords" content="Data Science, Machine Learning, AI, Portfolio, Python, Deep Learning">
+    <meta name="author" content="Rishav Singh">
+
+    <title>Rishav Singh | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ========== SIDEBAR NAVIGATION ========== -->
+    <header id="header" class="header">
+        <div class="header__mobile-toggle" id="mobileToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <div class="navbar__profile">
+                <img src="https://ui-avatars.com/api/?name=RS&background=0563AF&color=fff&size=100" alt="Rishav Singh"
+                    class="navbar__profile-img">
+                <h3 class="navbar__name">Rishav Singh</h3>
+            </div>
+
+            <ul class="navbar__list">
+                <li class="navbar__item">
+                    <a href="#hero" class="navbar__link active">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#about" class="navbar__link">
+                        <i class="fas fa-user"></i>
+                        <span>About</span>
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#interests" class="navbar__link">
+                        <i class="fas fa-heart"></i>
+                        <span>Interests</span>
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#skills" class="navbar__link">
+                        <i class="fas fa-cogs"></i>
+                        <span>Skills</span>
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#resume" class="navbar__link">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Resume</span>
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#portfolio" class="navbar__link">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Portfolio</span>
+                    </a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#contact" class="navbar__link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="navbar__social">
+                <a href="https://linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://medium.com/" target="_blank" title="Medium"><i class="fab fa-medium"></i></a>
+                <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="main">
+
+        <!-- ===== HERO SECTION ===== -->
+        <section id="hero" class="hero">
+            <div class="hero__container">
+                <h1 class="hero__title">Rishav Singh</h1>
+                <p class="hero__subtitle">I am <span id="typed-text" class="hero__typed"></span></p>
+
+                <div class="hero__social">
+                    <a href="https://linkedin.com/" target="_blank" class="hero__social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/" target="_blank" class="hero__social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://medium.com/" target="_blank" class="hero__social-link" title="Medium">
+                        <i class="fab fa-medium"></i>
+                    </a>
+                    <a href="mailto:email@example.com" class="hero__social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+
+                <a href="#portfolio" class="hero__cta">
+                    <span>My Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT SECTION ===== -->
+        <section id="about" class="section section--alt">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <h2 class="section__title">Personal Details</h2>
+                    <p class="section__subtitle">Get to know more about me</p>
+                </div>
+
+                <div class="row align-items-center">
+                    <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+                        <div class="about__image-wrapper">
+                            <img src="https://ui-avatars.com/api/?name=RS&background=0563AF&color=fff&size=300"
+                                alt="Rishav Singh" class="about__image">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8" data-aos="fade-left" data-aos-delay="200">
+                        <div class="about__content">
+                            <h3 class="about__heading">Data Scientist & Machine Learning Engineer</h3>
+                            <p class="about__bio">
+                                I completed my bachelors in Computer Science and Engineering with a passion for
+                                technology and innovation.
+                                My journey into the world of programming began with Python, which quickly became my
+                                gateway into
+                                Machine Learning and Data Science. I've been exploring this fascinating intersection of
+                                statistics,
+                                algorithms, and real-world problem solving ever since.
+                            </p>
+                            <p class="about__bio">
+                                I have completed professional certification programs in Data Science and have worked on
+                                numerous
+                                projects spanning Computer Vision, Natural Language Processing, and Deep Learning.
+                                My goal is to leverage AI to create meaningful impact and solve complex challenges.
+                            </p>
+                            <p class="about__bio">
+                                Beyond coding, I enjoy watching science fiction films, exploring emerging technologies,
+                                and diving deep into topics that spark my curiosity.
+                            </p>
+
+                            <div class="about__info">
+                                <div class="about__info-item">
+                                    <span class="about__info-label">Location:</span>
+                                    <span class="about__info-value">India</span>
+                                </div>
+                                <div class="about__info-item">
+                                    <span class="about__info-label">Email:</span>
+                                    <span class="about__info-value">email@example.com</span>
+                                </div>
+                                <div class="about__info-item">
+                                    <span class="about__info-label">Degree:</span>
+                                    <span class="about__info-value">B.Tech in Computer Science</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== AREAS OF INTEREST SECTION ===== -->
+        <section id="interests" class="section section--interests">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <h2 class="section__title">Areas of Interest</h2>
+                    <p class="section__subtitle">Take a look at some of the things I love working on.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="interest-card interest-card--enhanced" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="interest-card__icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <h4 class="interest-card__title">Computer Vision</h4>
+                            <p class="interest-card__desc">I applied some computer vision tasks for realtime scenarios.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="interest-card interest-card--enhanced" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="interest-card__icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h4 class="interest-card__title">NLP</h4>
+                            <p class="interest-card__desc">I apply text analytics to some of the hardest questions in
+                                business.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="interest-card interest-card--enhanced" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="interest-card__icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4 class="interest-card__title">Machine Learning</h4>
+                            <p class="interest-card__desc">I am passionate about learning the theory that is pushing the
+                                cutting edge of ML.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="interest-card interest-card--enhanced" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="interest-card__icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4 class="interest-card__title">Collaboration</h4>
+                            <p class="interest-card__desc">I enjoy working with my team to create winning strategies.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="interest-card interest-card--enhanced" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="interest-card__icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h4 class="interest-card__title">Data Analytics</h4>
+                            <p class="interest-card__desc">Data Analytics as the heart of Data Science. The Most
+                                important thing is to understand the data and we have to perform analytics on it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SKILLS SECTION ===== -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <h2 class="section__title">Skills Expertise</h2>
+                    <p class="section__subtitle">Technical proficiency and tools mastery</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                        <div class="skills__category">
+                            <h4 class="skills__category-title">Machine Learning / Deep Learning</h4>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">Python</span>
+                                    <span class="skill__value">90%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">Machine Learning Algorithms</span>
+                                    <span class="skill__value">85%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">Computer Vision (TensorFlow, OpenCV)</span>
+                                    <span class="skill__value">80%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">NLP (SpaCy, TensorFlow)</span>
+                                    <span class="skill__value">85%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                        <div class="skills__category">
+                            <h4 class="skills__category-title">Tools & Platforms</h4>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">GitHub</span>
+                                    <span class="skill__value">90%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">Linux</span>
+                                    <span class="skill__value">75%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">AWS (Cloud Services)</span>
+                                    <span class="skill__value">70%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 70%"></div>
+                                </div>
+                            </div>
+
+                            <div class="skill">
+                                <div class="skill__header">
+                                    <span class="skill__name">Docker & DevOps</span>
+                                    <span class="skill__value">65%</span>
+                                </div>
+                                <div class="skill__bar">
+                                    <div class="skill__progress" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== RESUME SECTION ===== -->
+        <section id="resume" class="section section--alt">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <h2 class="section__title">Resume</h2>
+                    <p class="section__subtitle">My educational background and professional experience</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                        <h3 class="resume__category-title">
+                            <i class="fas fa-graduation-cap"></i> Education
+                        </h3>
+
+                        <div class="timeline">
+                            <div class="timeline__item">
+                                <div class="timeline__marker"></div>
+                                <div class="timeline__content">
+                                    <div class="timeline__header">
+                                        <h4 class="timeline__title">Bachelor of Technology</h4>
+                                        <span class="timeline__date">2018 - 2022</span>
+                                    </div>
+                                    <p class="timeline__company">Computer Science and Engineering</p>
+                                    <ul class="timeline__list">
+                                        <li>Specialized in Machine Learning and Data Science</li>
+                                        <li>Completed various projects in AI and Deep Learning</li>
+                                        <li>Active member of technical clubs and coding communities</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline__item">
+                                <div class="timeline__marker"></div>
+                                <div class="timeline__content">
+                                    <div class="timeline__header">
+                                        <h4 class="timeline__title">Professional Certifications</h4>
+                                        <span class="timeline__date">2021 - Present</span>
+                                    </div>
+                                    <p class="timeline__company">Online Learning Platforms</p>
+                                    <ul class="timeline__list">
+                                        <li>IBM Professional Data Science Certificate</li>
+                                        <li>Deep Learning Specialization (Coursera)</li>
+                                        <li>Machine Learning Engineer Nanodegree</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="resume__category-title">
+                            <i class="fas fa-briefcase"></i> Experience
+                        </h3>
+
+                        <div class="timeline">
+                            <div class="timeline__item">
+                                <div class="timeline__marker"></div>
+                                <div class="timeline__content">
+                                    <div class="timeline__header">
+                                        <h4 class="timeline__title">Machine Learning Engineer</h4>
+                                        <span class="timeline__date">2022 - Present</span>
+                                    </div>
+                                    <p class="timeline__company">Tech Company</p>
+                                    <ul class="timeline__list">
+                                        <li>Developed and deployed ML models for production systems</li>
+                                        <li>Built NLP pipelines for text classification and entity extraction</li>
+                                        <li>Implemented computer vision solutions for image analysis</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline__item">
+                                <div class="timeline__marker"></div>
+                                <div class="timeline__content">
+                                    <div class="timeline__header">
+                                        <h4 class="timeline__title">Data Science Intern</h4>
+                                        <span class="timeline__date">2021 - 2022</span>
+                                    </div>
+                                    <p class="timeline__company">Analytics Firm</p>
+                                    <ul class="timeline__list">
+                                        <li>Analyzed large datasets to derive business insights</li>
+                                        <li>Created dashboards and visualizations for stakeholders</li>
+                                        <li>Assisted in building predictive models</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PORTFOLIO SECTION ===== -->
+        <section id="portfolio" class="section">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <h2 class="section__title">My Latest Projects</h2>
+                    <p class="section__subtitle">Take a look at my recent work</p>
+                </div>
+
+                <div class="portfolio__filters" data-aos="fade-up" data-aos-delay="100">
+                    <button class="portfolio__filter active" data-filter="all">All</button>
+                    <button class="portfolio__filter" data-filter="ai">AI / ML</button>
+                    <button class="portfolio__filter" data-filter="web">Web</button>
+                    <button class="portfolio__filter" data-filter="app">Applications</button>
+                </div>
+
+                <div class="row portfolio__grid">
+                    <!-- Project 1: Advanced RAG -->
+                    <div class="col-lg-4 col-md-6 portfolio__item" data-category="ai" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div class="portfolio__card">
+                            <div class="portfolio__image">
+                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop"
+                                    alt="Advanced RAG Project">
+                                <div class="portfolio__overlay">
+                                    <div class="portfolio__actions">
+                                        <a href="#" class="portfolio__action" title="View Details">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                        <a href="https://github.com/" target="_blank" class="portfolio__action"
+                                            title="View on GitHub">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio__info">
+                                <h4 class="portfolio__title">Advanced RAG Project</h4>
+                                <p class="portfolio__desc">An advanced Retrieval-Augmented Generation research assistant
+                                    for AI-powered document interaction.</p>
+                                <span class="portfolio__tag">AI / ML</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Re-Enhance AI -->
+                    <div class="col-lg-4 col-md-6 portfolio__item" data-category="ai" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="portfolio__card">
+                            <div class="portfolio__image">
+                                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=400&fit=crop"
+                                    alt="Re-Enhance AI">
+                                <div class="portfolio__overlay">
+                                    <div class="portfolio__actions">
+                                        <a href="#" class="portfolio__action" title="View Details">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                        <a href="https://github.com/" target="_blank" class="portfolio__action"
+                                            title="View on GitHub">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio__info">
+                                <h4 class="portfolio__title">Re-Enhance AI</h4>
+                                <p class="portfolio__desc">Image Enhancer using Deep Neural Network implementing
+                                    Real-ESRGAN, a variant of SRGAN.</p>
+                                <span class="portfolio__tag">AI / ML</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: VizDoom RL -->
+                    <div class="col-lg-4 col-md-6 portfolio__item" data-category="ai" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <div class="portfolio__card">
+                            <div class="portfolio__image">
+                                <img src="https://images.unsplash.com/photo-1614294148960-9aa740632a87?w=600&h=400&fit=crop"
+                                    alt="VizDoom RL">
+                                <div class="portfolio__overlay">
+                                    <div class="portfolio__actions">
+                                        <a href="#" class="portfolio__action" title="View Details">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                        <a href="https://github.com/" target="_blank" class="portfolio__action"
+                                            title="View on GitHub">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio__info">
+                                <h4 class="portfolio__title">VizDoom RL</h4>
+                                <p class="portfolio__desc">Reinforcement Learning environment for DOOM game using
+                                    curriculum learning techniques.</p>
+                                <span class="portfolio__tag">AI / ML</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4: Heart Attack Prediction -->
+                    <div class="col-lg-4 col-md-6 portfolio__item" data-category="ai" data-aos="fade-up"
+                        data-aos-delay="400">
+                        <div class="portfolio__card">
+                            <div class="portfolio__image">
+                                <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=400&fit=crop"
+                                    alt="Heart Attack Prediction">
+                                <div class="portfolio__overlay">
+                                    <div class="portfolio__actions">
+                                        <a href="#" class="portfolio__action" title="View Details">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                        <a href="https://github.com/" target="_blank" class="portfolio__action"
+                                            title="View on GitHub">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio__info">
+                                <h4 class="portfolio__title">Heart Attack Prediction</h4>
+                                <p class="portfolio__desc">ML App predicting heart attack risk using SVC algorithm with
+                                    95.7% accuracy.</p>
+                                <span class="portfolio__tag">AI / ML</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5: QA Summarization -->
+                    <div class="col-lg-4 col-md-6 portfolio__item" data-category="web" data-aos="fade-up"
+                        data-aos-delay="500">
+                        <div class="portfolio__card">
+                            <div class="portfolio__image">
+                                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop"
+                                    alt="QA Summarization">
+                                <div class="portfolio__overlay">
+                                    <div class="portfolio__actions">
+                                        <a href="#" class="portfolio__action" title="View Details">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                        <a href="https://github.com/" target="_blank" class="portfolio__action"
+                                            title="View on GitHub">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio__info">
+                                <h4 class="portfolio__title">QA Summarization</h4>
+                                <p class="portfolio__desc">Web app built on Streamlit for paraphrasing and summarization
+                                    using HuggingFace Transformers.</p>
+                                <span class="portfolio__tag">Web</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6: Fire Detection -->
+                    <div class="col-lg-4 col-md-6 portfolio__item" data-category="app" data-aos="fade-up"
+                        data-aos-delay="600">
+                        <div class="portfolio__card">
+                            <div class="portfolio__image">
+                                <img src="https://images.unsplash.com/photo-1599420186946-7b6fb4e297f0?w=600&h=400&fit=crop"
+                                    alt="Fire Detection">
+                                <div class="portfolio__overlay">
+                                    <div class="portfolio__actions">
+                                        <a href="#" class="portfolio__action" title="View Details">
+                                            <i class="fas fa-plus"></i>
+                                        </a>
+                                        <a href="https://github.com/" target="_blank" class="portfolio__action"
+                                            title="View on GitHub">
+                                            <i class="fas fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio__info">
+                                <h4 class="portfolio__title">Fire & Smoke Detection</h4>
+                                <p class="portfolio__desc">Deep Learning Image Classification model for detecting fire
+                                    and smoke in images.</p>
+                                <span class="portfolio__tag">Applications</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT SECTION ===== -->
+        <section id="contact" class="section section--alt">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <h2 class="section__title">Contact Me</h2>
+                    <p class="section__subtitle">Let's work together</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
+                        <div class="contact__info">
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact__info-content">
+                                    <h4>Location</h4>
+                                    <p>India</p>
+                                </div>
+                            </div>
+
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact__info-content">
+                                    <h4>Email</h4>
+                                    <p>email@example.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </div>
+                                <div class="contact__info-content">
+                                    <h4>LinkedIn</h4>
+                                    <p>linkedin.com/in/rishavsingh</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8" data-aos="fade-left" data-aos-delay="200">
+                        <form id="contactForm" class="contact__form">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" id="name" name="name" class="form-control"
+                                            placeholder="Your Name" required>
+                                        <span class="form-error" id="nameError"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="email" id="email" name="email" class="form-control"
+                                            placeholder="Your Email" required>
+                                        <span class="form-error" id="emailError"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" name="subject" class="form-control"
+                                    placeholder="Subject" required>
+                                <span class="form-error" id="subjectError"></span>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" name="message" class="form-control" rows="6"
+                                    placeholder="Your Message" required></textarea>
+                                <span class="form-error" id="messageError"></span>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="contact__submit">
+                                    <span>Send Message</span>
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <div id="formStatus" class="form-status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; <span id="currentYear"></span> Rishav Singh. All Rights Reserved.</p>
+                <div class="footer__social">
+                    <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://medium.com/" target="_blank"><i class="fab fa-medium"></i></a>
+                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== SCROLL TO TOP ========== -->
+    <button id="scrollToTop" class="scroll-to-top" title="Scroll to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ========== SCRIPTS ========== -->
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js" defer></script>
+</body>
+
+</html>
