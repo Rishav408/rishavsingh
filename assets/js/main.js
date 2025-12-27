@@ -5,7 +5,7 @@
  * ========================================
  */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
   // ===== INITIALIZATION =====
@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
       new Typed('#typed-text', {
         strings: [
           'Data Scientist',
-          'Machine Learning Engineer',
-          'AI Researcher',
-          'Deep Learning Enthusiast'
+          'ML Engineer',
+          'AI Engineer',
+          'GenAI Developer'
         ],
         typeSpeed: 50,
         backSpeed: 30,
@@ -61,9 +61,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.navbar__link');
 
     if (mobileToggle && header) {
-      mobileToggle.addEventListener('click', function() {
+      mobileToggle.addEventListener('click', function () {
         header.classList.toggle('active');
-        
+
         // Toggle icon
         const icon = this.querySelector('i');
         if (header.classList.contains('active')) {
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Close menu when clicking a nav link (mobile)
       navLinks.forEach(link => {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function () {
           if (window.innerWidth < 1200) {
             header.classList.remove('active');
             const icon = mobileToggle.querySelector('i');
@@ -88,11 +88,11 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       // Close menu when clicking outside
-      document.addEventListener('click', function(e) {
-        if (window.innerWidth < 1200 && 
-            header.classList.contains('active') && 
-            !header.contains(e.target) && 
-            !mobileToggle.contains(e.target)) {
+      document.addEventListener('click', function (e) {
+        if (window.innerWidth < 1200 &&
+          header.classList.contains('active') &&
+          !header.contains(e.target) &&
+          !mobileToggle.contains(e.target)) {
           header.classList.remove('active');
           const icon = mobileToggle.querySelector('i');
           icon.classList.remove('fa-times');
@@ -108,18 +108,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerHeight = 0; // No fixed header offset needed
 
     navLinks.forEach(link => {
-      link.addEventListener('click', function(e) {
+      link.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
-        
+
         if (targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
-        
+
         if (targetElement) {
           e.preventDefault();
-          
+
           const targetPosition = targetElement.offsetTop - headerHeight;
-          
+
           window.scrollTo({
             top: targetPosition,
             behavior: 'smooth'
@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (scrollToTopBtn) {
       // Show/hide button based on scroll position
-      window.addEventListener('scroll', function() {
+      window.addEventListener('scroll', function () {
         if (window.scrollY > scrollThreshold) {
           scrollToTopBtn.classList.add('visible');
         } else {
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       // Scroll to top on click
-      scrollToTopBtn.addEventListener('click', function() {
+      scrollToTopBtn.addEventListener('click', function () {
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const portfolioItems = document.querySelectorAll('.portfolio__item');
 
     filterButtons.forEach(button => {
-      button.addEventListener('click', function() {
+      button.addEventListener('click', function () {
         // Update active button
         filterButtons.forEach(btn => btn.classList.remove('active'));
         this.classList.add('active');
@@ -218,29 +218,29 @@ document.addEventListener('DOMContentLoaded', function() {
   // ===== CONTACT FORM VALIDATION =====
   function initContactForm() {
     const contactForm = document.getElementById('contactForm');
-    
+
     if (contactForm) {
-      contactForm.addEventListener('submit', function(e) {
+      contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
-        
+
         // Clear previous errors
         clearFormErrors();
-        
+
         // Get form fields
         const name = document.getElementById('name');
         const email = document.getElementById('email');
         const subject = document.getElementById('subject');
         const message = document.getElementById('message');
         const formStatus = document.getElementById('formStatus');
-        
+
         let isValid = true;
-        
+
         // Validate name
         if (!name.value.trim()) {
           showError('nameError', 'Please enter your name');
           isValid = false;
         }
-        
+
         // Validate email
         if (!email.value.trim()) {
           showError('emailError', 'Please enter your email');
@@ -249,28 +249,28 @@ document.addEventListener('DOMContentLoaded', function() {
           showError('emailError', 'Please enter a valid email address');
           isValid = false;
         }
-        
+
         // Validate subject
         if (!subject.value.trim()) {
           showError('subjectError', 'Please enter a subject');
           isValid = false;
         }
-        
+
         // Validate message
         if (!message.value.trim()) {
           showError('messageError', 'Please enter your message');
           isValid = false;
         }
-        
+
         // If valid, show success message
         if (isValid) {
           formStatus.textContent = 'Thank you! Your message has been sent successfully.';
           formStatus.className = 'form-status success';
           formStatus.style.display = 'block';
-          
+
           // Reset form
           contactForm.reset();
-          
+
           // Hide success message after 5 seconds
           setTimeout(() => {
             formStatus.style.display = 'none';
@@ -278,25 +278,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }
-    
+
     function showError(elementId, message) {
       const errorElement = document.getElementById(elementId);
       if (errorElement) {
         errorElement.textContent = message;
       }
     }
-    
+
     function clearFormErrors() {
       const errorElements = document.querySelectorAll('.form-error');
       errorElements.forEach(el => el.textContent = '');
-      
+
       const formStatus = document.getElementById('formStatus');
       if (formStatus) {
         formStatus.style.display = 'none';
         formStatus.className = 'form-status';
       }
     }
-    
+
     function isValidEmail(email) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailRegex.test(email);
@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // ===== SKILL BAR ANIMATION =====
   function animateSkillBars() {
     const skillBars = document.querySelectorAll('.skill__progress');
-    
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -328,10 +328,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
     }, { threshold: 0.5 });
-    
+
     skillBars.forEach(bar => observer.observe(bar));
   }
-  
+
   // Initialize skill bar animation
   animateSkillBars();
 
