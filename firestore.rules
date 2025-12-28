@@ -1,0 +1,59 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ========================================
+    // CONTACT MESSAGES COLLECTION
+    // ========================================
+    // This collection stores contact form submissions from your portfolio website
+    
+    match /contact_messages/{document} {
+      // ALLOW CREATE: Anyone can submit a contact form
+      // Validation ensures all required fields are present and properly formatted
+      allow create: if 
+        // Check all required fields exist
+        request.resource.data.keys().hasAll(['name', 'email', 'subject', 'message', 'timestamp'])
+        
+        // Validate data types
+        && request.resource.data.name is string
+        && request.resource.data.email is string
+        && request.resource.data.subject is string
+        && request.resource.data.message is string
+        
+        // Ensure fields are not empty
+        && request.resource.data.name.size() > 0
+        && request.resource.data.email.size() > 0
+        && request.resource.data.subject.size() > 0
+        && request.resource.data.message.size() > 0
+        
+        // Enforce maximum field lengths to prevent abuse
+        && request.resource.data.name.size() <= 100
+        && request.resource.data.email.size() <= 100
+        && request.resource.data.subject.size() <= 200
+        && request.resource.data.message.size() <= 2000
+        
+        // Validate email format (basic check)
+        && request.resource.data.email.matches('.*@.*\\..*');
+      
+      // DENY READ: Only you can view submissions via Firebase Console
+      // Public users cannot read other people's submissions
+      allow read: if false;
+      
+      // DENY UPDATE: Prevent modification of submitted messages
+      allow update: if false;
+      
+      // DENY DELETE: Prevent deletion of submitted messages
+      allow delete: if false;
+    }
+    
+    // ========================================
+    // FUTURE COLLECTIONS
+    // ========================================
+    // Add rules for other collections here as your project grows
+    
+    // Example: Blog posts, projects, etc.
+    // match /blog_posts/{document} {
+    //   allow read: if true;
+    //   allow write: if request.auth != null;
+    // }
+  }
+}

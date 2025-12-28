@@ -215,12 +215,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // ===== CONTACT FORM VALIDATION =====
+  // ===== CONTACT FORM WITH FIREBASE INTEGRATION =====
   function initContactForm() {
     const contactForm = document.getElementById('contactForm');
 
     if (contactForm) {
-      contactForm.addEventListener('submit', function (e) {
+      contactForm.addEventListener('submit', async function (e) {
         e.preventDefault();
 
         // Clear previous errors
@@ -232,6 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const subject = document.getElementById('subject');
         const message = document.getElementById('message');
         const formStatus = document.getElementById('formStatus');
+        const submitButton = contactForm.querySelector('.contact__submit');
 
         let isValid = true;
 
@@ -262,19 +263,68 @@ document.addEventListener('DOMContentLoaded', function () {
           isValid = false;
         }
 
-        // If valid, show success message
+        // If valid, submit to Firebase
         if (isValid) {
-          formStatus.textContent = 'Thank you! Your message has been sent successfully.';
-          formStatus.className = 'form-status success';
-          formStatus.style.display = 'block';
+          try {
+            // Check if Firebase is available
+            if (!window.firebaseDB) {
+              throw new Error('Firebase is not initialized. Please refresh the page.');
+            }
 
-          // Reset form
-          contactForm.reset();
+            // Disable submit button and show loading state
+            submitButton.disabled = true;
+            const originalButtonHTML = submitButton.innerHTML;
+            submitButton.innerHTML = '<span>Sending...</span><i class="fas fa-spinner fa-spin"></i>';
 
-          // Hide success message after 5 seconds
-          setTimeout(() => {
-            formStatus.style.display = 'none';
-          }, 5000);
+            // Add to Firestore
+            const contactMessagesRef = window.firebaseCollection(window.firebaseDB, 'contact_messages');
+            await window.firebaseAddDoc(contactMessagesRef, {
+              name: name.value.trim(),
+              email: email.value.trim(),
+              subject: subject.value.trim(),
+              message: message.value.trim(),
+              timestamp: window.firebaseServerTimestamp(),
+              read: false,
+              userAgent: navigator.userAgent,
+              submittedFrom: window.location.href
+            });
+
+            // Show success message
+            formStatus.textContent = '✓ Thank you! Your message has been sent successfully. I\'ll get back to you soon!';
+            formStatus.className = 'form-status success';
+            formStatus.style.display = 'block';
+
+            // Reset form
+            contactForm.reset();
+
+            // Hide success message after 7 seconds
+            setTimeout(() => {
+              formStatus.style.display = 'none';
+            }, 7000);
+
+            // Re-enable submit button after a delay
+            setTimeout(() => {
+              submitButton.disabled = false;
+              submitButton.innerHTML = originalButtonHTML;
+            }, 2000);
+
+          } catch (error) {
+            console.error('Error submitting form:', error);
+
+            // Show error message
+            formStatus.textContent = '✗ Sorry, there was an error sending your message. Please try again or email me directly at rishav4805@gmail.com';
+            formStatus.className = 'form-status error';
+            formStatus.style.display = 'block';
+
+            // Re-enable submit button
+            submitButton.disabled = false;
+            submitButton.innerHTML = '<span>Send Message</span><i class="fas fa-paper-plane"></i>';
+
+            // Hide error message after 10 seconds
+            setTimeout(() => {
+              formStatus.style.display = 'none';
+            }, 10000);
+          }
         }
       });
     }

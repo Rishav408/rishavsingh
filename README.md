@@ -18,9 +18,19 @@ A modern, responsive portfolio website built with HTML5, CSS3, and Vanilla JavaS
 
 ## 🎯 Overview
 
-This portfolio website is a single-page application (SPA) designed to showcase skills, projects, and professional experience in the field of Data Science, Machine Learning, and AI. The website features a fixed sidebar navigation, smooth scroll animations, and a fully responsive design that works seamlessly across all devices.
+This portfolio website is a single-page application (SPA) designed to showcase skills, projects, and professional experience in the field of Data Science, Machine Learning, and AI. The website features a fixed sidebar navigation, smooth scroll animations, Firebase-powered contact form, and a fully responsive design that works seamlessly across all devices.
 
-**Live Demo**: Open `index.html` in your browser
+**Live Website**: [https://rishavsingh4805.web.app](https://rishavsingh4805.web.app)  
+**Alternative URL**: [https://rishavsingh4805.firebaseapp.com](https://rishavsingh4805.firebaseapp.com)  
+**Firebase Project**: rishavsingh4805
+
+### Key Highlights
+- 🎨 Modern, responsive design with smooth animations
+- 🔥 Firebase Firestore integration for contact form
+- 📱 Mobile-first approach with hamburger menu
+- 🚀 Deployed on Firebase Hosting with automatic HTTPS
+- ⚡ Lightweight and fast-loading (~730 KB total)
+- 🔒 Secure with Firestore security rules
 
 ## ✨ Features
 
@@ -30,7 +40,7 @@ This portfolio website is a single-page application (SPA) designed to showcase s
 - **Typed.js Integration** - Dynamic typing effect in the hero section
 - **AOS Animations** - Scroll-triggered animations for enhanced user experience
 - **Portfolio Filtering** - Interactive project filtering system (All, AI/ML, Web, Applications)
-- **Contact Form** - Client-side validation with email format checking
+- **Firebase Contact Form** - Real-time form submissions stored in Firestore with validation
 - **Scroll-to-Top Button** - Appears after scrolling 100px down
 
 ### Visual Features
@@ -50,6 +60,8 @@ This portfolio website is a single-page application (SPA) designed to showcase s
 | **Animations** | AOS (Animate On Scroll) | 2.3.1 |
 | **Typing Effect** | Typed.js | 2.1.0 |
 | **Fonts** | Google Fonts | - |
+| **Backend** | Firebase Firestore | 10.7.1 |
+| **Hosting** | Firebase Hosting | - |
 
 ### CDN Links Used
 ```html
@@ -67,21 +79,50 @@ https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js
 
 <!-- Google Fonts -->
 https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@400;500;600;700;800&display=swap
+
+<!-- Firebase SDK -->
+https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js
+https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js
 ```
 
 ## 📁 Project Structure
 
 ```
 rishavsingh/
-├── index.html              # Main HTML file
-├── README.md              # Project documentation
+├── index.html                    # Main HTML file
+├── README.md                     # Project documentation
+├── FIREBASE_REFERENCE.md         # Complete Firebase guide
 ├── assets/
 │   ├── css/
-│   │   └── style.css      # Custom CSS with design tokens
+│   │   └── style.css            # Custom CSS with design tokens
 │   ├── js/
-│   │   └── main.js        # JavaScript for interactivity
-│   └── img/               # Image assets (placeholder)
-└── .gitignore             # Git ignore file (if using version control)
+│   │   └── main.js              # JavaScript for interactivity
+│   └── img/
+│       ├── RAS.jpg              # Profile photo
+│       └── Rishav Resume.pdf    # Resume PDF
+├── firebase.json                 # Firebase Hosting configuration
+├── .firebaserc                   # Firebase project configuration
+├── firestore.rules               # Firestore security rules
+└── deploy.ps1                    # Automated deployment script
+```
+
+### File Descriptions
+
+**Production Files**:
+- `index.html` - Main website with all sections
+- `assets/css/style.css` - Complete styling with design system
+- `assets/js/main.js` - All JavaScript functionality including Firebase integration
+- `assets/img/` - Profile photo and resume
+
+**Firebase Configuration**:
+- `firebase.json` - Hosting configuration with caching rules
+- `.firebaserc` - Links to Firebase project (rishavsingh4805)
+- `firestore.rules` - Security rules for database protection
+- `deploy.ps1` - Automated deployment script for Windows
+
+**Documentation**:
+- `README.md` - This file, project overview and setup
+- `FIREBASE_REFERENCE.md` - Complete Firebase integration guide
 ```
 
 ## 🎨 Design System
@@ -177,13 +218,18 @@ rishavsingh/
   - Fire & Smoke Detection
 
 ### 7. **Contact**
-- Contact information cards (Location, Email, LinkedIn)
-- Contact form with validation:
+- Contact information cards (Location, Email, LinkedIn, Phone)
+- **Firebase-Powered Contact Form** with:
   - Name field
   - Email field (with format validation)
   - Subject field
   - Message textarea
-- Submit button with success/error feedback
+  - Real-time Firebase Firestore integration
+  - Loading states with spinner animation
+  - Success/error feedback messages
+  - Automatic form reset after submission
+- All submissions stored securely in Firebase Firestore
+- View submissions in Firebase Console
 
 ### 8. **Footer**
 - Copyright notice with dynamic year
@@ -220,6 +266,76 @@ rishavsingh/
 3. **View the Website**
    - Navigate to `http://localhost:8000` (or the appropriate port)
    - The website should load with all features functional
+
+## 🔥 Firebase Deployment
+
+This project is configured for deployment on Firebase Hosting with Firestore database integration.
+
+### Prerequisites
+
+```bash
+# Install Firebase CLI
+npm install -g firebase-tools
+
+# Login to Firebase
+firebase login
+```
+
+### Deployment Steps
+
+#### 1. Deploy Firestore Security Rules (CRITICAL!)
+
+Before deploying the website, you **must** deploy the security rules:
+
+```bash
+firebase deploy --only firestore:rules
+```
+
+This protects your database from unauthorized access.
+
+#### 2. Deploy Website to Firebase Hosting
+
+```bash
+firebase deploy --only hosting
+```
+
+Or deploy everything at once:
+
+```bash
+firebase deploy
+```
+
+#### 3. Using the Deployment Script
+
+For automated deployment on Windows:
+
+```powershell
+.\deploy.ps1
+```
+
+### Live URLs
+
+After deployment, your site will be available at:
+- **Primary**: https://rishavsingh4805.web.app
+- **Alternative**: https://rishavsingh4805.firebaseapp.com
+
+### Firebase Console
+
+Manage your project at:
+- **Console**: https://console.firebase.google.com/project/rishavsingh4805
+- **Firestore Database**: View contact form submissions
+- **Hosting**: Manage deployments and view analytics
+
+### Post-Deployment Checklist
+
+- [ ] Visit live site and test all functionality
+- [ ] Submit test contact form
+- [ ] Verify submission appears in Firestore Console
+- [ ] Test on mobile devices
+- [ ] Check all links work correctly
+- [ ] Verify SSL certificate (automatic with Firebase)
+
+For detailed Firebase setup and troubleshooting, see `FIREBASE_REFERENCE.md`.
 
 ## 💡 Usage
 
@@ -399,20 +515,25 @@ This project is open source and available for personal and commercial use. Feel 
 - [AOS](https://michalsnik.github.io/aos/) - Scroll Animations
 - [Typed.js](https://mattboldt.com/demos/typed-js/) - Typing Animation
 - [Google Fonts](https://fonts.google.com/) - Web Fonts
+- [Firebase](https://firebase.google.com/) - Backend & Hosting
 
 ### Images
 - Project images from [Unsplash](https://unsplash.com/)
-- Profile placeholders from [UI Avatars](https://ui-avatars.com/)
 
 ## 📧 Contact
 
 **Rishav Singh**
-- Email: email@example.com
-- LinkedIn: [linkedin.com/in/rishavsingh](https://linkedin.com/in/rishavsingh)
-- GitHub: [github.com/rishavsingh](https://github.com/rishavsingh)
+- **Email**: rishav4805@gmail.com
+- **LinkedIn**: [linkedin.com/in/rishavsingh408](https://linkedin.com/in/rishavsingh408)
+- **GitHub**: [github.com/Rishav408](https://github.com/Rishav408)
+- **Twitter**: [@RishavSingh408](https://x.com/RishavSingh408)
+- **Instagram**: [@rsinghm85](https://www.instagram.com/rsinghm85)
+- **Location**: Pune, Maharashtra, India
 
 ---
 
-**Built with ❤️ using HTML, CSS, and JavaScript**
+**Built with ❤️ using HTML, CSS, JavaScript, and Firebase**
 
-*Last Updated: December 27, 2025*
+**Live at**: [https://rishavsingh4805.web.app](https://rishavsingh4805.web.app)
+
+*Last Updated: December 28, 2025*

@@ -41,8 +41,7 @@
 
         <nav id="navbar" class="navbar">
             <div class="navbar__profile">
-                <img src="https://ui-avatars.com/api/?name=RS&background=0563AF&color=fff&size=100" alt="Rishav Singh"
-                    class="navbar__profile-img">
+                <img src="assets/img/RAS.jpg" alt="Rishav Singh" class="navbar__profile-img">
                 <h3 class="navbar__name">Rishav Singh</h3>
             </div>
 
@@ -147,8 +146,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-4" data-aos="fade-right" data-aos-delay="100">
                         <div class="about__image-wrapper">
-                            <img src="https://ui-avatars.com/api/?name=RS&background=0563AF&color=fff&size=300"
-                                alt="Rishav Singh" class="about__image">
+                            <img src="assets/img/RAS.jpg" alt="Rishav Singh" class="about__image">
                         </div>
                     </div>
 
@@ -976,6 +974,34 @@
 
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+    <!-- Firebase SDK (v9 modular) -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getFirestore, collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBborfoURe0y-NeYLVe8Nmo7bxGLHdRQFY",
+            authDomain: "rishavsingh4805.firebaseapp.com",
+            projectId: "rishavsingh4805",
+            storageBucket: "rishavsingh4805.firebasestorage.app",
+            messagingSenderId: "472708987810",
+            appId: "1:472708987810:web:63ce5c84ba5c6a5257d0fb",
+            measurementId: "G-XB30SKNXTY"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Make Firebase available globally for main.js
+        window.firebaseDB = db;
+        window.firebaseCollection = collection;
+        window.firebaseAddDoc = addDoc;
+        window.firebaseServerTimestamp = serverTimestamp;
+    </script>
 
     <!-- Custom JS -->
     <script src="assets/js/main.js" defer></script>
