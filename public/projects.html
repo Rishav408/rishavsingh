@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Rishav Singh – AI Systems Engineer</title>
+    <meta name="description"
+        content="View featured AI and machine learning projects by Rishav Singh, including LLM pipelines and CV systems.">
+    <meta name="keywords" content="AI, Machine Learning, LLM, Computer Vision, Portfolio, Projects">
+    <meta name="author" content="Rishav Singh">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6 (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo" aria-label="Rishav Singh homepage">
+                <span class="header__logo-text">Rishav<span class="accent">.dev</span></span>
+            </a>
+            <nav class="nav" id="nav" aria-label="Main navigation">
+                <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                    <span class="visually-hidden">Menu</span>
+                </button>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="projects.html" class="nav__link active">Projects</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link nav__link--cta">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title" data-aos="fade-up">Featured Projects</h1>
+                <p class="page-header__subtitle" data-aos="fade-up" data-aos-delay="100">Real-world AI systems I've built</p>
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECTS SECTION (dynamic from JSON) -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="projects__filters" data-aos="fade-up" data-aos-delay="50">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ai">AI / ML</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="app">Applications</button>
+                </div>
+                <div class="projects__grid" id="projectsGrid" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Projects will be injected by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Rishav Singh</h3>
+                    <p class="footer__about-text">AI Systems Engineer specializing in LLM pipelines, computer vision, and building intelligence into production systems.</p>
+                    <div class="footer__social-links">
+                        <a href="https://github.com/Rishav408" target="_blank" class="footer__social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/rishavsingh408" target="_blank" class="footer__social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/RishavSingh408" target="_blank" class="footer__social-btn" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Contact Info</h3>
+                    <ul class="footer__links">
+                        <li><span class="footer__link">Pune, Maharashtra, India</span></li>
+                        <li><a href="mailto:rishav4805@gmail.com" class="footer__link">rishav4805@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="currentYear"></span> Rishav Singh. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart" style="color: var(--accent-primary)"></i> and AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PROJECT MODAL (hidden by default) -->
+    <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+        <div class="modal__container">
+            <button class="modal__close" aria-label="Close modal" data-modal-close><i class="fas fa-times"></i></button>
+            <div class="modal__content">
+                <div class="modal__header">
+                    <h2 class="modal__title" id="modalTitle">Project Title</h2>
+                    <span class="modal__tag" id="modalTag">Category</span>
+                </div>
+                <div class="modal__body">
+                    <div class="modal__section">
+                        <h3><i class="fas fa-lightbulb"></i> Problem & Concept</h3>
+                        <p id="modalConcept"></p>
+                    </div>
+                    <div class="modal__section">
+                        <h3><i class="fas fa-sitemap"></i> System Architecture</h3>
+                        <div id="modalArchitecture" class="architecture-diagram">
+                            <!-- Visual pipeline will be injected -->
+                        </div>
+                        <p class="architecture-desc" id="modalArchDesc"></p>
+                    </div>
+                    <div class="modal__section">
+                        <h3><i class="fas fa-code"></i> Tech Stack</h3>
+                        <div class="tech-stack" id="modalTechStack"></div>
+                    </div>
+                    <div class="modal__section">
+                        <h3><i class="fas fa-star"></i> Key Differentiators</h3>
+                        <ul class="differentiators" id="modalDifferentiators"></ul>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <a href="#" target="_blank" class="btn btn--outline" id="modalGithubLink">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
