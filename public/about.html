@@ -84,13 +84,13 @@
 
         <div class="about__bio">
           <p>
-            I'm a <strong>B.Tech student specializing in AI & Data Science</strong> at MIT World Peace University, Pune. I got into AI not because it was trendy, but because I was frustrated with how many impressive demos never became real systems. So I made it my goal to close that gap myself.
+            I'm a <strong>B.Tech student specializing in AI & Data Science</strong> at MIT World Peace University, Pune. I got into AI because I saw a gap: impressive demos rarely become reliable systems. I decided to close that gap myself — and I've been building end-to-end ever since.
           </p>
           <p>
-            My work spans <strong>three domains</strong>: LLM systems and RAG pipelines (NyayaAI, ResolvAI, BharatNiti), computer vision applications (Tulsi Disease Detection, FaceMark attendance), and full-stack AI products that bring both together (CyberRakshak, Probity.ai). I care about <strong>privacy-first architectures</strong> — if a system can run locally, it should.
+            My work spans <strong>five domains</strong>: explainable NLP (Justify-AI — multilingual hate-speech detection with classical ML, no transformers), computer vision with local inference (Local AI Dashcam — YOLO11 + VLMs, 100% offline with automatic privacy filtering), healthcare AI (VaniCure — three-model ensemble for respiratory diagnostics designed for remote clinics), full-stack web platforms (Urban Hive — zero-framework housing society management), and LLM systems (NyayaAI, ResolvAI, BharatNiti). I care deeply about <strong>privacy-first architectures</strong> — if a system can run locally, it should.
           </p>
           <p>
-            Beyond code, I think about AI infrastructure and deployment. Building a model is the easy part. Making it reliable, fast, and maintainable under real-world conditions is where the interesting work happens. That's the problem space I'm most interested in.
+            Beyond code, I think about AI infrastructure and deployment. Building a model is the easy part. Making it reliable, fast, and maintainable under real-world conditions is where the interesting work happens. That's the problem space I'm most interested in — and where I deliver.
           </p>
         </div>
 
@@ -147,9 +147,10 @@
           <span class="skill-badge">PyTorch</span>
           <span class="skill-badge">scikit-learn</span>
           <span class="skill-badge">OpenCV</span>
-          <span class="skill-badge">Hugging Face</span>
-          <span class="skill-badge">BERT</span>
-          <span class="skill-badge">Wav2Vec</span>
+          <span class="skill-badge">YOLO11</span>
+          <span class="skill-badge">NLTK</span>
+          <span class="skill-badge">Naive Bayes</span>
+          <span class="skill-badge">SORT Tracker</span>
         </div>
       </div>
 
@@ -161,9 +162,9 @@
           <span class="skill-badge">RAG Pipelines</span>
           <span class="skill-badge">Ollama</span>
           <span class="skill-badge">LLaMA 3</span>
-          <span class="skill-badge">GPT APIs</span>
+          <span class="skill-badge">MiniCPM-V</span>
+          <span class="skill-badge">Mistral 7B</span>
           <span class="skill-badge">Prompt Eng.</span>
-          <span class="skill-badge">Vector DBs</span>
         </div>
       </div>
 
@@ -171,13 +172,16 @@
       <div class="reveal reveal-delay-4">
         <div class="skills-category__head">Infrastructure</div>
         <div class="skills-badges">
+          <span class="skill-badge">FastAPI</span>
           <span class="skill-badge">Flask</span>
+          <span class="skill-badge">Gradio</span>
+          <span class="skill-badge">FFmpeg</span>
           <span class="skill-badge">Docker</span>
           <span class="skill-badge">Firebase</span>
           <span class="skill-badge">Git / GitHub</span>
           <span class="skill-badge">REST APIs</span>
-          <span class="skill-badge">Streamlit</span>
-          <span class="skill-badge">Linux</span>
+          <span class="skill-badge">React</span>
+          <span class="skill-badge">TypeScript</span>
         </div>
       </div>
 
@@ -243,14 +247,6 @@
           </div>
           <div class="timeline__item">
             <div class="timeline__marker"></div>
-            <div class="timeline__date">Ongoing</div>
-            <div class="timeline__card">
-              <h4 class="timeline__title">IBM Data Scientist Professional Certificate</h4>
-              <p class="timeline__desc">Covering Python, ML, data visualization, and applied data science workflows</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__marker"></div>
             <div class="timeline__date">2021 – 2023</div>
             <div class="timeline__card">
               <h4 class="timeline__title">Higher Secondary (Science &amp; Maths)</h4>
@@ -260,43 +256,88 @@
         </div>
       </div>
 
-      <!-- Milestones -->
+      <!-- Certifications Carousel -->
       <div class="reveal reveal-delay-2">
         <h3 style="font-size:1rem; font-family:var(--font-mono); color:var(--text-muted); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:var(--s-xl);">
-          # Build milestones
+          # Certifications
         </h3>
-        <div class="timeline">
-          <div class="timeline__item">
-            <div class="timeline__marker"></div>
-            <div class="timeline__date">2025</div>
-            <div class="timeline__card">
-              <h4 class="timeline__title">NyayaAI &amp; ResolvAI</h4>
-              <p class="timeline__desc">Built full-stack LLM pipelines with RAG, LangChain, and local model inference. Both deployed and functional.</p>
+        <div class="cert-carousel" id="certCarousel">
+          <div class="cert-carousel__track" id="certTrack">
+            <!-- Group 1 (visible by default) -->
+            <div class="cert-group active" data-group="0">
+              <div class="cert-card">
+                <div class="cert-card__year">2026</div>
+                <h4 class="cert-card__title">AI Fluency for Students</h4>
+                <p class="cert-card__org">Anthropic</p>
+                <p class="cert-card__desc">Understanding AI capabilities, limitations, and safe deployment practices.</p>
+              </div>
+              <div class="cert-card">
+                <div class="cert-card__year">2026</div>
+                <h4 class="cert-card__title">Claude Code in Action</h4>
+                <p class="cert-card__org">Anthropic</p>
+                <p class="cert-card__desc">Practical AI-assisted coding workflows and best practices for developer productivity.</p>
+              </div>
+            </div>
+            <!-- Group 2 -->
+            <div class="cert-group" data-group="1">
+              <div class="cert-card">
+                <div class="cert-card__year">2025</div>
+                <h4 class="cert-card__title">Artificial Intelligence Fundamentals</h4>
+                <p class="cert-card__org">IBM SkillsBuild</p>
+                <p class="cert-card__desc">Core AI concepts, ML pipelines, and applied AI workflows.</p>
+              </div>
+              <div class="cert-card">
+                <div class="cert-card__year">—</div>
+                <h4 class="cert-card__title">Foundation Intro to LangChain</h4>
+                <p class="cert-card__org">Python</p>
+                <p class="cert-card__desc">Building LLM-powered applications with LangChain orchestration and memory management.</p>
+              </div>
+            </div>
+            <!-- Group 3 -->
+            <div class="cert-group" data-group="2">
+              <div class="cert-card">
+                <div class="cert-card__year">—</div>
+                <h4 class="cert-card__title">Critical Thinking &amp; Problem Solving</h4>
+                <p class="cert-card__org">—</p>
+                <p class="cert-card__desc">Analytical reasoning and structured problem decomposition for complex systems.</p>
+              </div>
+              <div class="cert-card">
+                <div class="cert-card__year">—</div>
+                <h4 class="cert-card__title">Teamwork &amp; Collaboration</h4>
+                <p class="cert-card__org">—</p>
+                <p class="cert-card__desc">Cross-functional collaboration and agile teamwork in engineering environments.</p>
+              </div>
+            </div>
+            <!-- Group 4 -->
+            <div class="cert-group" data-group="3">
+              <div class="cert-card">
+                <div class="cert-card__year">—</div>
+                <h4 class="cert-card__title">Intro to Social-Emotional Learning</h4>
+                <p class="cert-card__org">—</p>
+                <p class="cert-card__desc">Understanding emotional intelligence and its role in effective team dynamics.</p>
+              </div>
+              <div class="cert-card">
+                <div class="cert-card__year">—</div>
+                <h4 class="cert-card__title">Measuring Sustainable Development</h4>
+                <p class="cert-card__org">—</p>
+                <p class="cert-card__desc">Frameworks for tracking and evaluating sustainable development impact metrics.</p>
+              </div>
             </div>
           </div>
-          <div class="timeline__item">
-            <div class="timeline__marker"></div>
-            <div class="timeline__date">2025</div>
-            <div class="timeline__card">
-              <h4 class="timeline__title">CyberRakshak &amp; Probity.ai</h4>
-              <p class="timeline__desc">Multimodal AI security and content integrity systems — novel architectures addressing real-world problems.</p>
+          <!-- Dots navigation -->
+          <div class="cert-carousel__nav">
+            <button class="cert-arrow cert-arrow--prev" data-dir="prev" aria-label="Previous certificates">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <div class="cert-carousel__dots">
+              <button class="cert-dot active" data-dot="0" aria-label="Show certificates 1-2"></button>
+              <button class="cert-dot" data-dot="1" aria-label="Show certificates 3-4"></button>
+              <button class="cert-dot" data-dot="2" aria-label="Show certificates 5-6"></button>
+              <button class="cert-dot" data-dot="3" aria-label="Show certificates 7-8"></button>
             </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__marker"></div>
-            <div class="timeline__date">2024</div>
-            <div class="timeline__card">
-              <h4 class="timeline__title">Tulsi Disease Detection</h4>
-              <p class="timeline__desc">End-to-end CV pipeline using custom CNNs with TensorFlow and OpenCV. First production-deployed ML model.</p>
-            </div>
-          </div>
-          <div class="timeline__item">
-            <div class="timeline__marker"></div>
-            <div class="timeline__date">Ongoing</div>
-            <div class="timeline__card">
-              <h4 class="timeline__title">14 Projects &amp; counting</h4>
-              <p class="timeline__desc">Across LLMs, Computer Vision, Web, and applications. Every project solves a real problem.</p>
-            </div>
+            <button class="cert-arrow cert-arrow--next" data-dir="next" aria-label="Next certificates">
+              <i class="fas fa-arrow-right"></i>
+            </button>
           </div>
         </div>
       </div>
@@ -317,28 +358,28 @@
       <div style="display:flex; flex-direction:column; gap:var(--s-lg);">
         <div style="padding:var(--s-xl); background:var(--bg-base); border:1px solid var(--border-subtle); border-radius:var(--r-lg); border-left:3px solid var(--accent);">
           <h4 style="font-size:1.0625rem; font-weight:600; margin-bottom:var(--s-sm);">
-            Production over polish
+            Explainability over black boxes
           </h4>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.8;">
-            A beautiful model that doesn't deploy is a failed project. I build with the endpoint in mind from day one — API contracts, error handling, latency budgets, and real-world data distribution.
+            Justify-AI detects hate speech across five languages using classical NLP and Naive Bayes — no transformers. Every risk score comes with a transparent breakdown: which words, which causal links, which demographic signals. When the model says something is risky, you know exactly why.
           </p>
         </div>
 
         <div style="padding:var(--s-xl); background:var(--bg-base); border:1px solid var(--border-subtle); border-radius:var(--r-lg); border-left:3px solid var(--accent);">
           <h4 style="font-size:1.0625rem; font-weight:600; margin-bottom:var(--s-sm);">
-            Privacy as a constraint, not an afterthought
+            Offline-first, privacy by design
           </h4>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.8;">
-            ResolvAI and CyberRakshak both run entirely offline. If sensitive data is involved, it should never leave the machine. This shapes architecture decisions from the start.
+            Local AI Dashcam analyzes incidents with YOLO11 + VLMs entirely offline. VaniCure runs respiratory diagnostics on-device for remote clinics. If sensitive data is involved — video, audio, health records — it never leaves the machine.
           </p>
         </div>
 
         <div style="padding:var(--s-xl); background:var(--bg-base); border:1px solid var(--border-subtle); border-radius:var(--r-lg); border-left:3px solid var(--accent);">
           <h4 style="font-size:1.0625rem; font-weight:600; margin-bottom:var(--s-sm);">
-            Explainability is a feature
+            Zero-framework when it matters
           </h4>
           <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.8;">
-            FaceMark uses classical CV intentionally — LBPH and Haar Cascade over a neural network — because the recognition logic is transparent and debuggable. Explainability isn't a regression; sometimes it's the right tool.
+            Urban Hive manages entire housing societies with zero frameworks — just vanilla HTML, CSS, and JavaScript. FaceMark uses Haar Cascade + LBPH over a neural network because the recognition logic is transparent, debuggable, and runs on any hardware.
           </p>
         </div>
       </div>

@@ -1,6 +1,219 @@
 [
     {
         "id": 1,
+        "title": "Justify-AI – Explainable Hate Analysis",
+        "category": "ai",
+        "tags": [
+            "NLP",
+            "Naive Bayes",
+            "Multilingual",
+            "Explainable AI"
+        ],
+        "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop",
+        "description": "Explainable, multilingual hate-analysis framework built with classical NLP and Naive Bayes, combining lexical, causal, and demographic signals for interpretable risk scoring.",
+        "concept": "Justify-AI addresses the need for transparent, interpretable hate speech detection without relying on black-box transformers. It supports multiple Indian languages with clear risk breakdowns, making AI decisions auditable and understandable for research and moderation workflows.",
+        "architecture": "Classical NLP pipeline: Language Detection → Language-specific preprocessing (tokenization, stemming, lemmatization) → Hate lexicon matching with severity spans → Rule-based causality extraction → Demographic bias auditing → Composite risk scoring → FastAPI backend + visual dashboard.",
+        "archSteps": [
+            {
+                "icon": "type",
+                "label": "Input Text"
+            },
+            {
+                "icon": "globe",
+                "label": "Language Detect"
+            },
+            {
+                "icon": "filter",
+                "label": "Preprocess"
+            },
+            {
+                "icon": "search-check",
+                "label": "Lexicon Match"
+            },
+            {
+                "icon": "activity",
+                "label": "Risk Dashboard"
+            }
+        ],
+        "techStack": [
+            "Python",
+            "NLTK",
+            "scikit-learn",
+            "FastAPI",
+            "uvicorn",
+            "SpeechRecognition",
+            "gTTS"
+        ],
+        "differentiators": [
+            "Pure statistical NLP—no transformers, fully interpretable pipeline",
+            "Multilingual support: English, Hindi, Marathi, Bhojpuri, Marwari",
+            "Transparent risk scoring with lexical + causal + bias breakdowns",
+            "Visual dashboard wired directly to backend analytical outputs"
+        ],
+        "github": "https://github.com/Rishav408/justify-ai"
+    },
+    {
+        "id": 2,
+        "title": "Local AI Dashcam – Incident Explainer",
+        "category": "ai",
+        "tags": [
+            "Computer Vision",
+            "YOLO",
+            "Local LLM",
+            "Privacy"
+        ],
+        "image": "https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=600&h=400&fit=crop",
+        "description": "Fully local, privacy-preserving dashcam incident analysis using YOLO11, SORT tracking, optical flow, and local VLMs via Ollama—no cloud APIs required.",
+        "concept": "Solves automated incident detection and explanation from dashcam footage while maintaining complete privacy. Ideal for scenarios where sensitive video data cannot leave local infrastructure, delivering intelligent analysis with zero internet dependency.",
+        "architecture": "5-phase pipeline: (1) FFmpeg keyframe extraction with motion scoring, (2) Incident detection via YOLO11+SORT+Farneback optical flow fusion, (3) Multi-modal VLM narration using MiniCPM-V + Mistral 7B via Ollama, (4) Privacy filtering with face/LP blurring, (5) Gradio UI + ReportLab PDF export.",
+        "archSteps": [
+            {
+                "icon": "video",
+                "label": "Video Upload"
+            },
+            {
+                "icon": "scan",
+                "label": "Keyframe Extract"
+            },
+            {
+                "icon": "target",
+                "label": "Incident Detect"
+            },
+            {
+                "icon": "brain",
+                "label": "VLM Analysis"
+            },
+            {
+                "icon": "file-text",
+                "label": "PDF Report"
+            }
+        ],
+        "techStack": [
+            "Python",
+            "FFmpeg",
+            "YOLO11",
+            "SORT Tracker",
+            "OpenCV",
+            "Ollama",
+            "MiniCPM-V",
+            "Mistral 7B",
+            "Gradio"
+        ],
+        "differentiators": [
+            "100% offline operation—no cloud APIs or internet required",
+            "Multi-modal AI: combines object tracking, optical flow, and VLMs",
+            "Automatic privacy enforcement with face and license plate blurring",
+            "Academic-grade evaluation with BLEU/ROUGE metrics and ablation studies"
+        ],
+        "github": "https://github.com/Rishav408/local-ai-dashcam"
+    },
+    {
+        "id": 3,
+        "title": "VaniCure – AI Respiratory Diagnostics",
+        "category": "app",
+        "tags": [
+            "Healthcare AI",
+            "Audio Analysis",
+            "Offline-First",
+            "PyTorch"
+        ],
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+        "description": "Offline-first medical screening app using deep learning to analyze respiratory audio (coughs, breathing) for TB and Asthma risk prediction—designed for remote clinics with zero cloud dependency.",
+        "concept": "Solves accessible respiratory diagnostics in resource-constrained settings by running full AI inference locally on-device. Protects patient privacy with complete offline operation while delivering ensemble-model predictions and multilingual triage support for health workers.",
+        "architecture": "Multi-model ensemble pipeline: (1) PANNs CNN14 for robust feature extraction, (2) YAMNet for fast anomaly detection, (3) Custom CNN-BiLSTM for targeted respiratory classification. FastAPI backend with React frontend, localStorage patient records, dynamic outbreak alerting, and multilingual triage agent.",
+        "archSteps": [
+            {
+                "icon": "user-plus",
+                "label": "Patient Register"
+            },
+            {
+                "icon": "mic",
+                "label": "Audio Capture"
+            },
+            {
+                "icon": "cpu",
+                "label": "Multi-Model Inference"
+            },
+            {
+                "icon": "message-circle",
+                "label": "Triage Q&A"
+            },
+            {
+                "icon": "clipboard-check",
+                "label": "Risk Report"
+            }
+        ],
+        "techStack": [
+            "React 18",
+            "TypeScript",
+            "Tailwind CSS",
+            "FastAPI",
+            "PyTorch",
+            "TensorFlow",
+            "librosa",
+            "Recharts"
+        ],
+        "differentiators": [
+            "Three-model ensemble for robust, cross-validated predictions",
+            "Complete offline operation—ideal for remote/low-connectivity clinics",
+            "Dynamic outbreak alerting based on spatial case clustering",
+            "Multilingual triage agent (Hindi, Gujarati, Marathi, English) with exportable patient records"
+        ],
+        "github": "https://github.com/Rishav408/vanicure"
+    },
+    {
+        "id": 4,
+        "title": "Urban Hive – Housing Society Management",
+        "category": "web",
+        "tags": [
+            "Vanilla JS",
+            "Role-based Auth",
+            "Dashboard",
+            "Responsive"
+        ],
+        "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
+        "description": "Complete vanilla HTML, CSS, and JavaScript housing society management platform with role-based dashboards for Residents, Managers, and Workers.",
+        "concept": "Urban Hive addresses the challenge of digitizing housing society operations with accessible, role-specific interfaces. It eliminates dependency on complex frameworks while delivering a fully responsive, session-based management system for notices, complaints, payments, and task coordination.",
+        "architecture": "Frontend-only SPA architecture using sessionStorage for auth, modular JavaScript files per role, CSS variables design system, and in-memory data management with CRUD operations for complaints, notices, and tasks.",
+        "archSteps": [
+            {
+                "icon": "home",
+                "label": "Landing Page"
+            },
+            {
+                "icon": "log-in",
+                "label": "Role Login"
+            },
+            {
+                "icon": "users",
+                "label": "Role Redirect"
+            },
+            {
+                "icon": "layout-dashboard",
+                "label": "Dashboard"
+            },
+            {
+                "icon": "bell",
+                "label": "Actions"
+            }
+        ],
+        "techStack": [
+            "HTML5",
+            "CSS3",
+            "JavaScript ES6+",
+            "Google Fonts",
+            "CSS Variables"
+        ],
+        "differentiators": [
+            "Zero-framework implementation for maximum performance",
+            "Fully responsive across desktop, tablet, and mobile",
+            "Demo accounts for instant testing of all three roles",
+            "Clean modular structure with separation of concerns"
+        ],
+        "github": "https://github.com/Rishav408/urbanhive-web"
+    },
+    {
+        "id": 5,
         "title": "NyayaAI – AI Legal Assistant",
         "category": "ai",
         "tags": [
@@ -48,7 +261,7 @@
         "github": "https://github.com/Rishav408/nyaya-ai"
     },
     {
-        "id": 2,
+        "id": 6,
         "title": "ResolvAI – Offline AI System",
         "category": "ai",
         "tags": [
@@ -90,185 +303,6 @@
             "Enterprise-grade data isolation"
         ],
         "github": "https://github.com/Rishav408/resolv-ai"
-    },
-    {
-        "id": 3,
-        "title": "VedaTale – AI Storytelling",
-        "category": "web",
-        "tags": [
-            "GenAI",
-            "Web"
-        ],
-        "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=600&h=400&fit=crop",
-        "description": "AI-powered storytelling web platform with Flask backend and Firebase deployment.",
-        "concept": "VedaTale reimagines storytelling for the digital age by combining AI-powered narrative generation with engaging web experiences. The platform enables users to create, customize, and experience AI-generated stories with Indian cultural context.",
-        "architecture": "Flask-based backend handles AI model integration and content generation. Firebase provides scalable hosting and real-time database capabilities.",
-        "archSteps": [
-            {
-                "icon": "pencil",
-                "label": "User Input"
-            },
-            {
-                "icon": "cloud",
-                "label": "Flask API"
-            },
-            {
-                "icon": "brain",
-                "label": "GenAI"
-            },
-            {
-                "icon": "fire",
-                "label": "Firebase"
-            },
-            {
-                "icon": "book",
-                "label": "Story"
-            }
-        ],
-        "techStack": [
-            "Python",
-            "Flask",
-            "Firebase",
-            "Generative AI",
-            "REST APIs"
-        ],
-        "differentiators": [
-            "Cultural context-aware narrative generation",
-            "Real-time story customization",
-            "Scalable cloud architecture"
-        ],
-        "github": "https://github.com/Rishav408/veda-tale"
-    },
-    {
-        "id": 4,
-        "title": "Tulsi Disease Detection",
-        "category": "ai",
-        "tags": [
-            "CV",
-            "TensorFlow"
-        ],
-        "image": "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600&h=400&fit=crop",
-        "description": "End-to-end Computer Vision system for plant disease detection using custom CNNs.",
-        "concept": "Agricultural plant disease detection remains a significant challenge. This system provides end-to-end automated disease detection using computer vision, helping farmers identify and address plant health issues early.",
-        "architecture": "Pipeline-based CV system with custom CNN architecture for feature extraction and classification. OpenCV handles image preprocessing.",
-        "archSteps": [
-            {
-                "icon": "camera",
-                "label": "Image Capture"
-            },
-            {
-                "icon": "filter",
-                "label": "Preprocessing"
-            },
-            {
-                "icon": "network-wired",
-                "label": "CNN"
-            },
-            {
-                "icon": "diagnoses",
-                "label": "Classification"
-            }
-        ],
-        "techStack": [
-            "Python",
-            "TensorFlow",
-            "OpenCV",
-            "Custom CNNs",
-            "Flask"
-        ],
-        "differentiators": [
-            "Custom-trained model for Tulsi-specific diseases",
-            "End-to-end pipeline from capture to diagnosis",
-            "Lightweight deployment for field use"
-        ],
-        "github": "https://github.com/Rishav408/tulsi-disease-detection"
-    },
-    {
-        "id": 5,
-        "title": "Probity.ai – AI Humanization",
-        "category": "ai",
-        "tags": [
-            "NLP",
-            "LLM"
-        ],
-        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop",
-        "description": "Privacy-first content integrity platform for AI detection and humanization.",
-        "concept": "Probity.ai addresses per-request API dependency and word-count billing. It is designed as a content integrity layer that both detects AI-generated text and rewrites it to reintroduce human-like linguistic entropy.",
-        "architecture": "Local Sieve Architecture: A large, locally indexed corpus performs low-cost similarity, entropy, and statistical checks. Only when text crosses an uncertainty threshold does the system escalate to heavier LLM-based verification.",
-        "archSteps": [
-            {
-                "icon": "file",
-                "label": "Input Text"
-            },
-            {
-                "icon": "sieve",
-                "label": "Local Sieve"
-            },
-            {
-                "icon": "balance-scale",
-                "label": "Threshold Check"
-            },
-            {
-                "icon": "magic",
-                "label": "Humanizer"
-            }
-        ],
-        "techStack": [
-            "NLP Pipelines",
-            "Entropy Analysis",
-            "N-gram",
-            "LLM"
-        ],
-        "differentiators": [
-            "Near-zero marginal cost per check",
-            "Detection + remediation in one pipeline",
-            "Privacy-first with no forced cloud transmission"
-        ],
-        "github": "https://github.com/Rishav408/probity-ai"
-    },
-    {
-        "id": 6,
-        "title": "CyberRakshak – Digital Airbag",
-        "category": "app",
-        "tags": [
-            "Security",
-            "ML"
-        ],
-        "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop",
-        "description": "AI-powered multi-layer defense system for real-time scam detection.",
-        "concept": "CyberRakshak reframes cybersecurity as real-time risk interception, similar to an airbag deploying before physical damage. It provides pre-transaction fraud prevention.",
-        "architecture": "Multi-layer AI defense system: Perception Layer monitors SMS, calls, UPI links. Inference Layer applies NLP, anomaly detection, and CV models. Intervention Layer blocks actions.",
-        "archSteps": [
-            {
-                "icon": "mobile-alt",
-                "label": "Input"
-            },
-            {
-                "icon": "eye",
-                "label": "Perception"
-            },
-            {
-                "icon": "brain",
-                "label": "Inference"
-            },
-            {
-                "icon": "shield",
-                "label": "Intervention"
-            }
-        ],
-        "techStack": [
-            "TensorFlow Lite",
-            "NLP",
-            "PyTorch",
-            "Deepfake Detection",
-            "React Native"
-        ],
-        "differentiators": [
-            "On-device inference for privacy & latency",
-            "AI + human hybrid security model",
-            "Pre-transaction fraud prevention"
-        ],
-        "github": "https://github.com/Rishav408/cyber-rakshak"
     },
     {
         "id": 7,

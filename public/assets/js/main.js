@@ -43,6 +43,45 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Certifications carousel (about.html) ───────────────
+  const certCarousel = document.getElementById('certCarousel');
+  if (certCarousel) {
+    const groups = certCarousel.querySelectorAll('.cert-group');
+    const dots = certCarousel.querySelectorAll('.cert-dot');
+    let currentIndex = 0;
+
+    function showGroup(index) {
+      currentIndex = ((index % groups.length) + groups.length) % groups.length;
+      groups.forEach(g => g.classList.remove('active'));
+      dots.forEach(d => d.classList.remove('active'));
+      if (groups[currentIndex]) groups[currentIndex].classList.add('active');
+      if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+    }
+
+    // Dot clicks
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        showGroup(parseInt(dot.dataset.dot));
+      });
+    });
+
+    // Arrow clicks
+    certCarousel.querySelectorAll('.cert-arrow').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const dir = btn.dataset.dir;
+        if (dir === 'prev') showGroup(currentIndex - 1);
+        else showGroup(currentIndex + 1);
+      });
+    });
+
+    // Click cards to advance
+    certCarousel.addEventListener('click', (e) => {
+      if (e.target.closest('.cert-dot') || e.target.closest('.cert-arrow')) return;
+      showGroup(currentIndex + 1);
+    });
+  }
+
   // ── Footer year ─────────────────────────────────────
   document.querySelectorAll('#footerYear').forEach(el => {
     el.textContent = new Date().getFullYear();
