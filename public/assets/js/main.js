@@ -8,6 +8,41 @@ import { initProjects } from './projects.js';
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
+  // ── Theme toggle (light / dark) ────────────────────────
+  const THEME_KEY = 'rishav-theme';
+  const html = document.documentElement;
+
+  // Restore saved theme or default to dark
+  const savedTheme = localStorage.getItem(THEME_KEY);
+  if (savedTheme === 'light') {
+    html.setAttribute('data-theme', 'light');
+  }
+
+  // Update toggle icon to match current theme
+  function updateToggleIcon() {
+    const icon = document.querySelector('#themeToggle i');
+    if (!icon) return;
+    const isLight = html.getAttribute('data-theme') === 'light';
+    icon.className = isLight ? 'fas fa-sun' : 'fas fa-moon';
+  }
+
+  updateToggleIcon();
+
+  // Attach click handler to all theme toggle buttons (one per page)
+  document.querySelectorAll('#themeToggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isLight = html.getAttribute('data-theme') === 'light';
+      if (isLight) {
+        html.removeAttribute('data-theme');
+        localStorage.setItem(THEME_KEY, 'dark');
+      } else {
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem(THEME_KEY, 'light');
+      }
+      updateToggleIcon();
+    });
+  });
+
   // ── Footer year ─────────────────────────────────────
   document.querySelectorAll('#footerYear').forEach(el => {
     el.textContent = new Date().getFullYear();

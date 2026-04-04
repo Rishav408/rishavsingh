@@ -8,16 +8,16 @@
 
 /* ── DESIGN TOKENS ──────────────────────────────────────── */
 :root {
-  /* Core palette */
-  --bg-base:        #080C14;   /* True dark base */
-  --bg-surface:     #0D1220;   /* Cards, panels */
-  --bg-elevated:    #131927;   /* Hover states, raised elements */
-  --bg-overlay:     #1A2236;   /* Modals, dropdowns */
+  /* Core palette — Dark mode (warm, layered, not void-black) */
+  --bg-base:        #0E1117;   /* Soft warm dark — GitHub dark vibe */
+  --bg-surface:     #161B22;   /* Cards, panels — subtle lift */
+  --bg-elevated:    #1C2128;   /* Hover states, raised elements */
+  --bg-overlay:     #21262D;   /* Modals, dropdowns */
 
-  /* Borders */
-  --border-subtle:  rgba(255, 255, 255, 0.06);
-  --border-default: rgba(255, 255, 255, 0.10);
-  --border-strong:  rgba(255, 255, 255, 0.18);
+  /* Borders — Dark */
+  --border-subtle:  rgba(255, 255, 255, 0.08);
+  --border-default: rgba(255, 255, 255, 0.14);
+  --border-strong:  rgba(255, 255, 255, 0.22);
   --border-accent:  rgba(200, 240, 77, 0.35);
 
   /* Accent — Electric Lime */
@@ -29,11 +29,17 @@
   --accent-blue:    #4D9EF0;
   --accent-blue-dim:rgba(77, 158, 240, 0.12);
 
-  /* Text */
+  /* Text — Dark */
   --text-primary:   #EDF0F7;
   --text-secondary: #8A92A6;
   --text-muted:     #4D566B;
   --text-accent:    #C8F04D;
+
+  /* Shadows — Dark */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.5);
+  --shadow-lg:  0 12px 40px rgba(0,0,0,0.6);
+  --shadow-accent: 0 0 24px rgba(200,240,77,0.15);
 
   /* Typography */
   --font-display:   'Clash Display', 'Outfit', sans-serif;
@@ -64,12 +70,42 @@
   --t-fast:  150ms;
   --t-base:  280ms;
   --t-slow:  500ms;
+}
 
-  /* Shadows */
-  --shadow-sm:  0 1px 3px rgba(0,0,0,0.4);
-  --shadow-md:  0 4px 16px rgba(0,0,0,0.5);
-  --shadow-lg:  0 12px 40px rgba(0,0,0,0.6);
-  --shadow-accent: 0 0 24px rgba(200,240,77,0.15);
+/* ── LIGHT MODE TOKENS — Claude UI Inspired ────────────── */
+[data-theme="light"] {
+  /* Core palette — warm parchment, terracotta, soft neutrals */
+  --bg-base:        #F4F3EE;   /* Pampas — warm parchment */
+  --bg-surface:     #FFFFFF;   /* White — clean cards */
+  --bg-elevated:    #EDECE6;   /* Warm lift — slightly deeper pampas */
+  --bg-overlay:     #E5E3DC;   /* Soft neutral for overlays */
+
+  /* Borders — Light */
+  --border-subtle:  rgba(0, 0, 0, 0.05);
+  --border-default: rgba(0, 0, 0, 0.10);
+  --border-strong:  rgba(0, 0, 0, 0.16);
+  --border-accent:  rgba(193, 95, 60, 0.30);
+
+  /* Accent — Crail: warm terracotta / rust-orange */
+  --accent:         #C15F3C;
+  --accent-dim:     rgba(193, 95, 60, 0.08);
+  --accent-glow:    rgba(193, 95, 60, 0.06);
+
+  /* Secondary accent — soft warm blue */
+  --accent-blue:    #6B8EAF;
+  --accent-blue-dim:rgba(107, 142, 175, 0.08);
+
+  /* Text — warm dark neutrals */
+  --text-primary:   #2C2A25;   /* Warm near-black */
+  --text-secondary: #7A7568;   /* Cloudy warm gray */
+  --text-muted:     #A8A397;   /* Soft cloudy */
+  --text-accent:    #C15F3C;
+
+  /* Shadows — warm, soft */
+  --shadow-sm:  0 1px 3px rgba(44,42,37,0.06);
+  --shadow-md:  0 4px 16px rgba(44,42,37,0.08);
+  --shadow-lg:  0 12px 40px rgba(44,42,37,0.10);
+  --shadow-accent: 0 0 20px rgba(193,95,60,0.10);
 }
 
 /* ── RESET ──────────────────────────────────────────────── */
@@ -92,6 +128,8 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 350ms var(--ease-in-out),
+              color 350ms var(--ease-in-out);
 }
 
 /* Remove default list styles */
@@ -235,6 +273,13 @@ h1, h2, h3, h4, h5, h6 {
   backdrop-filter: blur(20px) saturate(150%);
   -webkit-backdrop-filter: blur(20px) saturate(150%);
   border-bottom: 1px solid var(--border-subtle);
+  transition: background-color 350ms var(--ease-in-out),
+              border-color 350ms var(--ease-in-out),
+              backdrop-filter 350ms var(--ease-in-out);
+}
+
+[data-theme="light"] .header--scrolled {
+  background: rgba(246, 248, 250, 0.88);
 }
 
 .header__logo {
@@ -314,6 +359,41 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-accent);
 }
 
+/* ── THEME TOGGLE ────────────────────────────────────────── */
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--r-full);
+  border: 1px solid var(--border-default);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--t-fast),
+              background-color 350ms var(--ease-in-out),
+              border-color 350ms var(--ease-in-out),
+              color 350ms var(--ease-in-out);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.theme-toggle:active {
+  transform: scale(0.92);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+
 /* Mobile nav toggle */
 .nav__toggle {
   display: none;
@@ -356,6 +436,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .nav__link {
+    font-size: 1.25rem;
+  }
+
+  .theme-toggle {
+    width: 48px;
+    height: 48px;
     font-size: 1.25rem;
   }
 }
@@ -462,7 +548,9 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--r-lg);
-  transition: all var(--t-base) var(--ease-out);
+  transition: all var(--t-base) var(--ease-out),
+              background-color 350ms var(--ease-in-out),
+              border-color 350ms var(--ease-in-out);
 }
 
 .card:hover {
@@ -2169,6 +2257,257 @@ h1, h2, h3, h4, h5, h6 {
 .reveal-delay-3 { transition-delay: 300ms; }
 .reveal-delay-4 { transition-delay: 400ms; }
 .reveal-delay-5 { transition-delay: 500ms; }
+
+/* ── LIGHT MODE SPECIFIC ADJUSTMENTS — Claude UI ───────── */
+
+/* Hero canvas particles — warm tone visibility */
+[data-theme="light"] #hero-canvas {
+  opacity: 0.3;
+}
+
+/* Terminal cell gets a subtle border in light mode */
+[data-theme="light"] .bento__cell--terminal {
+  border-color: var(--border-default);
+}
+
+/* Stat chips in light mode */
+[data-theme="light"] .stat-chip {
+  background: var(--bg-elevated);
+  border-color: var(--border-subtle);
+}
+
+/* Fact items light mode */
+[data-theme="light"] .fact-item {
+  border-left-color: var(--border-accent);
+}
+
+/* Modal backdrop — warm parchment overlay */
+[data-theme="light"] .modal__backdrop {
+  background: rgba(244, 243, 238, 0.88);
+}
+
+/* Modal box */
+[data-theme="light"] .modal__box {
+  background: var(--bg-surface);
+  border-color: var(--border-default);
+}
+
+/* Architecture diagram in modal */
+[data-theme="light"] .modal__arch {
+  background: var(--bg-elevated);
+}
+
+/* Differentiator items */
+[data-theme="light"] .modal__diff-item {
+  background: var(--bg-elevated);
+  border-left-color: var(--accent);
+}
+
+/* Skills badges */
+[data-theme="light"] .skill-badge {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+}
+
+/* Timeline markers */
+[data-theme="light"] .timeline__marker {
+  background: var(--bg-base);
+}
+
+/* Details/FAQ elements */
+[data-theme="light"] details {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="light"] details summary {
+  background: var(--bg-surface);
+}
+
+[data-theme="light"] details > div {
+  background: var(--bg-surface);
+}
+
+/* Contact form box */
+[data-theme="light"] .contact__form-box {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+}
+
+/* Contact link items */
+[data-theme="light"] .contact__link-item {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="light"] .contact__link-icon {
+  background: var(--bg-elevated);
+  border-color: var(--border-subtle);
+}
+
+/* Scroll to top button */
+[data-theme="light"] .scroll-top {
+  background: var(--bg-surface);
+  border-color: var(--border-default);
+}
+
+/* Page header gradient line — terracotta */
+[data-theme="light"] .page-header::before {
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0.4;
+}
+
+/* Section label underline */
+[data-theme="light"] .section-label::before {
+  background: var(--accent);
+}
+
+/* Spec card top accent bar */
+[data-theme="light"] .spec-card::before {
+  background: var(--accent);
+}
+
+/* Flagship image overlay text readable */
+[data-theme="light"] .project-flagship__img-wrap::before {
+  background: rgba(244, 243, 238, 0.78);
+  color: var(--accent);
+}
+
+[data-theme="light"] .project-card__img-wrap::before {
+  background: rgba(244, 243, 238, 0.78);
+  color: var(--accent);
+}
+
+/* Project list items */
+[data-theme="light"] .project-list-item {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+}
+
+[data-theme="light"] .project-list-item:hover {
+  background: var(--bg-elevated);
+}
+
+/* Footer */
+[data-theme="light"] .footer {
+  background: var(--bg-base);
+}
+
+[data-theme="light"] .footer__social-link {
+  background: var(--bg-surface);
+  border-color: var(--border-subtle);
+}
+
+/* Button primary in light mode — terracotta */
+[data-theme="light"] .btn--primary {
+  background: var(--accent);
+  color: #FFFFFF;
+  border-color: var(--accent);
+}
+
+[data-theme="light"] .btn--primary:hover {
+  background: #A84E30;
+  border-color: #A84E30;
+}
+
+/* Nav CTA in light mode */
+[data-theme="light"] .nav__cta {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+[data-theme="light"] .nav__cta:hover {
+  background: #A84E30;
+}
+
+/* About image badge */
+[data-theme="light"] .about__img-badge {
+  background: var(--bg-surface);
+  border-color: var(--border-default);
+}
+
+/* Contact link hover */
+[data-theme="light"] .contact__link-item:hover {
+  background: var(--accent-dim);
+}
+
+[data-theme="light"] .contact__link-item:hover .contact__link-icon {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+/* Filter buttons active state */
+[data-theme="light"] .filter-btn.active {
+  background: var(--accent);
+  color: #FFFFFF;
+  border-color: var(--accent);
+}
+
+/* Status dot pulse */
+[data-theme="light"] .status-dot {
+  background: #22C55E;
+}
+
+[data-theme="light"] .status-dot::after {
+  background: rgba(34,197,94,0.2);
+}
+
+/* Highlight box inline */
+[data-theme="light"] .highlight-box {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+/* Skip link */
+[data-theme="light"] .skip-link {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+/* Bento main cell label accent */
+[data-theme="light"] .bento-main__label {
+  color: var(--accent);
+}
+
+[data-theme="light"] .bento-main__label::before {
+  background: var(--accent);
+}
+
+/* Tech pills in modal */
+[data-theme="light"] .tech-pill {
+  background: var(--bg-elevated);
+  border-color: var(--border-subtle);
+  color: var(--text-secondary);
+}
+
+/* Project tag accents */
+[data-theme="light"] .tag--accent {
+  background: var(--accent-dim);
+  color: var(--accent);
+  border-color: var(--border-accent);
+}
+
+/* Header scrolled */
+[data-theme="light"] .header--scrolled {
+  background: rgba(244, 243, 238, 0.90);
+  backdrop-filter: blur(20px) saturate(120%);
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
+}
+
+/* Spec card icon hover */
+[data-theme="light"] .spec-card:hover .spec-card__icon {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+/* Terminal colors — warm neutrals */
+[data-theme="light"] .terminal__key {
+  color: var(--accent-blue);
+}
+
+[data-theme="light"] .terminal__val {
+  color: var(--accent);
+}
 
 /* ── DIVIDER ─────────────────────────────────────────────── */
 .divider {
