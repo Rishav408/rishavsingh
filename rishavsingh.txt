@@ -1,0 +1,2534 @@
+index.html/
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishav Singh – AI Systems Engineer</title>
+    <meta name="description"
+        content="AI Systems Engineer building LLM pipelines, computer vision, and production ML systems.">
+    <meta name="keywords" content="AI, Machine Learning, LLM, Computer Vision, Portfolio">
+    <meta name="author" content="Rishav Singh">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Rishav Singh – AI Systems Engineer">
+    <meta property="og:description" content="Building intelligent systems with AI, LLMs, and computer vision.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200">
+    <meta property="og:url" content="https://rishav.dev">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6 (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo" aria-label="Rishav Singh homepage">
+                <span class="header__logo-text">Rishav<span class="accent">.dev</span></span>
+            </a>
+            <nav class="nav" id="nav" aria-label="Main navigation">
+                <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                    <span class="visually-hidden">Menu</span>
+                </button>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="projects.html" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link nav__link--cta">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <div class="hero__container">
+                <div class="hero__content" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="hero__title">
+                        Rishav Singh
+                        <span class="hero__title-gradient">AI Systems Engineer</span>
+                    </h1>
+                    <p class="hero__subtitle">
+                        I build <span class="typed-text" id="typed-text"></span>
+                    </p>
+                    <p class="hero__description">
+                        LLM Pipelines • Computer Vision • Production ML
+                    </p>
+                    <div class="hero__actions">
+                        <a href="projects.html" class="btn btn--primary">
+                            <span>View Projects</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="contact.html" class="btn btn--outline">
+                            <span>Contact Me</span>
+                        </a>
+                    </div>
+                    <div class="hero__social">
+                        <a href="https://github.com/Rishav408" target="_blank" rel="noopener" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/rishavsingh408" target="_blank" rel="noopener"
+                            aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://x.com/RishavSingh408" target="_blank" rel="noopener" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__scroll" aria-hidden="true">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <!-- CAPABILITIES PREVIEW -->
+        <section class="section section--alt">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <h2 class="section__title">Specialised Expertise</h2>
+                    <p class="section__subtitle">Core areas of focus in AI development</p>
+                </div>
+                <div class="capabilities__grid">
+                    <div class="capability-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="capability-card__icon"><i class="fas fa-robot"></i></div>
+                        <h3 class="capability-card__title">Generative AI</h3>
+                        <p class="capability-card__desc">LLM orchestration, RAG pipelines, and agentic workflows.</p>
+                    </div>
+                    <div class="capability-card" data-aos="zoom-in" data-aos-delay="150">
+                        <div class="capability-card__icon"><i class="fas fa-eye"></i></div>
+                        <h3 class="capability-card__title">Computer Vision</h3>
+                        <p class="capability-card__desc">Object detection, segmentation, and real-time processing.</p>
+                    </div>
+                    <div class="capability-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="capability-card__icon"><i class="fas fa-brain"></i></div>
+                        <h3 class="capability-card__title">ML Systems</h3>
+                        <p class="capability-card__desc">Production-grade ML pipelines and infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTAs -->
+        <section class="section">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__content" data-aos="fade-right">
+                        <h2 class="section__title">About My Journey</h2>
+                        <p class="about__text">
+                            I'm Rishav Singh, currently pursuing B.Tech in CSE (AI & Data Science) at MIT World Peace University, Pune. 
+                            I combine theoretical understanding with hands-on implementation to solve real-world problems.
+                        </p>
+                        <a href="about.html" class="btn btn--primary">Read My Full Story</a>
+                    </div>
+                    <div class="about__content" data-aos="fade-left">
+                        <h2 class="section__title">Passionate Projects</h2>
+                        <p class="about__text">
+                            From Tulsi disease detection to NyayaAI legal assistant, check out the various projects 
+                            I've built to address real-world challenges using modern AI techniques.
+                        </p>
+                        <a href="projects.html" class="btn btn--primary">Explore All Projects</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="section section--alt">
+            <div class="container text-center" data-aos="fade-up">
+                <h2 class="section__title">Ready to build something intelligent?</h2>
+                <p class="section__subtitle" style="margin-bottom: var(--space-lg)">Let's discuss how AI can transform your project.</p>
+                <a href="contact.html" class="btn btn--primary">Get In Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Rishav Singh</h3>
+                    <p class="footer__about-text">AI Systems Engineer specializing in LLM pipelines, computer vision, and building intelligence into production systems.</p>
+                    <div class="footer__social-links">
+                        <a href="https://github.com/Rishav408" target="_blank" class="footer__social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/rishavsingh408" target="_blank" class="footer__social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/RishavSingh408" target="_blank" class="footer__social-btn" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Contact Info</h3>
+                    <ul class="footer__links">
+                        <li><span class="footer__link">Pune, Maharashtra, India</span></li>
+                        <li><a href="mailto:rishav4805@gmail.com" class="footer__link">rishav4805@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="currentYear"></span> Rishav Singh. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart" style="color: var(--accent-primary)"></i> and AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- Custom modules -->
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+about.html/
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Rishav Singh – AI Systems Engineer</title>
+    <meta name="description"
+        content="Learn more about Rishav Singh, an AI Systems Engineer focused on LLM pipelines and computer vision.">
+    <meta name="keywords" content="AI, Machine Learning, LLM, Computer Vision, Portfolio, About">
+    <meta name="author" content="Rishav Singh">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6 (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo" aria-label="Rishav Singh homepage">
+                <span class="header__logo-text">Rishav<span class="accent">.dev</span></span>
+            </a>
+            <nav class="nav" id="nav" aria-label="Main navigation">
+                <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                    <span class="visually-hidden">Menu</span>
+                </button>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link active">About</a></li>
+                    <li class="nav__item"><a href="projects.html" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link nav__link--cta">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title" data-aos="fade-up">About Me</h1>
+                <p class="page-header__subtitle" data-aos="fade-up" data-aos-delay="100">AI & Data Science engineer
+                    focused on real-world systems</p>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="about__grid">
+                    <div class="about__content" data-aos="fade-right" data-aos-delay="100">
+                        <p class="about__text">
+                            I'm Rishav Singh, an AI Systems Engineer passionate about building production-ready
+                            intelligent systems. My work spans LLM pipelines, computer vision applications, and
+                            privacy-first AI architectures.
+                        </p>
+                        <p class="about__text">
+                            Currently pursuing B.Tech in CSE (AI & Data Science) at MIT World Peace University, Pune. I
+                            combine theoretical understanding with hands-on implementation to solve real-world problems.
+                        </p>
+                        <div class="about__stats">
+                            <div class="stat">
+                                <span class="stat__label">Location</span>
+                                <span class="stat__value">Pune, India</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__label">Degree</span>
+                                <span class="stat__value">B.Tech AI & DS</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__label">Email</span>
+                                <span class="stat__value">rishav4805@gmail.com</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__label">Focus</span>
+                                <span class="stat__value">LLMs · CV · ML</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about__image" data-aos="fade-left" data-aos-delay="200">
+                        <img src="assets/img/rks.jpg" alt="Rishav Singh" class="about__img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION (badges) -->
+        <section id="skills" class="section section--alt">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <h2 class="section__title">Technical Skills</h2>
+                    <p class="section__subtitle">Tools and technologies I work with</p>
+                </div>
+                <div class="skills__content">
+                    <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="skills-category__title">Languages</h3>
+                        <div class="skills-badges">
+                            <span class="badge">Python</span>
+                            <span class="badge">SQL</span>
+                            <span class="badge">JavaScript</span>
+                            <span class="badge">HTML/CSS</span>
+                        </div>
+                    </div>
+                    <div class="skills-category" data-aos="fade-up" data-aos-delay="150">
+                        <h3 class="skills-category__title">ML & AI</h3>
+                        <div class="skills-badges">
+                            <span class="badge">TensorFlow</span>
+                            <span class="badge">PyTorch</span>
+                            <span class="badge">scikit-learn</span>
+                            <span class="badge">OpenCV</span>
+                            <span class="badge">LangChain</span>
+                            <span class="badge">Hugging Face</span>
+                        </div>
+                    </div>
+                    <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="skills-category__title">LLM & GenAI</h3>
+                        <div class="skills-badges">
+                            <span class="badge">RAG Pipelines</span>
+                            <span class="badge">Prompt Engineering</span>
+                            <span class="badge">Ollama</span>
+                            <span class="badge">LLaMA</span>
+                            <span class="badge">GPT APIs</span>
+                        </div>
+                    </div>
+                    <div class="skills-category" data-aos="fade-up" data-aos-delay="250">
+                        <h3 class="skills-category__title">Infrastructure</h3>
+                        <div class="skills-badges">
+                            <span class="badge">Flask</span>
+                            <span class="badge">Docker</span>
+                            <span class="badge">Git/GitHub</span>
+                            <span class="badge">Firebase</span>
+                            <span class="badge">REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE SECTION -->
+        <section id="timeline" class="section">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <h2 class="section__title">Journey</h2>
+                    <p class="section__subtitle">Education & milestones</p>
+                </div>
+                <div class="timeline" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2023 – Present</span>
+                            <h3 class="timeline__title">B.Tech CSE (AI & Data Science)</h3>
+                            <p class="timeline__subtitle">MIT World Peace University, Pune</p>
+                            <p class="timeline__desc">CGPA: 7.43 · Specialising in AI & DS</p>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2024</span>
+                            <h3 class="timeline__title">Built Tulsi Disease Detection</h3>
+                            <p class="timeline__desc">Computer Vision model using TensorFlow & OpenCV</p>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2025</span>
+                            <h3 class="timeline__title">Developed NyayaAI LLM Assistant</h3>
+                            <p class="timeline__desc">RAG pipeline with LangChain & Flask</p>
+                        </div>
+                    </div>
+                    <div class="timeline__item">
+                        <div class="timeline__dot"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">Ongoing</span>
+                            <h3 class="timeline__title">IBM Data Scientist Certificate</h3>
+                            <p class="timeline__desc">Professional certification</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Rishav Singh</h3>
+                    <p class="footer__about-text">AI Systems Engineer specializing in LLM pipelines, computer vision,
+                        and building intelligence into production systems.</p>
+                    <div class="footer__social-links">
+                        <a href="https://github.com/Rishav408" target="_blank" class="footer__social-btn"
+                            aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/rishavsingh408" target="_blank" class="footer__social-btn"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/RishavSingh408" target="_blank" class="footer__social-btn"
+                            aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Contact Info</h3>
+                    <ul class="footer__links">
+                        <li><span class="footer__link">Pune, Maharashtra, India</span></li>
+                        <li><a href="mailto:rishav4805@gmail.com" class="footer__link">rishav4805@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="currentYear"></span> Rishav Singh. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart" style="color: var(--accent-primary)"></i> and AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+
+contact.html/
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Rishav Singh – AI Systems Engineer</title>
+    <meta name="description"
+        content="Get in touch with Rishav Singh for AI collaborations, machine learning projects, or just a chat.">
+    <meta name="keywords" content="AI, Machine Learning, LLM, Computer Vision, Portfolio, Contact">
+    <meta name="author" content="Rishav Singh">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6 (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo" aria-label="Rishav Singh homepage">
+                <span class="header__logo-text">Rishav<span class="accent">.dev</span></span>
+            </a>
+            <nav class="nav" id="nav" aria-label="Main navigation">
+                <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                    <span class="visually-hidden">Menu</span>
+                </button>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="projects.html" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link active nav__link--cta">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title" data-aos="fade-up">Let's Connect</h1>
+                <p class="page-header__subtitle" data-aos="fade-up" data-aos-delay="100">Reach out for collaborations or just a chat</p>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact__grid">
+                    <div class="contact__info" data-aos="fade-right" data-aos-delay="100">
+                        <div class="contact__item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:rishav4805@gmail.com">rishav4805@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <i class="fab fa-github"></i>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/Rishav408" target="_blank">/Rishav408</a>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <i class="fab fa-linkedin"></i>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/rishavsingh408" target="_blank">/in/rishavsingh408</a>
+                            </div>
+                        </div>
+                        <div class="contact__item">
+                            <i class="fas fa-map-pin"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Pune, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact__form" id="contactForm" action="https://formspree.io/f/your-form-id"
+                        method="POST" data-aos="fade-left" data-aos-delay="200">
+                        <div class="form-group">
+                            <label for="name" class="visually-hidden">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="visually-hidden">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="visually-hidden">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required
+                                class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="visually-hidden">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required
+                                class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Rishav Singh</h3>
+                    <p class="footer__about-text">AI Systems Engineer specializing in LLM pipelines, computer vision, and building intelligence into production systems.</p>
+                    <div class="footer__social-links">
+                        <a href="https://github.com/Rishav408" target="_blank" class="footer__social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/rishavsingh408" target="_blank" class="footer__social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/RishavSingh408" target="_blank" class="footer__social-btn" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Contact Info</h3>
+                    <ul class="footer__links">
+                        <li><span class="footer__link">Pune, Maharashtra, India</span></li>
+                        <li><a href="mailto:rishav4805@gmail.com" class="footer__link">rishav4805@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="currentYear"></span> Rishav Singh. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart" style="color: var(--accent-primary)"></i> and AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+projects.html/
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Rishav Singh – AI Systems Engineer</title>
+    <meta name="description"
+        content="View featured AI and machine learning projects by Rishav Singh, including LLM pipelines and CV systems.">
+    <meta name="keywords" content="AI, Machine Learning, LLM, Computer Vision, Portfolio, Projects">
+    <meta name="author" content="Rishav Singh">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome 6 (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo" aria-label="Rishav Singh homepage">
+                <span class="header__logo-text">Rishav<span class="accent">.dev</span></span>
+            </a>
+            <nav class="nav" id="nav" aria-label="Main navigation">
+                <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                    <span class="visually-hidden">Menu</span>
+                </button>
+                <ul class="nav__menu" id="navMenu">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="projects.html" class="nav__link active">Projects</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link nav__link--cta">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- PAGE HEADER -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title" data-aos="fade-up">Featured Projects</h1>
+                <p class="page-header__subtitle" data-aos="fade-up" data-aos-delay="100">Real-world AI systems I've built</p>
+            </div>
+        </section>
+
+        <!-- FEATURED PROJECTS SECTION (dynamic from JSON) -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="projects__filters" data-aos="fade-up" data-aos-delay="50">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="ai">AI / ML</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="app">Applications</button>
+                </div>
+                <div class="projects__grid" id="projectsGrid" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Projects will be injected by JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Rishav Singh</h3>
+                    <p class="footer__about-text">AI Systems Engineer specializing in LLM pipelines, computer vision, and building intelligence into production systems.</p>
+                    <div class="footer__social-links">
+                        <a href="https://github.com/Rishav408" target="_blank" class="footer__social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/rishavsingh408" target="_blank" class="footer__social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/RishavSingh408" target="_blank" class="footer__social-btn" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="index.html" class="footer__link">Home</a></li>
+                        <li><a href="about.html" class="footer__link">About</a></li>
+                        <li><a href="projects.html" class="footer__link">Projects</a></li>
+                        <li><a href="contact.html" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h3 class="footer__col-title">Contact Info</h3>
+                    <ul class="footer__links">
+                        <li><span class="footer__link">Pune, Maharashtra, India</span></li>
+                        <li><a href="mailto:rishav4805@gmail.com" class="footer__link">rishav4805@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; <span id="currentYear"></span> Rishav Singh. All rights reserved.</p>
+                <p>Built with <i class="fas fa-heart" style="color: var(--accent-primary)"></i> and AI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PROJECT MODAL (hidden by default) -->
+    <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+        <div class="modal__overlay" tabindex="-1" data-modal-close></div>
+        <div class="modal__container">
+            <button class="modal__close" aria-label="Close modal" data-modal-close><i class="fas fa-times"></i></button>
+            <div class="modal__content">
+                <div class="modal__header">
+                    <h2 class="modal__title" id="modalTitle">Project Title</h2>
+                    <span class="modal__tag" id="modalTag">Category</span>
+                </div>
+                <div class="modal__body">
+                    <div class="modal__section">
+                        <h3><i class="fas fa-lightbulb"></i> Problem & Concept</h3>
+                        <p id="modalConcept"></p>
+                    </div>
+                    <div class="modal__section">
+                        <h3><i class="fas fa-sitemap"></i> System Architecture</h3>
+                        <div id="modalArchitecture" class="architecture-diagram">
+                            <!-- Visual pipeline will be injected -->
+                        </div>
+                        <p class="architecture-desc" id="modalArchDesc"></p>
+                    </div>
+                    <div class="modal__section">
+                        <h3><i class="fas fa-code"></i> Tech Stack</h3>
+                        <div class="tech-stack" id="modalTechStack"></div>
+                    </div>
+                    <div class="modal__section">
+                        <h3><i class="fas fa-star"></i> Key Differentiators</h3>
+                        <ul class="differentiators" id="modalDifferentiators"></ul>
+                    </div>
+                </div>
+                <div class="modal__footer">
+                    <a href="#" target="_blank" class="btn btn--outline" id="modalGithubLink">
+                        <i class="fab fa-github"></i> View Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+
+
+
+main.js/
+/**
+ * main.js – Entry point for all interactions
+ */
+
+import { initProjects } from './projects.js';
+
+// Wait for DOM
+document.addEventListener('DOMContentLoaded', () => {
+  'use strict';
+
+  // Set current year in footer
+  const yearEl = document.getElementById('currentYear');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Initialize AOS (scroll animations)
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 50,
+    });
+  }
+
+  // Initialize Typed.js
+  const typedEl = document.getElementById('typed-text');
+  if (typedEl && typeof Typed !== 'undefined') {
+    new Typed('#typed-text', {
+      strings: [
+        'LLM pipelines',
+        'computer vision systems',
+        'production ML models',
+        'AI agents',
+      ],
+      typeSpeed: 60,
+      backSpeed: 30,
+      backDelay: 2000,
+      startDelay: 500,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|',
+    });
+  }
+
+
+  // Initialize Projects (load from JSON)
+  initProjects();
+
+  // Mobile menu toggle
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true' ? false : true;
+      navToggle.setAttribute('aria-expanded', expanded);
+      navMenu.classList.toggle('active');
+      document.body.style.overflow = expanded ? 'hidden' : ''; // Prevent scroll behind menu
+    });
+
+    // Close menu when clicking a link
+    navMenu.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close on click outside
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('active') && !navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        navMenu.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Header scroll effect
+  const header = document.getElementById('header');
+  function handleHeaderScroll() {
+    if (window.scrollY > 50) {
+      header.classList.add('header--scrolled');
+    } else {
+      header.classList.remove('header--scrolled');
+    }
+  }
+  window.addEventListener('scroll', handleHeaderScroll);
+  handleHeaderScroll();
+
+  // Active nav link based on current page and scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav__link');
+  const path = window.location.pathname;
+  let fileName = path.split('/').pop() || 'index.html';
+  if (fileName === '/' || fileName === '') fileName = 'index.html';
+
+  function setActiveLink() {
+    let currentSection = '';
+    const scrollY = window.scrollY + 120;
+
+    // 1. Try to find if we're on a specific section of the page
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        currentSection = section.getAttribute('id');
+      }
+    });
+
+    // 2. Set active class based on section OR whole page
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      const href = link.getAttribute('href');
+      
+      // Highlight if same file and same hash (or if no hash and it's the current file)
+      if (href.startsWith('#')) {
+          if ('#' + currentSection === href) {
+              link.classList.add('active');
+          }
+      } else if (href === fileName) {
+          // If we're on the same file, only highlight if no other section is specifically highlighted
+          // but usually on a multi-page, we just highlight the page link.
+          link.classList.add('active');
+      }
+    });
+  }
+  
+  if (sections.length > 1 && fileName === 'index.html') {
+      window.addEventListener('scroll', setActiveLink);
+  }
+  setActiveLink();
+
+  // Scroll to top button
+  const scrollBtn = document.getElementById('scrollTop');
+  if (scrollBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add('visible');
+      } else {
+        scrollBtn.classList.remove('visible');
+      }
+    });
+    scrollBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Contact form handling (with Formspree)
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(contactForm);
+      const statusEl = document.getElementById('formStatus');
+      statusEl.className = 'form-status';
+      statusEl.style.display = 'none';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' },
+        });
+        if (response.ok) {
+          statusEl.textContent = 'Thank you! Your message has been sent.';
+          statusEl.classList.add('success');
+          statusEl.style.display = 'block';
+          contactForm.reset();
+        } else {
+          const data = await response.json();
+          if (data.errors) {
+            statusEl.textContent = data.errors.map(e => e.message).join(', ');
+          } else {
+            throw new Error('Form submission failed');
+          }
+          statusEl.classList.add('error');
+          statusEl.style.display = 'block';
+        }
+      } catch (error) {
+        statusEl.textContent = 'Oops! There was a problem sending your message.';
+        statusEl.classList.add('error');
+        statusEl.style.display = 'block';
+      }
+
+      // Hide after 5 seconds
+      setTimeout(() => {
+        statusEl.style.display = 'none';
+      }, 5000);
+    });
+  }
+
+  // Modal close handlers
+  const modal = document.getElementById('projectModal');
+  const modalCloseButtons = document.querySelectorAll('[data-modal-close]');
+  if (modal) {
+    modalCloseButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+    // Close on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+});
+
+
+
+projects.js/
+/**
+ * projects.js – Load project data from JSON and render cards & modal
+ */
+
+export async function initProjects() {
+    const projectsGrid = document.getElementById('projectsGrid');
+    if (!projectsGrid) return;
+
+    try {
+        const response = await fetch('data/projects.json');
+        if (!response.ok) throw new Error('Failed to load projects');
+        const projects = await response.json();
+
+        renderProjects(projects);
+        setupFilters(projects);
+        setupModal(projects);
+    } catch (error) {
+        console.error('Error loading projects:', error);
+        projectsGrid.innerHTML = '<p class="error">Failed to load projects.</p>';
+    }
+}
+
+function renderProjects(projects) {
+    const grid = document.getElementById('projectsGrid');
+    if (!grid) return;
+
+    grid.innerHTML = projects.map(project => `
+        <div class="project-card" data-category="${project.category}" data-id="${project.id}">
+            <div class="project-card__image">
+                <img src="${project.image}" alt="${project.title}" loading="lazy">
+            </div>
+            <div class="project-card__content">
+                <h3 class="project-card__title">${project.title}</h3>
+                <p class="project-card__desc">${project.description}</p>
+                <div class="project-card__tags">
+                    ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+function setupFilters(projects) {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.dataset.filter;
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Filter projects
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (filter === 'all' || card.dataset.category === filter) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
+function setupModal(projects) {
+    const modal = document.getElementById('projectModal');
+    const cards = document.querySelectorAll('.project-card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            const projectId = card.dataset.id;
+            const project = projects.find(p => p.id == projectId); // id could be string or number
+            if (!project) return;
+
+            // Fill modal content
+            document.getElementById('modalTitle').textContent = project.title;
+            document.getElementById('modalTag').textContent = project.tags.join(' · ');
+            document.getElementById('modalConcept').textContent = project.concept;
+            document.getElementById('modalArchDesc').textContent = project.architecture;
+
+            // Build visual architecture diagram
+            const archDiv = document.getElementById('modalArchitecture');
+            if (project.archSteps) {
+                archDiv.innerHTML = project.archSteps.map(step => `
+                    <div class="arch-step">
+                        <i class="fas fa-${step.icon}"></i>
+                        <span>${step.label}</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                `).join('');
+            } else {
+                archDiv.innerHTML = '<p>Architecture diagram not available.</p>';
+            }
+
+            // Tech stack
+            const techStack = document.getElementById('modalTechStack');
+            techStack.innerHTML = project.techStack.map(tech =>
+                `<span class="tech-item">${tech}</span>`
+            ).join('');
+
+            // Differentiators
+            const diffList = document.getElementById('modalDifferentiators');
+            diffList.innerHTML = project.differentiators.map(diff =>
+                `<li>${diff}</li>`
+            ).join('');
+
+            // GitHub link
+            const githubLink = document.getElementById('modalGithubLink');
+            if (project.github) {
+                githubLink.href = project.github;
+                githubLink.style.display = 'inline-flex';
+            } else {
+                githubLink.style.display = 'none';
+            }
+
+            // Show modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+}
+
+
+
+
+
+style.css/
+/* ========================================
+   DESIGN TOKENS (variables)
+   ======================================== */
+:root {
+  /* Colors - Dark theme */
+  --bg-primary: #071025;
+  --bg-secondary: #0f1724;
+  --bg-card: #1a2332;
+  --text-primary: #e6eef8;
+  --text-secondary: #9aa6b2;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #f59e0b;
+  --border-color: #2a3442;
+  --success: #10b981;
+  --error: #ef4444;
+
+  /* Typography */
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Open Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.6s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-accent: 0 0 20px rgba(59, 130, 246, 0.3);
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+}
+
+/* ========================================
+   RESET & BASE
+   ======================================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Accessibility */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent-primary);
+  color: white;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Focus styles for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+a {
+  color: var(--accent-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--accent-secondary);
+}
+
+/* ========================================
+   LAYOUT
+   ======================================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.section {
+  padding: var(--space-xl) 0;
+}
+
+.section--alt {
+  background-color: var(--bg-secondary);
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.section__title {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-xs);
+}
+
+.section__subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* ========================================
+   PAGE HEADER (for subpages)
+   ======================================== */
+.page-header {
+  padding: calc(var(--space-xl) * 2) 0 var(--space-xl);
+  background: linear-gradient(to bottom, var(--bg-secondary), var(--bg-primary));
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.page-header__title {
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 800;
+  margin-bottom: var(--space-xs);
+  background: linear-gradient(135deg, var(--text-primary), var(--accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-header__subtitle {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   HEADER / NAVIGATION
+   ======================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(7, 16, 37, 0.75);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all var(--transition-base);
+}
+
+.header--scrolled {
+  background-color: rgba(7, 16, 37, 0.9);
+  padding: 0.5rem 0;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-md) var(--space-lg);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header__logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__logo .accent {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav__menu {
+  display: flex;
+  gap: var(--space-xl);
+  list-style: none;
+  align-items: center;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  color: rgba(230, 238, 248, 0.75);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: var(--space-xs) var(--space-xs);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  transition: width var(--transition-base);
+  border-radius: var(--radius-full);
+}
+
+.nav__link:hover {
+  color: var(--text-primary);
+  transform: translateY(-2px);
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+}
+
+.nav__link.active {
+  color: var(--accent-primary);
+}
+
+.nav__link--cta {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  padding: 0.6rem 1.4rem !important;
+  border-radius: var(--radius-full);
+  color: white !important;
+  text-shadow: none !important;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.nav__link--cta::after {
+  display: none;
+}
+
+.nav__link--cta:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+@media (max-width: 768px) {
+  .nav__toggle {
+    display: block;
+    z-index: 101;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(7, 16, 37, 0.98);
+    backdrop-filter: blur(15px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-xl) 0;
+    border-bottom: none;
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 99;
+  }
+
+  .nav__menu.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav__item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav__link {
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .nav__link::after {
+    display: none;
+  }
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  background-image: 
+    radial-gradient(circle at center, rgba(7, 16, 37, 0.4) 0%, rgba(7, 16, 37, 0.8) 100%),
+    url('../img/hero-img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  width: 100%;
+  align-items: center;
+}
+
+.hero__content {
+  z-index: 2;
+  text-align: left; /* Ensure strictly left aligned */
+}
+
+.hero__title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: var(--space-md);
+}
+
+.hero__title-gradient {
+  display: block;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero__subtitle {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  margin-bottom: var(--space-sm);
+  color: var(--text-secondary);
+}
+
+.hero__typed {
+  color: var(--accent-primary);
+  font-weight: 600;
+}
+
+.hero__description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.hero__social {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.hero__social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--bg-card);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--border-color);
+}
+
+.hero__social a:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: translateY(-3px);
+  border-color: transparent;
+}
+
+
+.hero__scroll {
+  position: absolute;
+  bottom: var(--space-md);
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-secondary);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  40% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+
+  60% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .hero__social {
+    justify-content: center;
+  }
+
+  .hero__canvas {
+    height: 400px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+}
+
+.btn--primary {
+  background: var(--accent-primary);
+  color: white;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.4);
+}
+
+.btn--primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+.btn--outline {
+  background: transparent;
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.btn--outline:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.btn--full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ========================================
+   ABOUT SECTION
+   ======================================== */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.about__content {
+  color: var(--text-secondary);
+}
+
+.about__text {
+  margin-bottom: var(--space-md);
+  line-height: 1.8;
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.stat {
+  background: var(--bg-card);
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--accent-primary);
+}
+
+.stat__label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat__value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.about__image {
+  display: flex;
+  justify-content: center;
+}
+
+.about__img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 2px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__image {
+    order: -1;
+  }
+}
+
+/* ========================================
+   CAPABILITIES CARDS
+   ======================================== */
+.capabilities__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+.capability-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-base);
+}
+
+.capability-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md), var(--shadow-accent);
+  border-color: var(--accent-primary);
+}
+
+.capability-card__icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-sm);
+  font-size: 2rem;
+  color: white;
+}
+
+.capability-card__title {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-xs);
+}
+
+.capability-card__desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* ========================================
+   PROJECTS SECTION
+   ======================================== */
+.projects__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.filter-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-md);
+}
+
+.project-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-primary);
+}
+
+.project-card__image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.project-card:hover .project-card__image img {
+  transform: scale(1.05);
+}
+
+.project-card__content {
+  padding: var(--space-md);
+}
+
+.project-card__title {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-xs);
+}
+
+.project-card__desc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-sm);
+  line-height: 1.5;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.project-tag {
+  background: var(--bg-primary);
+  color: var(--accent-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid var(--accent-primary);
+}
+
+/* ========================================
+   SKILLS SECTION (badges)
+   ======================================== */
+.skills-category {
+  margin-bottom: var(--space-lg);
+}
+
+.skills-category__title {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-sm);
+  color: var(--text-secondary);
+}
+
+.skills-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.badge {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+}
+
+.badge:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   TIMELINE
+   ======================================== */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: var(--accent-primary);
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: var(--space-lg);
+}
+
+.timeline__dot {
+  position: absolute;
+  left: 12px;
+  top: 5px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-primary);
+  border-radius: 50%;
+  border: 2px solid var(--bg-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.timeline__content {
+  background: var(--bg-card);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.timeline__date {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--accent-primary);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.timeline__title {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline__subtitle {
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-bottom: var(--space-xs);
+}
+
+.timeline__desc {
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.contact__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  background: var(--bg-card);
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.contact__item i {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  width: 40px;
+  text-align: center;
+}
+
+.contact__item h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact__item a,
+.contact__item span {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.contact__item a:hover {
+  color: var(--accent-primary);
+}
+
+.contact__form {
+  background: var(--bg-card);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+.form-group {
+  margin-bottom: var(--space-md);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.form-status {
+  margin-top: var(--space-sm);
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  display: none;
+}
+
+.form-status.success {
+  display: block;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+  border: 1px solid var(--success);
+}
+
+.form-status.error {
+  display: block;
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--error);
+  border: 1px solid var(--error);
+}
+
+@media (max-width: 768px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ========================================
+   MODAL
+   ======================================== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all var(--transition-base);
+}
+
+.modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+}
+
+.modal__container {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  max-height: 85vh;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.9);
+  transition: transform var(--transition-base);
+  border: 1px solid var(--border-color);
+}
+
+.modal.active .modal__container {
+  transform: scale(1);
+}
+
+.modal__close {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  background: var(--bg-primary);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--border-color);
+}
+
+.modal__close:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: rotate(90deg);
+}
+
+.modal__content {
+  padding: var(--space-lg);
+  overflow-y: auto;
+  max-height: 85vh;
+}
+
+.modal__header {
+  margin-bottom: var(--space-lg);
+  padding-right: 40px;
+}
+
+.modal__title {
+  font-size: 1.8rem;
+  margin-bottom: var(--space-xs);
+}
+
+.modal__tag {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  background: rgba(59, 130, 246, 0.2);
+  color: var(--accent-primary);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.modal__section {
+  margin-bottom: var(--space-lg);
+}
+
+.modal__section h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.modal__section h3 i {
+  color: var(--accent-primary);
+}
+
+.modal__section p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.architecture-diagram {
+  background: var(--bg-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  border: 1px solid var(--border-color);
+}
+
+.arch-step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.arch-step i {
+  color: var(--accent-primary);
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.tech-item {
+  background: var(--bg-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.differentiators {
+  list-style: none;
+  padding: 0;
+}
+
+.differentiators li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: var(--space-xs);
+  color: var(--text-secondary);
+}
+
+.differentiators li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+.modal__footer {
+  margin-top: var(--space-lg);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  background: var(--bg-secondary);
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-top: 1px solid var(--border-color);
+  position: relative;
+  z-index: 10;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.footer__col-title {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+}
+
+.footer__about-text {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  max-width: 320px;
+}
+
+.footer__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.footer__link {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footer__link:hover {
+  color: var(--accent-primary);
+  padding-left: 5px;
+}
+
+.footer__social-links {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.footer__social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.footer__social-btn:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: translateY(-3px);
+  border-color: var(--accent-primary);
+}
+
+.footer__bottom {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 992px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .footer__bottom {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* ========================================
+   SCROLL TO TOP
+   ======================================== */
+.scroll-top {
+  position: fixed;
+  bottom: var(--space-md);
+  right: var(--space-md);
+  width: 50px;
+  height: 50px;
+  background: var(--accent-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+  z-index: 99;
+  box-shadow: var(--shadow-md);
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-top:hover {
+  background: #2563eb;
+  transform: translateY(-5px);
+}
+
+/* ========================================
+   UTILITIES
+   ======================================== */
+.text-center {
+  text-align: center;
+}
+
+.mt-md {
+  margin-top: var(--space-md);
+}
+
+.mt-lg {
+  margin-top: var(--space-lg);
+}
+
+.mt-xl {
+  margin-top: var(--space-xl);
+}
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+@media (max-width: 576px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__title-gradient {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: var(--space-lg) 0;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem;
+  }
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+[data-aos] {
+  pointer-events: none;
+}
+
+[data-aos].aos-animate {
+  pointer-events: auto;
+}

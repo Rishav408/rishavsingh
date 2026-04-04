@@ -1,252 +1,419 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Rishav Singh – AI Systems Engineer</title>
-    <meta name="description"
-        content="Learn more about Rishav Singh, an AI Systems Engineer focused on LLM pipelines and computer vision.">
-    <meta name="keywords" content="AI, Machine Learning, LLM, Computer Vision, Portfolio, About">
-    <meta name="author" content="Rishav Singh">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Rishav Singh</title>
+  <meta name="description" content="Learn more about Rishav Singh — AI Systems Engineer, B.Tech student at MIT-WPU, and builder of production ML systems.">
+  <meta name="author" content="Rishav Singh">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;600&family=JetBrains+Mono&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome 6 (icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
-
 <body>
 
-    <!-- HEADER / NAVIGATION -->
-    <header class="header" id="header">
-        <div class="header__container">
-            <a href="index.html" class="header__logo" aria-label="Rishav Singh homepage">
-                <span class="header__logo-text">Rishav<span class="accent">.dev</span></span>
-            </a>
-            <nav class="nav" id="nav" aria-label="Main navigation">
-                <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
-                    <i class="fas fa-bars" aria-hidden="true"></i>
-                    <span class="visually-hidden">Menu</span>
-                </button>
-                <ul class="nav__menu" id="navMenu">
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="about.html" class="nav__link active">About</a></li>
-                    <li class="nav__item"><a href="projects.html" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link nav__link--cta">Contact</a></li>
-                </ul>
-            </nav>
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<!-- ── HEADER ─────────────────────────────────────────── -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo" aria-label="Rishav Singh — home">
+      <span class="header__logo-dot"></span>
+      rishav.dev
+    </a>
+    <nav aria-label="Main navigation">
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__menu" id="navMenu" role="list">
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="about.html"    class="nav__link active">About</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+        <li><a href="contact.html"  class="nav__cta">Let's Talk</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+<!-- ── PAGE HEADER ───────────────────────────────────── -->
+<section class="page-header">
+  <div class="container">
+    <p class="page-header__eyebrow">About me</p>
+    <h1 class="page-header__title">
+      Engineer. Student.<br>
+      <span style="color:var(--accent);">Builder.</span>
+    </h1>
+    <p class="page-header__desc">
+      I'm Rishav Singh. I build AI systems that go beyond proof-of-concept — from local LLM inference to deployed computer vision pipelines. Here's the longer story.
+    </p>
+  </div>
+</section>
+
+<!-- ── ABOUT MAIN ─────────────────────────────────────── -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about__grid">
+      <!-- Photo -->
+      <div class="about__image-wrap reveal">
+        <img
+          src="assets/img/rks.jpg"
+          alt="Rishav Singh"
+          class="about__img"
+          loading="lazy"
+        >
+        <div class="about__img-badge">
+          <span class="about__img-badge-num">14+</span>
+          <span class="about__img-badge-label">Projects shipped</span>
         </div>
-    </header>
+      </div>
 
-    <main id="main-content">
-        <!-- PAGE HEADER -->
-        <section class="page-header">
-            <div class="container">
-                <h1 class="page-header__title" data-aos="fade-up">About Me</h1>
-                <p class="page-header__subtitle" data-aos="fade-up" data-aos-delay="100">AI & Data Science engineer
-                    focused on real-world systems</p>
-            </div>
-        </section>
+      <!-- Content -->
+      <div class="about__content reveal reveal-delay-1">
+        <p class="section-label">The full story</p>
 
-        <!-- ABOUT SECTION -->
-        <section id="about" class="section">
-            <div class="container">
-                <div class="about__grid">
-                    <div class="about__content" data-aos="fade-right" data-aos-delay="100">
-                        <p class="about__text">
-                            I'm Rishav Singh, an AI Systems Engineer passionate about building production-ready
-                            intelligent systems. My work spans LLM pipelines, computer vision applications, and
-                            privacy-first AI architectures.
-                        </p>
-                        <p class="about__text">
-                            Currently pursuing B.Tech in CSE (AI & Data Science) at MIT World Peace University, Pune. I
-                            combine theoretical understanding with hands-on implementation to solve real-world problems.
-                        </p>
-                        <div class="about__stats">
-                            <div class="stat">
-                                <span class="stat__label">Location</span>
-                                <span class="stat__value">Pune, India</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat__label">Degree</span>
-                                <span class="stat__value">B.Tech AI & DS</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat__label">Email</span>
-                                <span class="stat__value">rishav4805@gmail.com</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat__label">Focus</span>
-                                <span class="stat__value">LLMs · CV · ML</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about__image" data-aos="fade-left" data-aos-delay="200">
-                        <img src="assets/img/rks.jpg" alt="Rishav Singh" class="about__img">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SKILLS SECTION (badges) -->
-        <section id="skills" class="section section--alt">
-            <div class="container">
-                <div class="section__header" data-aos="fade-up">
-                    <h2 class="section__title">Technical Skills</h2>
-                    <p class="section__subtitle">Tools and technologies I work with</p>
-                </div>
-                <div class="skills__content">
-                    <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
-                        <h3 class="skills-category__title">Languages</h3>
-                        <div class="skills-badges">
-                            <span class="badge">Python</span>
-                            <span class="badge">SQL</span>
-                            <span class="badge">JavaScript</span>
-                            <span class="badge">HTML/CSS</span>
-                        </div>
-                    </div>
-                    <div class="skills-category" data-aos="fade-up" data-aos-delay="150">
-                        <h3 class="skills-category__title">ML & AI</h3>
-                        <div class="skills-badges">
-                            <span class="badge">TensorFlow</span>
-                            <span class="badge">PyTorch</span>
-                            <span class="badge">scikit-learn</span>
-                            <span class="badge">OpenCV</span>
-                            <span class="badge">LangChain</span>
-                            <span class="badge">Hugging Face</span>
-                        </div>
-                    </div>
-                    <div class="skills-category" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="skills-category__title">LLM & GenAI</h3>
-                        <div class="skills-badges">
-                            <span class="badge">RAG Pipelines</span>
-                            <span class="badge">Prompt Engineering</span>
-                            <span class="badge">Ollama</span>
-                            <span class="badge">LLaMA</span>
-                            <span class="badge">GPT APIs</span>
-                        </div>
-                    </div>
-                    <div class="skills-category" data-aos="fade-up" data-aos-delay="250">
-                        <h3 class="skills-category__title">Infrastructure</h3>
-                        <div class="skills-badges">
-                            <span class="badge">Flask</span>
-                            <span class="badge">Docker</span>
-                            <span class="badge">Git/GitHub</span>
-                            <span class="badge">Firebase</span>
-                            <span class="badge">REST APIs</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- TIMELINE SECTION -->
-        <section id="timeline" class="section">
-            <div class="container">
-                <div class="section__header" data-aos="fade-up">
-                    <h2 class="section__title">Journey</h2>
-                    <p class="section__subtitle">Education & milestones</p>
-                </div>
-                <div class="timeline" data-aos="fade-up" data-aos-delay="100">
-                    <div class="timeline__item">
-                        <div class="timeline__dot"></div>
-                        <div class="timeline__content">
-                            <span class="timeline__date">2023 – Present</span>
-                            <h3 class="timeline__title">B.Tech CSE (AI & Data Science)</h3>
-                            <p class="timeline__subtitle">MIT World Peace University, Pune</p>
-                            <p class="timeline__desc">CGPA: 7.43 · Specialising in AI & DS</p>
-                        </div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__dot"></div>
-                        <div class="timeline__content">
-                            <span class="timeline__date">2024</span>
-                            <h3 class="timeline__title">Built Tulsi Disease Detection</h3>
-                            <p class="timeline__desc">Computer Vision model using TensorFlow & OpenCV</p>
-                        </div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__dot"></div>
-                        <div class="timeline__content">
-                            <span class="timeline__date">2025</span>
-                            <h3 class="timeline__title">Developed NyayaAI LLM Assistant</h3>
-                            <p class="timeline__desc">RAG pipeline with LangChain & Flask</p>
-                        </div>
-                    </div>
-                    <div class="timeline__item">
-                        <div class="timeline__dot"></div>
-                        <div class="timeline__content">
-                            <span class="timeline__date">Ongoing</span>
-                            <h3 class="timeline__title">IBM Data Scientist Certificate</h3>
-                            <p class="timeline__desc">Professional certification</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__grid">
-                <div class="footer__col">
-                    <h3 class="footer__col-title">Rishav Singh</h3>
-                    <p class="footer__about-text">AI Systems Engineer specializing in LLM pipelines, computer vision,
-                        and building intelligence into production systems.</p>
-                    <div class="footer__social-links">
-                        <a href="https://github.com/Rishav408" target="_blank" class="footer__social-btn"
-                            aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/rishavsingh408" target="_blank" class="footer__social-btn"
-                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://x.com/RishavSingh408" target="_blank" class="footer__social-btn"
-                            aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__col-title">Quick Links</h3>
-                    <ul class="footer__links">
-                        <li><a href="index.html" class="footer__link">Home</a></li>
-                        <li><a href="about.html" class="footer__link">About</a></li>
-                        <li><a href="projects.html" class="footer__link">Projects</a></li>
-                        <li><a href="contact.html" class="footer__link">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <h3 class="footer__col-title">Contact Info</h3>
-                    <ul class="footer__links">
-                        <li><span class="footer__link">Pune, Maharashtra, India</span></li>
-                        <li><a href="mailto:rishav4805@gmail.com" class="footer__link">rishav4805@gmail.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer__bottom">
-                <p>&copy; <span id="currentYear"></span> Rishav Singh. All rights reserved.</p>
-                <p>Built with <i class="fas fa-heart" style="color: var(--accent-primary)"></i> and AI</p>
-            </div>
+        <div class="about__bio">
+          <p>
+            I'm a <strong>B.Tech student specializing in AI & Data Science</strong> at MIT World Peace University, Pune. I got into AI not because it was trendy, but because I was frustrated with how many impressive demos never became real systems. So I made it my goal to close that gap myself.
+          </p>
+          <p>
+            My work spans <strong>three domains</strong>: LLM systems and RAG pipelines (NyayaAI, ResolvAI, BharatNiti), computer vision applications (Tulsi Disease Detection, FaceMark attendance), and full-stack AI products that bring both together (CyberRakshak, Probity.ai). I care about <strong>privacy-first architectures</strong> — if a system can run locally, it should.
+          </p>
+          <p>
+            Beyond code, I think about AI infrastructure and deployment. Building a model is the easy part. Making it reliable, fast, and maintainable under real-world conditions is where the interesting work happens. That's the problem space I'm most interested in.
+          </p>
         </div>
-    </footer>
 
-    <!-- SCROLL TO TOP BUTTON -->
-    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-        <i class="fas fa-chevron-up"></i>
-    </button>
+        <!-- Quick facts -->
+        <div class="about__facts">
+          <div class="fact-item">
+            <span class="fact-item__label">Location</span>
+            <span class="fact-item__value">Pune, Maharashtra</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-item__label">Degree</span>
+            <span class="fact-item__value">B.Tech CSE · AI &amp; DS</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-item__label">Email</span>
+            <span class="fact-item__value">rishav4805@gmail.com</span>
+          </div>
+          <div class="fact-item">
+            <span class="fact-item__label">Status</span>
+            <span class="fact-item__value" style="color:var(--accent);">Open to opportunities</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- SCRIPTS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="module" src="assets/js/main.js"></script>
+<!-- ── SKILLS ─────────────────────────────────────────── -->
+<section class="section" style="background:var(--bg-surface); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);" id="skills">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:var(--s-2xl);">
+      <p class="section-label">Technical depth</p>
+      <h2 class="display-md">Skills &amp; stack</h2>
+    </div>
+
+    <div class="skills__grid">
+      <!-- Languages -->
+      <div class="reveal reveal-delay-1">
+        <div class="skills-category__head">Languages</div>
+        <div class="skills-badges">
+          <span class="skill-badge">Python</span>
+          <span class="skill-badge">SQL</span>
+          <span class="skill-badge">JavaScript</span>
+          <span class="skill-badge">HTML / CSS</span>
+          <span class="skill-badge">Bash</span>
+        </div>
+      </div>
+
+      <!-- ML & AI -->
+      <div class="reveal reveal-delay-2">
+        <div class="skills-category__head">ML &amp; AI</div>
+        <div class="skills-badges">
+          <span class="skill-badge">TensorFlow</span>
+          <span class="skill-badge">PyTorch</span>
+          <span class="skill-badge">scikit-learn</span>
+          <span class="skill-badge">OpenCV</span>
+          <span class="skill-badge">Hugging Face</span>
+          <span class="skill-badge">BERT</span>
+          <span class="skill-badge">Wav2Vec</span>
+        </div>
+      </div>
+
+      <!-- LLM & GenAI -->
+      <div class="reveal reveal-delay-3">
+        <div class="skills-category__head">LLM &amp; GenAI</div>
+        <div class="skills-badges">
+          <span class="skill-badge">LangChain</span>
+          <span class="skill-badge">RAG Pipelines</span>
+          <span class="skill-badge">Ollama</span>
+          <span class="skill-badge">LLaMA 3</span>
+          <span class="skill-badge">GPT APIs</span>
+          <span class="skill-badge">Prompt Eng.</span>
+          <span class="skill-badge">Vector DBs</span>
+        </div>
+      </div>
+
+      <!-- Infrastructure -->
+      <div class="reveal reveal-delay-4">
+        <div class="skills-category__head">Infrastructure</div>
+        <div class="skills-badges">
+          <span class="skill-badge">Flask</span>
+          <span class="skill-badge">Docker</span>
+          <span class="skill-badge">Firebase</span>
+          <span class="skill-badge">Git / GitHub</span>
+          <span class="skill-badge">REST APIs</span>
+          <span class="skill-badge">Streamlit</span>
+          <span class="skill-badge">Linux</span>
+        </div>
+      </div>
+
+      <!-- Data Science -->
+      <div class="reveal reveal-delay-5">
+        <div class="skills-category__head">Data Science</div>
+        <div class="skills-badges">
+          <span class="skill-badge">Pandas</span>
+          <span class="skill-badge">NumPy</span>
+          <span class="skill-badge">Plotly</span>
+          <span class="skill-badge">Matplotlib</span>
+          <span class="skill-badge">ETL Pipelines</span>
+          <span class="skill-badge">Jupyter</span>
+        </div>
+      </div>
+
+      <!-- Currently learning -->
+      <div class="reveal reveal-delay-1">
+        <div class="skills-category__head">Currently learning</div>
+        <div class="skills-badges">
+          <span class="skill-badge" style="border-color:var(--border-accent);color:var(--accent);">
+            Agentic AI
+          </span>
+          <span class="skill-badge" style="border-color:var(--border-accent);color:var(--accent);">
+            RLHF
+          </span>
+          <span class="skill-badge" style="border-color:var(--border-accent);color:var(--accent);">
+            MLOps
+          </span>
+          <span class="skill-badge" style="border-color:var(--border-accent);color:var(--accent);">
+            Kubernetes
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── JOURNEY / TIMELINE ─────────────────────────────── -->
+<section class="section" id="journey">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:var(--s-2xl);">
+      <p class="section-label">How I got here</p>
+      <h2 class="display-md">The journey so far</h2>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--s-3xl); align-items:start;" id="timelineGrid">
+
+      <!-- Education -->
+      <div class="reveal">
+        <h3 style="font-size:1rem; font-family:var(--font-mono); color:var(--text-muted); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:var(--s-xl);">
+          # Education
+        </h3>
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__date">2023 – Present</div>
+            <div class="timeline__card">
+              <h4 class="timeline__title">B.Tech CSE (AI &amp; Data Science)</h4>
+              <p class="timeline__subtitle">MIT World Peace University, Pune</p>
+              <p class="timeline__desc">CGPA: 7.43 · Specialising in AI, ML, and Data Science engineering</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__date">Ongoing</div>
+            <div class="timeline__card">
+              <h4 class="timeline__title">IBM Data Scientist Professional Certificate</h4>
+              <p class="timeline__desc">Covering Python, ML, data visualization, and applied data science workflows</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__date">2021 – 2023</div>
+            <div class="timeline__card">
+              <h4 class="timeline__title">Higher Secondary (Science &amp; Maths)</h4>
+              <p class="timeline__desc">Foundation in Mathematics, Physics, and Computer Science</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Milestones -->
+      <div class="reveal reveal-delay-2">
+        <h3 style="font-size:1rem; font-family:var(--font-mono); color:var(--text-muted); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:var(--s-xl);">
+          # Build milestones
+        </h3>
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__date">2025</div>
+            <div class="timeline__card">
+              <h4 class="timeline__title">NyayaAI &amp; ResolvAI</h4>
+              <p class="timeline__desc">Built full-stack LLM pipelines with RAG, LangChain, and local model inference. Both deployed and functional.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__date">2025</div>
+            <div class="timeline__card">
+              <h4 class="timeline__title">CyberRakshak &amp; Probity.ai</h4>
+              <p class="timeline__desc">Multimodal AI security and content integrity systems — novel architectures addressing real-world problems.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__date">2024</div>
+            <div class="timeline__card">
+              <h4 class="timeline__title">Tulsi Disease Detection</h4>
+              <p class="timeline__desc">End-to-end CV pipeline using custom CNNs with TensorFlow and OpenCV. First production-deployed ML model.</p>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__marker"></div>
+            <div class="timeline__date">Ongoing</div>
+            <div class="timeline__card">
+              <h4 class="timeline__title">14 Projects &amp; counting</h4>
+              <p class="timeline__desc">Across LLMs, Computer Vision, Web, and applications. Every project solves a real problem.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── PHILOSOPHY ─────────────────────────────────────── -->
+<section class="section" style="background:var(--bg-surface); border-top:1px solid var(--border-subtle);">
+  <div class="container">
+    <div style="max-width:720px; margin:0 auto;" class="reveal">
+      <p class="section-label">How I think</p>
+      <h2 class="display-md" style="margin-bottom:var(--s-xl);">
+        Design philosophy
+      </h2>
+
+      <div style="display:flex; flex-direction:column; gap:var(--s-lg);">
+        <div style="padding:var(--s-xl); background:var(--bg-base); border:1px solid var(--border-subtle); border-radius:var(--r-lg); border-left:3px solid var(--accent);">
+          <h4 style="font-size:1.0625rem; font-weight:600; margin-bottom:var(--s-sm);">
+            Production over polish
+          </h4>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.8;">
+            A beautiful model that doesn't deploy is a failed project. I build with the endpoint in mind from day one — API contracts, error handling, latency budgets, and real-world data distribution.
+          </p>
+        </div>
+
+        <div style="padding:var(--s-xl); background:var(--bg-base); border:1px solid var(--border-subtle); border-radius:var(--r-lg); border-left:3px solid var(--accent);">
+          <h4 style="font-size:1.0625rem; font-weight:600; margin-bottom:var(--s-sm);">
+            Privacy as a constraint, not an afterthought
+          </h4>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.8;">
+            ResolvAI and CyberRakshak both run entirely offline. If sensitive data is involved, it should never leave the machine. This shapes architecture decisions from the start.
+          </p>
+        </div>
+
+        <div style="padding:var(--s-xl); background:var(--bg-base); border:1px solid var(--border-subtle); border-radius:var(--r-lg); border-left:3px solid var(--accent);">
+          <h4 style="font-size:1.0625rem; font-weight:600; margin-bottom:var(--s-sm);">
+            Explainability is a feature
+          </h4>
+          <p style="font-size:0.9375rem; color:var(--text-secondary); line-height:1.8;">
+            FaceMark uses classical CV intentionally — LBPH and Haar Cascade over a neural network — because the recognition logic is transparent and debuggable. Explainability isn't a regression; sometimes it's the right tool.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ───────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:var(--s-xl); flex-wrap:wrap;" class="reveal">
+      <div>
+        <h2 class="display-md" style="margin-bottom:var(--s-sm);">Want to work together?</h2>
+        <p style="font-size:1.0625rem; color:var(--text-secondary);">I'm open to internships, collaborations, and interesting problems.</p>
+      </div>
+      <div style="display:flex; gap:var(--s-md); flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn--primary">Get in touch</a>
+        <a href="projects.html" class="btn btn--ghost">See my work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ── FOOTER ──────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__brand">rishav<span>.dev</span></p>
+        <p class="footer__blurb">AI Systems Engineer specializing in LLM pipelines, computer vision, and production ML. Based in Pune, India.</p>
+        <div class="footer__social">
+          <a href="https://github.com/Rishav408" target="_blank" rel="noopener" class="footer__social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/rishavsingh408" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://x.com/RishavSingh408" target="_blank" rel="noopener" class="footer__social-link" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__col-title">Navigation</p>
+        <ul class="footer__links">
+          <li><a href="index.html"    class="footer__link">Home</a></li>
+          <li><a href="about.html"    class="footer__link">About</a></li>
+          <li><a href="projects.html" class="footer__link">Projects</a></li>
+          <li><a href="contact.html"  class="footer__link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-title">Contact</p>
+        <ul class="footer__links">
+          <li><a href="mailto:rishav4805@gmail.com" class="footer__link">rishav4805@gmail.com</a></li>
+          <li><a href="https://linkedin.com/in/rishavsingh408" target="_blank" rel="noopener" class="footer__link">linkedin.com/in/rishavsingh408</a></li>
+          <li><span class="footer__link" style="cursor:default;">Pune, Maharashtra, India</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">&copy; <span id="footerYear"></span> Rishav Singh. All rights reserved.</p>
+      <p class="footer__made">Built with <i class="fas fa-heart"></i> and too much coffee</p>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script type="module" src="assets/js/main.js"></script>
+
+<!-- Timeline grid responsive -->
+<script>
+(function() {
+  const g = document.getElementById('timelineGrid');
+  if (!g) return;
+  function check() {
+    g.style.gridTemplateColumns = window.innerWidth < 768 ? '1fr' : '1fr 1fr';
+  }
+  check();
+  window.addEventListener('resize', check);
+})();
+</script>
 </body>
-
 </html>
