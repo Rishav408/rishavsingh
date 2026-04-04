@@ -82,6 +82,166 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // ── 3D Hero mouse parallax ─────────────────────────────
+  const bento = document.querySelector('.bento');
+  const hero = document.getElementById('hero');
+  if (bento && hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    bento.classList.add('bento--parallax');
+
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;  // -0.5 to 0.5
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+      // Subtle tilt: max 3 degrees
+      const rotateX = y * -3;
+      const rotateY = x * 3;
+
+      bento.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    hero.addEventListener('mouseleave', () => {
+      bento.style.transform = 'rotateX(0) rotateY(0)';
+    });
+  }
+
+  // ── Cursor trail glow in hero ──────────────────────────
+  if (hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const glow = document.createElement('div');
+    glow.className = 'hero__cursor-glow';
+    hero.style.position = 'relative';
+    hero.appendChild(glow);
+
+    let glowX = 0, glowY = 0, targetX = 0, targetY = 0;
+    let visible = false;
+
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      targetX = e.clientX - rect.left;
+      targetY = e.clientY - rect.top;
+      if (!visible) {
+        glow.style.opacity = '1';
+        visible = true;
+      }
+    });
+
+    hero.addEventListener('mouseleave', () => {
+      glow.style.opacity = '0';
+      visible = false;
+    });
+
+    function animateGlow() {
+      glowX += (targetX - glowX) * 0.08;
+      glowY += (targetY - glowY) * 0.08;
+      glow.style.left = glowX + 'px';
+      glow.style.top = glowY + 'px';
+      requestAnimationFrame(animateGlow);
+    }
+    animateGlow();
+  }
+
+  // ── Scroll progress bar ────────────────────────────────
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  progressBar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(progressBar);
+
+  function updateScrollProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = progress + '%';
+  }
+
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
+
+  // ── Footer entrance observer ───────────────────────────
+  const footer = document.querySelector('.footer');
+  if (footer) {
+    const footerObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            footerObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.05 }
+    );
+    footerObserver.observe(footer);
+
+    // If footer is already visible (short pages), show it immediately
+    const rect = footer.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      footer.classList.add('in-view');
+    }
+  }
+
+  // ── 3D tilt on project cards (mouse-follow) ────────────
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.project-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        card.style.transform = `rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-8px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+
+    // 3D tilt on flagship cards
+    document.querySelectorAll('.project-flagship').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        card.style.transform = `rotateY(${x * 4}deg) rotateX(${-y * 4}deg) translateY(-8px) translateZ(4px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+
+    // 3D tilt on spec cards
+    document.querySelectorAll('.spec-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        card.style.transform = `rotateY(${x * 6}deg) rotateX(${-y * 6}deg) translateY(-8px) translateZ(4px)`;
+      });
+
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+
+    // About photo tilt
+    const aboutImg = document.querySelector('.about__img');
+    if (aboutImg) {
+      aboutImg.addEventListener('mousemove', (e) => {
+        const rect = aboutImg.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        aboutImg.style.transform = `rotateY(${x * 10}deg) rotateX(${-y * 8}deg) scale(1.02)`;
+      });
+
+      aboutImg.addEventListener('mouseleave', () => {
+        aboutImg.style.transform = '';
+      });
+    }
+  }
+
   // ── Footer year ─────────────────────────────────────
   document.querySelectorAll('#footerYear').forEach(el => {
     el.textContent = new Date().getFullYear();

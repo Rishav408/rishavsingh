@@ -628,6 +628,31 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 80px;
 }
 
+/* Fix blurry text in hero — force crisp rendering */
+.hero *,
+.hero__container * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+  backface-visibility: visible;
+}
+
+/* Terminal & status cells — no 3D transform, crisp text only */
+.bento__cell--terminal,
+.bento__cell--status {
+  transform: translateZ(0) !important;
+  -webkit-transform: translateZ(0);
+  will-change: auto;
+}
+
+.bento__cell--terminal .terminal__body,
+.bento__cell--status .status-cell__text,
+.bento__cell--status .stat-chip__num {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
 /* Canvas particle background */
 #hero-canvas {
   position: absolute;
@@ -1367,21 +1392,28 @@ h1, h2, h3, h4, h5, h6 {
   content: 'Click to view details';
   position: absolute;
   inset: 0;
-  background: rgba(8, 12, 20, 0.7);
-  backdrop-filter: blur(2px);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.08em;
+  color: #ffffff;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   opacity: 0;
   transition: opacity var(--t-base) var(--ease-out);
   z-index: 2;
   pointer-events: none;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
+  text-shadow:
+    0 0 8px rgba(0,0,0,0.9),
+    0 0 16px rgba(0,0,0,0.7),
+    2px 2px 4px rgba(0,0,0,1),
+    -1px -1px 4px rgba(0,0,0,0.9),
+    1px -1px 4px rgba(0,0,0,0.9),
+    -1px 1px 4px rgba(0,0,0,0.9);
 }
 
 .project-flagship:hover .project-flagship__img-wrap::before {
@@ -1515,21 +1547,28 @@ h1, h2, h3, h4, h5, h6 {
   content: 'Click to view details';
   position: absolute;
   inset: 0;
-  background: rgba(8, 12, 20, 0.7);
-  backdrop-filter: blur(2px);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.08em;
+  color: #ffffff;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   opacity: 0;
   transition: opacity var(--t-base) var(--ease-out);
   z-index: 2;
   pointer-events: none;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
+  text-shadow:
+    0 0 8px rgba(0,0,0,0.9),
+    0 0 16px rgba(0,0,0,0.7),
+    2px 2px 4px rgba(0,0,0,1),
+    -1px -1px 4px rgba(0,0,0,0.9),
+    1px -1px 4px rgba(0,0,0,0.9),
+    -1px 1px 4px rgba(0,0,0,0.9);
 }
 
 .project-card:hover .project-card__img-wrap::before {
@@ -2369,13 +2408,29 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Flagship image overlay text readable */
 [data-theme="light"] .project-flagship__img-wrap::before {
-  background: rgba(244, 243, 238, 0.78);
-  color: var(--accent);
+  background: transparent;
+  color: #ffffff;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
+  text-shadow:
+    0 0 8px rgba(0,0,0,0.9),
+    0 0 16px rgba(0,0,0,0.7),
+    2px 2px 4px rgba(0,0,0,1),
+    -1px -1px 4px rgba(0,0,0,0.9),
+    1px -1px 4px rgba(0,0,0,0.9),
+    -1px 1px 4px rgba(0,0,0,0.9);
 }
 
 [data-theme="light"] .project-card__img-wrap::before {
-  background: rgba(244, 243, 238, 0.78);
-  color: var(--accent);
+  background: transparent;
+  color: #ffffff;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.8);
+  text-shadow:
+    0 0 8px rgba(0,0,0,0.9),
+    0 0 16px rgba(0,0,0,0.7),
+    2px 2px 4px rgba(0,0,0,1),
+    -1px -1px 4px rgba(0,0,0,0.9),
+    1px -1px 4px rgba(0,0,0,0.9),
+    -1px 1px 4px rgba(0,0,0,0.9);
 }
 
 /* Project list items */
@@ -2674,7 +2729,775 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.9em;
 }
 
-/* ── UTILITY ─────────────────────────────────────────────── */
+/* ============================================================
+   3D EFFECTS & IMMERSIVE ANIMATIONS — ALL PHASES
+   Premium, cinematic, Apple-level polish
+   ============================================================ */
+
+/* ── PHASE 1: 3D FOUNDATION ────────────────────────────── */
+
+/* Perspective container for bento and grids */
+.bento {
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+.projects__grid,
+.spec-grid {
+  perspective: 1200px;
+}
+
+/* Multi-layer depth shadows */
+.shadow-depth {
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.04),
+    0 8px 16px rgba(0,0,0,0.08),
+    0 24px 48px rgba(0,0,0,0.12);
+}
+
+/* 3D transform base for all tilt elements */
+.tilt-3d {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 400ms var(--ease-out);
+}
+
+/* Enhanced hover shadows with directional offset */
+.card-hover-3d {
+  transition: transform 400ms var(--ease-out),
+              box-shadow 400ms var(--ease-out);
+}
+
+.card-hover-3d:hover {
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.06),
+    0 12px 24px rgba(0,0,0,0.10),
+    0 32px 64px rgba(0,0,0,0.14);
+}
+
+/* ── PHASE 2: HERO 3D ─────────────────────────────────── */
+
+/* Bento cell 3D entrance animation */
+.bento__cell {
+  opacity: 0;
+  transform: rotateX(8deg) translateY(40px) rotateY(-3deg) scale(0.96);
+  animation: bentoLand 700ms var(--ease-out) forwards;
+}
+
+.bento__cell--main   { animation: bentoLandMain 700ms var(--ease-out) 100ms forwards; }
+.bento__cell--terminal { animation: bentoLandTerminal 700ms var(--ease-out) 250ms forwards; }
+.bento__cell--status  { animation: bentoLandStatus 700ms var(--ease-out) 400ms forwards; }
+
+@keyframes bentoLand {
+  to {
+    opacity: 1;
+    transform: rotateX(0) translateY(0) rotateY(0) scale(1);
+  }
+}
+
+@keyframes bentoLandMain {
+  to {
+    opacity: 1;
+    transform: translateZ(30px);
+  }
+}
+
+/* Hero image background for main bento cell */
+.bento__cell--main__bg {
+  position: absolute;
+  inset: 0;
+  background: url('../img/hero-img.jpg') center center / cover no-repeat;
+  opacity: 0.90;
+  z-index: 0;
+  pointer-events: none;
+  filter: saturate(0.8) brightness(0.7);
+  transition: opacity 600ms var(--ease-out);
+}
+
+.bento__cell--main:hover .bento__cell--main__bg {
+  opacity: 1;
+  filter: saturate(1) brightness(0.75);
+}
+
+/* Gradient overlay for text readability — shadow on the left */
+.bento__cell--main::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.55) 35%, rgba(0, 0, 0, 0.15) 60%, transparent 85%);
+  z-index: 0;
+  pointer-events: none;
+  transition: opacity 600ms var(--ease-out);
+}
+
+/* Light mode: show photo background at 90% opacity */
+[data-theme="light"] .bento__cell--main__bg {
+  opacity: 0.90;
+  filter: saturate(0.7) brightness(0.85);
+}
+
+[data-theme="light"] .bento__cell--main:hover .bento__cell--main__bg {
+  opacity: 1;
+  filter: saturate(0.8) brightness(0.8);
+}
+
+/* Dark gradient overlay so text pops on top of photo */
+[data-theme="light"] .bento__cell--main::before {
+  background: linear-gradient(105deg, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.65) 30%, rgba(0, 0, 0, 0.35) 55%, rgba(0, 0, 0, 0.10) 75%, transparent 95%);
+}
+
+/* Light mode hero text — pure black, pure white, electric lime yellow */
+[data-theme="light"] .bento-main__name {
+  color: #000000 !important;
+}
+
+[data-theme="light"] .bento-main__name span {
+  color: #CCFF00 !important;
+}
+
+[data-theme="light"] .bento-main__thesis {
+  color: #F9FAFB !important;
+}
+
+[data-theme="light"] .bento-main__thesis em {
+  color: #FFFFFF !important;
+  font-style: normal;
+}
+
+[data-theme="light"] .bento__cell--main > p:not(.bento-main__label):not(.bento-main__thesis) {
+  color: #D1D5DB !important;
+}
+
+[data-theme="light"] .bento-main__label {
+  color: #CCFF00 !important;
+}
+
+[data-theme="light"] .bento-main__label::before {
+  background: #CCFF00 !important;
+}
+
+[data-theme="light"] .bento-main__actions .btn--primary {
+  background: #CCFF00 !important;
+  color: #000000 !important;
+  border-color: #CCFF00 !important;
+}
+
+[data-theme="light"] .bento-main__actions .btn--primary:hover {
+  background: #B4D600 !important;
+  border-color: #B4D600 !important;
+}
+
+[data-theme="light"] .bento-main__actions .btn--ghost {
+  color: #FFFFFF !important;
+  border-color: rgba(255,255,255,0.35) !important;
+}
+
+[data-theme="light"] .bento-main__actions .btn--ghost:hover {
+  background: rgba(255,255,255,0.10) !important;
+  border-color: rgba(255,255,255,0.50) !important;
+}
+
+[data-theme="light"] .terminal__key {
+  color: #0F6AB4 !important;
+}
+
+/* Ensure content sits above all backgrounds */
+.bento__cell--main > *:not(.bento__cell--main__bg) {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes bentoLandTerminal {
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes bentoLandStatus {
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+/* Hero grid mouse parallax (JS-driven) */
+.bento--parallax {
+  transition: transform 200ms ease-out;
+}
+
+/* Terminal glass morphism */
+.bento__cell--terminal {
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.06),
+    0 8px 32px rgba(0,0,0,0.3);
+}
+
+[data-theme="light"] .bento__cell--terminal {
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow:
+    inset 0 1px 0 rgba(0,0,0,0.02),
+    0 8px 32px rgba(0,0,0,0.08);
+}
+
+/* Status badge glow pulse on numbers */
+.stat-chip__num {
+  text-shadow: 0 0 12px var(--accent-dim);
+  animation: numGlow 3s ease-in-out infinite;
+}
+
+@keyframes numGlow {
+  0%, 100% { text-shadow: 0 0 8px var(--accent-dim); }
+  50%      { text-shadow: 0 0 20px var(--accent-glow), 0 0 40px var(--accent-dim); }
+}
+
+/* ── PHASE 3: SCROLL-DRIVEN 3D ────────────────────────── */
+
+/* 3D scroll reveal — replaces flat translateY */
+.reveal {
+  opacity: 0;
+  transform: rotateX(4deg) translateY(30px) scale(0.97);
+  transform-origin: center top;
+  transition: opacity 600ms var(--ease-out),
+              transform 600ms var(--ease-out);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: rotateX(0) translateY(0) scale(1);
+}
+
+/* Staggered 3D grid assembly — cards enter from different angles */
+/* Base state: hidden, animated in by IntersectionObserver */
+.spec-grid .spec-card,
+.projects__grid .project-card {
+  opacity: 0;
+  transition: opacity 600ms var(--ease-out),
+              transform 600ms var(--ease-out);
+}
+
+.spec-grid .spec-card:nth-child(3n+1),
+.projects__grid .project-card:nth-child(3n+1) {
+  transform: rotateY(-8deg) translateX(-30px);
+}
+
+.spec-grid .spec-card:nth-child(3n+2),
+.projects__grid .project-card:nth-child(3n+2) {
+  transform: rotateX(6deg) translateY(30px);
+}
+
+.spec-grid .spec-card:nth-child(3n),
+.projects__grid .project-card:nth-child(3n) {
+  transform: rotateY(8deg) translateX(30px);
+}
+
+.spec-grid .spec-card.in-view,
+.projects__grid .project-card.in-view {
+  opacity: 1;
+  transform: rotateY(0) rotateX(0) translateX(0) translateY(0) scale(1);
+}
+
+/* Parallax section scroll effect */
+.section {
+  will-change: transform;
+}
+
+.section--parallax {
+  transition: transform 100ms linear;
+}
+
+/* ── PHASE 4: PROJECT CARDS & MODAL 3D ────────────────── */
+
+/* Mouse-follow tilt on project cards */
+.project-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 350ms var(--ease-out),
+              box-shadow 350ms var(--ease-out);
+}
+
+.project-card:hover {
+  transform: rotateX(-3deg) translateY(-8px);
+  box-shadow:
+    0 6px 12px rgba(0,0,0,0.08),
+    0 16px 32px rgba(0,0,0,0.12),
+    0 40px 80px rgba(0,0,0,0.16);
+}
+
+/* Image depth lift on hover */
+.project-card__img-wrap {
+  transform-style: preserve-3d;
+  perspective: 800px;
+}
+
+.project-card__img {
+  transition: transform 500ms var(--ease-out),
+              filter 500ms var(--ease-out);
+}
+
+.project-card:hover .project-card__img {
+  transform: scale(1.06) translateZ(10px);
+}
+
+/* Flagship card 3D hover */
+.project-flagship {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 400ms var(--ease-out),
+              box-shadow 400ms var(--ease-out);
+}
+
+.project-flagship:hover {
+  transform: rotateX(-2deg) translateY(-8px) translateZ(4px);
+  box-shadow:
+    0 8px 16px rgba(0,0,0,0.10),
+    0 20px 40px rgba(0,0,0,0.14),
+    0 48px 96px rgba(0,0,0,0.18);
+}
+
+/* Modal 3D entrance — like a physical panel swinging in */
+.modal__box {
+  transform-origin: center top;
+  transform: rotateX(-5deg) scale(0.9) translateY(30px);
+  transition: transform 400ms var(--ease-out),
+              opacity 300ms var(--ease-out);
+}
+
+.modal.active .modal__box {
+  transform: rotateX(0) scale(1) translateY(0);
+}
+
+/* Architecture diagram 3D steps — pipeline depth */
+.arch-step {
+  opacity: 0;
+  transform: translateZ(-10px) translateY(8px);
+  animation: archStepIn 400ms var(--ease-out) forwards;
+}
+
+.arch-step:nth-child(1) { animation-delay: 100ms; }
+.arch-step:nth-child(2) { animation-delay: 200ms; }
+.arch-step:nth-child(3) { animation-delay: 300ms; }
+.arch-step:nth-child(4) { animation-delay: 400ms; }
+.arch-step:nth-child(5) { animation-delay: 500ms; }
+
+.arch-step:nth-child(even) {
+  transform: translateZ(-15px) translateY(8px);
+}
+
+.arch-step:nth-child(odd) {
+  transform: translateZ(-5px) translateY(8px);
+}
+
+@keyframes archStepIn {
+  to {
+    opacity: 1;
+    transform: translateZ(0) translateY(0);
+  }
+}
+
+/* Tech stack pill spring pop-in */
+.tech-pill {
+  opacity: 0;
+  transform: scale(0);
+  animation: pillPop 350ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.tech-pill:nth-child(1) { animation-delay: 50ms; }
+.tech-pill:nth-child(2) { animation-delay: 100ms; }
+.tech-pill:nth-child(3) { animation-delay: 150ms; }
+.tech-pill:nth-child(4) { animation-delay: 200ms; }
+.tech-pill:nth-child(5) { animation-delay: 250ms; }
+.tech-pill:nth-child(6) { animation-delay: 300ms; }
+.tech-pill:nth-child(7) { animation-delay: 350ms; }
+.tech-pill:nth-child(8) { animation-delay: 400ms; }
+.tech-pill:nth-child(9) { animation-delay: 450ms; }
+
+@keyframes pillPop {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Differentiator items stagger */
+.modal__diff-item {
+  opacity: 0;
+  transform: translateX(-12px);
+  animation: diffSlide 300ms var(--ease-out) forwards;
+}
+
+.modal__diff-item:nth-child(1) { animation-delay: 150ms; }
+.modal__diff-item:nth-child(2) { animation-delay: 250ms; }
+.modal__diff-item:nth-child(3) { animation-delay: 350ms; }
+
+@keyframes diffSlide {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ── PHASE 5: ABOUT PAGE 3D ───────────────────────────── */
+
+/* Profile photo 3D tilt on hover */
+.about__image-wrap {
+  perspective: 1000px;
+}
+
+.about__img {
+  transition: transform 400ms var(--ease-out),
+              box-shadow 400ms var(--ease-out);
+  transform-style: preserve-3d;
+}
+
+.about__img:hover {
+  transform: rotateY(-4deg) rotateX(3deg) scale(1.02);
+  box-shadow:
+    0 12px 24px rgba(0,0,0,0.12),
+    0 32px 64px rgba(0,0,0,0.16);
+}
+
+/* Timeline 3D sphere markers */
+.timeline__marker {
+  width: 14px;
+  height: 14px;
+  left: -30px;
+  top: 4px;
+  border: 2.5px solid var(--accent);
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.2),
+    inset 0 1px 2px rgba(255,255,255,0.1);
+  transition: transform 300ms var(--ease-out),
+              box-shadow 300ms var(--ease-out);
+  transform-style: preserve-3d;
+}
+
+.timeline__marker::after {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: var(--bg-base);
+  transition: background 300ms var(--ease-out);
+}
+
+.timeline__item:hover .timeline__marker {
+  transform: translateZ(8px) scale(1.2);
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.3),
+    0 0 16px var(--accent-glow),
+    inset 0 1px 2px rgba(255,255,255,0.15);
+}
+
+.timeline__item:hover .timeline__marker::after {
+  background: var(--accent);
+}
+
+/* Cert carousel 3D slide */
+.cert-group {
+  animation: certSlide3D 350ms var(--ease-out);
+}
+
+@keyframes certSlide3D {
+  from {
+    opacity: 0;
+    transform: translateX(60px) rotateY(-6deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+
+/* Philosophy cards unstack on scroll */
+.section .reveal > div > div[style*="border-left"] {
+  opacity: 0;
+  transform: rotateX(2deg) translateY(16px) translateZ(-4px);
+  transition: opacity 500ms var(--ease-out),
+              transform 500ms var(--ease-out);
+}
+
+.section .reveal > div > div[style*="border-left"].in-view,
+.section .reveal.in-view > div > div[style*="border-left"] {
+  opacity: 1;
+  transform: rotateX(0) translateY(0) translateZ(0);
+}
+
+/* Skill badge magnetic hover with Z-depth */
+.skill-badge {
+  transition: transform 250ms var(--ease-out),
+              box-shadow 250ms var(--ease-out),
+              border-color 250ms var(--ease-out),
+              color 250ms var(--ease-out),
+              background-color 250ms var(--ease-out);
+  transform-style: preserve-3d;
+}
+
+.skill-badge:hover {
+  transform: scale(1.08) translateZ(4px);
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.08),
+    0 8px 16px rgba(0,0,0,0.12);
+}
+
+/* ── PHASE 6: CONTACT PAGE 3D ─────────────────────────── */
+
+/* Form field focus lift */
+.form-input,
+.form-textarea {
+  transition: transform 250ms var(--ease-out),
+              box-shadow 250ms var(--ease-out),
+              border-color 250ms var(--ease-out);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.06),
+    0 0 0 3px var(--accent-dim);
+}
+
+/* Submit button 3D press */
+.btn--primary:active {
+  transform: translateY(1px) scale(0.98);
+  transition: transform 100ms ease-out;
+}
+
+/* Contact link 3D hover tilt */
+.contact__link-item {
+  transform-style: preserve-3d;
+  perspective: 800px;
+  transition: transform 300ms var(--ease-out),
+              box-shadow 300ms var(--ease-out);
+}
+
+.contact__link-item:hover {
+  transform: rotateY(-2deg) translateX(4px);
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.06),
+    0 8px 16px rgba(0,0,0,0.08);
+}
+
+/* FAQ 3D accordion */
+details[open] > div,
+details[open] > summary ~ * {
+  animation: accordionOpen 300ms var(--ease-out);
+}
+
+@keyframes accordionOpen {
+  from {
+    opacity: 0;
+    transform: rotateX(-3deg) translateY(-8px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0) translateY(0);
+    max-height: 500px;
+  }
+}
+
+details summary {
+  transition: background-color 200ms ease-out, color 200ms ease-out;
+}
+
+details summary:hover {
+  background: var(--bg-elevated);
+}
+
+details[open] summary {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* ── PHASE 7: GLOBAL POLISH ───────────────────────────── */
+
+/* Cursor trail glow in hero (JS-driven, CSS fallback) */
+.hero__cursor-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 600ms ease-out;
+  z-index: 1;
+}
+
+[data-theme="light"] .hero__cursor-glow {
+  opacity: 0 !important;
+}
+
+/* Nav link underline 3D sweep */
+.nav__link::after {
+  transform-origin: left center;
+  transform: skewX(-10deg) scaleX(0);
+  transition: transform 300ms var(--ease-out);
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+.nav__link:hover::after,
+.nav__link.active::after {
+  transform: skewX(-10deg) scaleX(1);
+}
+
+/* Scroll progress bar */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-blue), var(--accent));
+  z-index: 10001;
+  transition: width 50ms linear;
+  box-shadow: 0 0 8px var(--accent-dim);
+}
+
+/* Footer entrance from below */
+.footer {
+  opacity: 0;
+  transform: translateY(20px) rotateX(2deg);
+  transition: opacity 600ms var(--ease-out),
+              transform 600ms var(--ease-out);
+}
+
+.footer.in-view {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+
+/* Footer social icon bounce on hover */
+.footer__social-link {
+  transition: transform 200ms var(--ease-out),
+              border-color 150ms ease-out,
+              color 150ms ease-out,
+              background-color 150ms ease-out;
+}
+
+.footer__social-link:hover {
+  transform: translateY(-3px) scale(1.08);
+}
+
+/* Spec card 3D tilt on hover (enhanced) */
+.spec-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 400ms var(--ease-out),
+              box-shadow 400ms var(--ease-out),
+              border-color 280ms ease-out,
+              background-color 280ms ease-out;
+}
+
+.spec-card:hover {
+  transform: rotateX(-3deg) translateY(-8px) translateZ(4px);
+  box-shadow:
+    0 8px 16px rgba(0,0,0,0.10),
+    0 20px 40px rgba(0,0,0,0.14),
+    0 40px 80px rgba(0,0,0,0.16);
+}
+
+/* Bento cell hover subtle lift */
+.bento__cell {
+  transition: border-color 280ms ease-out,
+              transform 400ms var(--ease-out);
+}
+
+/* Card generic 3D hover */
+.card {
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  transform: translateY(-6px) rotateX(-2deg);
+}
+
+/* Timeline card 3D hover */
+.timeline__card {
+  transition: transform 300ms var(--ease-out),
+              border-color 280ms ease-out,
+              box-shadow 300ms var(--ease-out);
+  transform-style: preserve-3d;
+}
+
+.timeline__item:hover .timeline__card {
+  transform: translateX(4px) translateZ(2px);
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.06),
+    0 8px 16px rgba(0,0,0,0.08);
+}
+
+/* Filter button press effect */
+.filter-btn:active {
+  transform: scale(0.96);
+  transition: transform 100ms ease-out;
+}
+
+/* Project list item 3D hover */
+.project-list-item {
+  transition: transform 250ms var(--ease-out),
+              box-shadow 250ms var(--ease-out);
+}
+
+.project-list-item:hover {
+  transform: translateX(6px) translateZ(2px);
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.06),
+    0 8px 16px rgba(0,0,0,0.08);
+}
+
+/* Scroll to top button 3D press */
+.scroll-top:active {
+  transform: scale(0.92) translateY(1px);
+}
+
+/* Theme toggle enhanced rotation on click */
+.theme-toggle {
+  transition: transform 300ms var(--ease-out),
+              background-color 350ms var(--ease-in-out),
+              border-color 350ms var(--ease-in-out),
+              color 350ms var(--ease-in-out);
+}
+
+.theme-toggle:active {
+  transform: rotate(15deg) scale(0.92);
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .bento__cell {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .spec-grid .spec-card,
+  .projects__grid .project-card {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero__cursor-glow { display: none; }
+  .scroll-progress { display: none; }
+}
 .flex         { display: flex; }
 .flex-center  { display: flex; align-items: center; justify-content: center; }
 .gap-xs       { gap: var(--s-xs); }

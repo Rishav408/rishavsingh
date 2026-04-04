@@ -2,6 +2,29 @@
  * projects.js – Load project data from JSON and render cards & modal
  */
 
+// Shared observer for 3D card entrance animations
+function observeGridCards(container) {
+    const cards = container.querySelectorAll('.project-card');
+    if (!cards.length) return;
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.05, rootMargin: '0px 0px -10px 0px' }
+    );
+
+    cards.forEach((card, i) => {
+        card.style.transitionDelay = `${i * 60}ms`;
+        observer.observe(card);
+    });
+}
+
 export async function initProjects() {
     const allProjectsGrid = document.getElementById('allProjectsGrid');
     const flagshipGrid = document.getElementById('flagshipGrid');
@@ -77,6 +100,24 @@ function renderAllProjectsGrid(projects, grid) {
             </div>
         </div>
     `).join('');
+
+    // Observe cards for 3D entrance animation
+    observeGridCards(grid);
+
+    // Attach 3D tilt to dynamically rendered cards
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        grid.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                card.style.transform = `rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-8px)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    }
 }
 
 function renderProjects(projects, grid) {
@@ -96,6 +137,8 @@ function renderProjects(projects, grid) {
             </div>
         </div>
     `).join('');
+
+    observeGridCards(grid);
 }
 
 function renderFlagship(projects, grid) {
@@ -128,6 +171,20 @@ function renderFlagship(projects, grid) {
             </div>
         </div>
     `).join('');
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        grid.querySelectorAll('.project-flagship').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                card.style.transform = `rotateY(${x * 4}deg) rotateX(${-y * 4}deg) translateY(-8px) translateZ(4px)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    }
 }
 
 function renderNotable(projects, grid) {
@@ -152,6 +209,23 @@ function renderNotable(projects, grid) {
             </div>
         </div>
     `).join('');
+
+    // Observe cards for 3D entrance
+    observeGridCards(grid);
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        grid.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                card.style.transform = `rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-8px)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    }
 }
 
 function renderList(projects, grid) {
