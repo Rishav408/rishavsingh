@@ -27,6 +27,11 @@ $RECYCLE.BIN/
 .settings/
 
 # ============================================
+# Local AI Assistant Config
+# ============================================
+.qwen/
+
+# ============================================
 # Terminal & Shell
 # ============================================
 *.log
@@ -62,13 +67,17 @@ secrets.json
 service-account.json
 
 # ============================================
-# Firebase
+# Firebase (local deploy config only)
 # ============================================
+.firebaserc
 .firebase/
+firebase.json
+firestore.rules
 firebase-debug.log*
 firestore-debug.log*
 ui-debug.log*
 .runtimeconfig.json
+deploy.ps1
 
 # ============================================
 # Python (for any local scripts)
