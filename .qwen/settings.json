@@ -1,7 +1,13 @@
 {
   "permissions": {
     "allow": [
-      "Bash(ren *)"
+      "Bash(ren *)",
+      "Bash(git rm *)",
+      "Bash(git add *)",
+      "Bash(git reset *)",
+      "Bash(del *)",
+      "Bash(dir *)"
     ]
-  }
+  },
+  "$version": 3
 }
