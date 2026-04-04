@@ -1115,7 +1115,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2px;
 }
 
-.about__content {}
 
 .about__bio p {
   font-size: 1.0625rem;
@@ -2077,7 +2076,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-body);
   font-size: 0.9375rem;
   transition: border-color var(--t-fast), box-shadow var(--t-fast);
-  -webkit-appearance: none;
 }
 
 .form-textarea {
