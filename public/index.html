@@ -3,32 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rishav Singh — AI Systems Engineer</title>
-  <meta name="description" content="AI Systems Engineer building LLM pipelines, computer vision systems, and production-ready ML infrastructure. Based in Pune, India.">
-  <meta name="keywords" content="AI Engineer, Machine Learning, LLM, RAG, Computer Vision, Portfolio, Rishav Singh">
+  <title>Rishav Singh — AI &amp; Systems Engineer</title>
+  <meta name="description" content="I build AI systems that work offline, understand multiple languages, and ship to production. Currently finishing B.Tech at MIT-WPU. Open to SDE and AI/ML roles.">
+  <meta name="keywords" content="AI Engineer, Machine Learning, NLP, Computer Vision, Portfolio, Rishav Singh">
   <meta name="author" content="Rishav Singh">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Rishav Singh — AI Systems Engineer">
-  <meta property="og:description" content="Building AI systems that work in the real world — not just in notebooks.">
+  <meta property="og:title" content="Rishav Singh — AI & Systems Engineer">
+  <meta property="og:description" content="Building AI systems that work offline, understand multiple languages, and ship to production.">
   <meta property="og:url" content="https://rishavsingh4805.web.app">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
 
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/img/Rlogo.jpg">
   <link rel="apple-touch-icon" href="assets/img/Rlogo.jpg">
 
-  <!-- Fonts -->
+  <!-- Fonts: Inter + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
-  <!-- Clash Display via Fontshare CDN -->
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
@@ -37,614 +31,439 @@
 
 <a href="#main-content" class="skip-link">Skip to content</a>
 
-<!-- ── HEADER ─────────────────────────────────────────── -->
-<header class="header" id="header">
-  <div class="header__inner">
-    <a href="index.html" class="header__logo" aria-label="Rishav Singh — home">
-      <span class="header__logo-dot"></span>
-      rishav.dev
-    </a>
+<!-- ── NAVIGATION ──────────────────────────────────────── -->
+<nav class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#" class="nav__name">Rishav Singh</a>
 
-    <nav aria-label="Main navigation">
-      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav__menu" id="navMenu" role="list">
-        <li><a href="index.html"    class="nav__link active">Home</a></li>
-        <li><a href="about.html"    class="nav__link">About</a></li>
-        <li><a href="projects.html" class="nav__link">Projects</a></li>
-        <li>
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark theme">
-            <i class="fas fa-moon"></i>
-          </button>
-        </li>
-        <li><a href="contact.html"  class="nav__cta">Let's Talk</a></li>
-      </ul>
-    </nav>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#about" class="nav__link">About</a></li>
+      <li><a href="#experience" class="nav__link">Experience</a></li>
+      <li><a href="#projects" class="nav__link">Projects</a></li>
+      <li><a href="#writing" class="nav__link">Writing</a></li>
+      <li><a href="#contact" class="nav__link">Contact</a></li>
+    </ul>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navDrawer" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
-</header>
 
-<!-- ── HERO ───────────────────────────────────────────── -->
+  <!-- Mobile drawer -->
+  <div class="nav__drawer" id="navDrawer">
+    <div class="nav__drawer-links">
+      <a href="#about" class="nav__drawer-link">About</a>
+      <a href="#experience" class="nav__drawer-link">Experience</a>
+      <a href="#projects" class="nav__drawer-link">Projects</a>
+      <a href="#writing" class="nav__drawer-link">Writing</a>
+      <a href="#contact" class="nav__drawer-link">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── MAIN CONTENT ────────────────────────────────────── -->
 <main id="main-content">
-<section class="hero" id="hero">
-  <canvas id="hero-canvas" aria-hidden="true"></canvas>
 
-  <div class="hero__container">
-    <div class="bento">
+  <!-- ── HERO ──────────────────────────────────────────── -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <img
+        src="assets/img/rks.jpg"
+        alt="Rishav Singh"
+        class="hero__photo"
+        width="80"
+        height="80"
+      >
 
-      <!-- Cell 1: Main identity block -->
-      <div class="bento__cell bento__cell--main">
-        <div class="bento__cell--main__bg"></div>
-        <p class="bento-main__label">AI Systems Engineer</p>
+      <h1 class="hero__name">Rishav Singh</h1>
 
-        <h1 class="bento-main__name" style="color:#FFFFFF;">
-          Rishav<br>
-          <span style="color:#CCFF00;">Singh.</span>
-        </h1>
+      <p class="hero__tagline">AI &amp; Systems Engineer — Pune, India</p>
 
-        <p class="bento-main__thesis" style="color:#F3F4F6; font-size:1.25rem;">
-          Most ML models never leave a notebook.<br>
-          <em style="color:#FFFFFF;font-style:normal;">Mine do.</em>
-        </p>
-
-        <p style="font-size:1.0625rem; color:#E5E7EB; margin-bottom:var(--s-xl); line-height:1.7;">
-          Building multilingual NLP systems, offline computer<br>
-          vision pipelines, and privacy-first AI — from idea to production.
-        </p>
-
-        <div class="bento-main__actions">
-          <a href="projects.html" class="btn btn--primary" style="background:#CCFF00;color:#000000;border-color:#CCFF00;">
-            View Projects <i class="fas fa-arrow-right" style="font-size:0.75rem"></i>
-          </a>
-          <a href="contact.html" class="btn btn--ghost" style="color:#FFFFFF;border-color:rgba(255,255,255,0.3);">Get in Touch</a>
-          <a href="assets/img/Rishav-Resume.pdf" class="btn btn--ghost" target="_blank" rel="noopener" style="color:#FFFFFF;border-color:rgba(255,255,255,0.3);">
-            <i class="fas fa-download" style="font-size:0.75rem"></i> Résumé
-          </a>
-        </div>
-
-        <div class="bento-main__social">
-          <a href="https://github.com/Rishav408" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/rishavsingh408" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://x.com/RishavSingh408" target="_blank" rel="noopener" aria-label="X / Twitter">
-            <i class="fab fa-x-twitter"></i>
-          </a>
-          <a href="mailto:rishav4805@gmail.com" aria-label="Email">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Cell 2: Terminal -->
-      <div class="bento__cell bento__cell--terminal">
-        <div class="bento-terminal">
-          <div class="terminal__titlebar">
-            <span class="terminal__dot"></span>
-            <span class="terminal__dot"></span>
-            <span class="terminal__dot"></span>
-            <span class="terminal__title">bash — rishav@dev</span>
-          </div>
-          <div class="terminal__body" aria-label="Terminal output showing whoami information">
-            <span class="terminal__line">
-              <span class="terminal__prompt">$ </span>
-              <span class="terminal__cmd">whoami</span>
-            </span>
-            <span class="terminal__line terminal__dim">──────────────────</span>
-            <span class="terminal__line">
-              <span class="terminal__key">name</span>
-              <span class="terminal__dim">: </span>
-              <span class="terminal__val">Rishav Singh</span>
-            </span>
-            <span class="terminal__line">
-              <span class="terminal__key">role</span>
-              <span class="terminal__dim">: </span>
-              <span class="terminal__val">AI Systems Eng.</span>
-            </span>
-            <span class="terminal__line">
-              <span class="terminal__key">stack</span>
-              <span class="terminal__dim">: </span>
-              <span class="terminal__val">Python, LangChain</span>
-            </span>
-            <span class="terminal__line">
-              <span class="terminal__key">focus</span>
-              <span class="terminal__dim">: </span>
-              <span class="terminal__val">LLMs &middot; ML &middot; RAG</span>
-            </span>
-            <span class="terminal__line">
-              <span class="terminal__key">edu</span>
-              <span class="terminal__dim">: </span>
-              <span class="terminal__val">B.Tech CSE AI+DS</span>
-            </span>
-            <span class="terminal__line">
-              <span class="terminal__key">loc</span>
-              <span class="terminal__dim">: </span>
-              <span class="terminal__val">Pune, India</span>
-            </span>
-            <span class="terminal__line terminal__dim">──────────────────</span>
-            <span class="terminal__line">
-              <span class="terminal__prompt">$ </span>
-              <span class="terminal__cursor" aria-hidden="true"></span>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Cell 3: Status + stats -->
-      <div class="bento__cell bento__cell--status">
-        <div>
-          <div class="status-cell__availability">
-            <span class="status-dot" aria-hidden="true"></span>
-            <span class="status-cell__text">Open to Opportunities</span>
-          </div>
-          <p class="status-cell__sub" style="margin-top:4px; padding-left: 20px;">
-            Pune · IST · UTC+5:30
-          </p>
-        </div>
-
-        <div class="status-cell__stats">
-          <div class="stat-chip">
-            <span class="stat-chip__num">14</span>
-            <span class="stat-chip__label">Projects built</span>
-          </div>
-          <div class="stat-chip">
-            <span class="stat-chip__num">4</span>
-            <span class="stat-chip__label">Live systems</span>
-          </div>
-          <div class="stat-chip">
-            <span class="stat-chip__num">3+</span>
-            <span class="stat-chip__label">Domains covered</span>
-          </div>
-          <div class="stat-chip">
-            <span class="stat-chip__num">7.43</span>
-            <span class="stat-chip__label">CGPA</span>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /bento -->
-  </div>
-
-  <!-- Scroll indicator -->
-  <div style="position:absolute; bottom:var(--s-xl); left:50%; transform:translateX(-50%); display:flex; flex-direction:column; align-items:center; gap:6px;" aria-hidden="true">
-    <span style="font-family:var(--font-mono); font-size:0.6875rem; color:var(--text-muted); letter-spacing:0.1em; text-transform:uppercase;">scroll</span>
-    <div style="width:1px; height:36px; background:linear-gradient(to bottom, var(--text-muted), transparent);"></div>
-  </div>
-</section>
-
-<!-- ── SPECIALIZATIONS ─────────────────────────────────── -->
-<section class="section" id="specializations">
-  <div class="container">
-    <div class="reveal">
-      <p class="section-label">What I do</p>
-      <h2 class="display-md" style="margin-bottom:var(--s-2xl)">
-        Specialized expertise<br>
-        <span style="color:var(--text-secondary); font-size:0.75em; font-weight:400;">in three overlapping domains</span>
-      </h2>
-    </div>
-
-    <div class="spec-grid">
-      <!-- Card 1 -->
-      <div class="spec-card reveal reveal-delay-1">
-        <div class="spec-card__icon" aria-hidden="true">
-          <i class="fas fa-robot"></i>
-        </div>
-        <h3 class="spec-card__title">Generative AI &amp; LLMs</h3>
-        <p class="spec-card__desc">
-          Building RAG pipelines, agentic workflows, and production-grade LLM systems. Privacy-first architectures using local models where cloud is not an option.
-        </p>
-        <div class="spec-card__tools">
-          <span class="tag tag--accent">LangChain</span>
-          <span class="tag tag--default">Ollama</span>
-          <span class="tag tag--default">LLaMA 3</span>
-          <span class="tag tag--default">RAG</span>
-          <span class="tag tag--default">Prompt Eng.</span>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="spec-card reveal reveal-delay-2">
-        <div class="spec-card__icon" aria-hidden="true">
-          <i class="fas fa-eye"></i>
-        </div>
-        <h3 class="spec-card__title">Computer Vision</h3>
-        <p class="spec-card__desc">
-          End-to-end CV pipelines from data to deployment. Classical approaches when deep learning is overkill. CNN-based detection, classification, and real-time inference.
-        </p>
-        <div class="spec-card__tools">
-          <span class="tag tag--accent">OpenCV</span>
-          <span class="tag tag--default">TensorFlow</span>
-          <span class="tag tag--default">PyTorch</span>
-          <span class="tag tag--default">LBPH</span>
-          <span class="tag tag--default">CNNs</span>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="spec-card reveal reveal-delay-3">
-        <div class="spec-card__icon" aria-hidden="true">
-          <i class="fas fa-layer-group"></i>
-        </div>
-        <h3 class="spec-card__title">ML Systems &amp; Infra</h3>
-        <p class="spec-card__desc">
-          Turning research into production. Flask APIs, Dockerized pipelines, Firebase deployments, and full-stack integration that makes ML actually usable.
-        </p>
-        <div class="spec-card__tools">
-          <span class="tag tag--accent">Flask</span>
-          <span class="tag tag--default">Docker</span>
-          <span class="tag tag--default">Firebase</span>
-          <span class="tag tag--default">REST APIs</span>
-          <span class="tag tag--default">Streamlit</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── FLAGSHIP PROJECT TEASERS ───────────────────────── -->
-<section class="section" id="featured" style="background: var(--bg-secondary, var(--bg-surface)); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
-  <div class="container">
-    <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:var(--s-lg); margin-bottom:var(--s-2xl); flex-wrap:wrap;" class="reveal">
-      <div>
-        <p class="section-label">Featured work</p>
-        <h2 class="display-md">Projects that<br>solve real problems</h2>
-      </div>
-      <a href="projects.html" class="btn btn--ghost" style="flex-shrink:0;">
-        View all 14 projects <i class="fas fa-arrow-right" style="font-size:0.75rem"></i>
-      </a>
-    </div>
-
-    <div class="projects__flagship" id="featuredProjects">
-      <!-- Injected dynamically by JS from projects.json -->
-      <!-- Fallback cards shown while loading -->
-      <div class="project-flagship reveal reveal-delay-1" data-id="1">
-        <div class="project-flagship__img-wrap">
-          <img class="project-flagship__img"
-               src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop"
-               alt="Justify-AI — Explainable Hate Analysis">
-        </div>
-        <div class="project-flagship__body">
-          <p class="project-flagship__problem">
-            Black-box AI. No transparency. Now fixed.
-          </p>
-          <h3 class="project-flagship__title">Justify-AI – Explainable Hate Analysis</h3>
-          <p class="project-flagship__desc">
-            Multilingual hate-speech detection using classical NLP and Naive Bayes — no transformers, fully interpretable. Supports English, Hindi, Marathi, Bhojpuri, Marwari with transparent risk breakdowns across lexical, causal, and bias dimensions.
-          </p>
-          <div class="project-flagship__footer">
-            <div class="project-flagship__tags">
-              <span class="tag tag--accent">NLP</span>
-              <span class="tag tag--default">Naive Bayes</span>
-              <span class="tag tag--default">Multilingual</span>
-              <span class="tag tag--default">Explainable AI</span>
-            </div>
-            <span class="project-flagship__link">
-              GitHub <i class="fas fa-arrow-up-right-from-square" style="font-size:0.625rem"></i>
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-flagship reveal reveal-delay-2" data-id="2">
-        <div class="project-flagship__img-wrap">
-          <img class="project-flagship__img"
-               src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=800&h=400&fit=crop"
-               alt="Local AI Dashcam — Incident Explainer">
-        </div>
-        <div class="project-flagship__body">
-          <p class="project-flagship__problem">
-            Dashcam footage. Zero cloud. Full intelligence.
-          </p>
-          <h3 class="project-flagship__title">Local AI Dashcam – Incident Explainer</h3>
-          <p class="project-flagship__desc">
-            5-phase pipeline: FFmpeg keyframe extraction → YOLO11+SORT+optical flow fusion → Multi-modal VLM narration (MiniCPM-V + Mistral 7B via Ollama) → Privacy filtering → Gradio UI + PDF export. 100% offline, automatic face/license plate blurring.
-          </p>
-          <div class="project-flagship__footer">
-            <div class="project-flagship__tags">
-              <span class="tag tag--accent">Computer Vision</span>
-              <span class="tag tag--default">YOLO</span>
-              <span class="tag tag--default">Local LLM</span>
-              <span class="tag tag--default">Privacy</span>
-            </div>
-            <span class="project-flagship__link">
-              GitHub <i class="fas fa-arrow-up-right-from-square" style="font-size:0.625rem"></i>
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── ABOUT TEASER ────────────────────────────────────── -->
-<section class="section">
-  <div class="container">
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--s-3xl); align-items:center;" class="reveal" id="aboutTeaserGrid">
-      <div>
-        <p class="section-label">The person behind the code</p>
-        <h2 class="display-md" style="margin-bottom:var(--s-lg);">
-          B.Tech AI &amp; DS student<br>who actually ships.
-        </h2>
-        <p style="font-size:1.0625rem; color:var(--text-secondary); line-height:1.8; margin-bottom:var(--s-lg);">
-          Currently at MIT World Peace University, Pune. I build AI systems that solve real problems — from multilingual hate-speech detection and offline dashcam incident analysis to healthcare diagnostics and housing society management. Every project on this site was engineered end-to-end, not just trained in a notebook.
-        </p>
-        <p style="font-size:1.0625rem; color:var(--text-secondary); line-height:1.8; margin-bottom:var(--s-xl);">
-          My edge: I own the full pipeline. From dataset curation and model training to FastAPI backends, React frontends, and production deployment. Privacy-first, offline-capable, and built for the real world.
-        </p>
-        <a href="about.html" class="btn btn--primary">
-          Read the full story <i class="fas fa-arrow-right" style="font-size:0.75rem"></i>
-        </a>
-      </div>
-      <div style="display:flex; flex-direction:column; gap:var(--s-md);">
-        <!-- Quick fact cards -->
-        <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--r-lg); padding:var(--s-lg); display:flex; align-items:center; gap:var(--s-md);">
-          <div style="width:44px;height:44px;border-radius:var(--r-md);background:var(--accent-dim);border:1px solid var(--border-accent);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;">
-            🎓
-          </div>
-          <div>
-            <p style="font-size:0.9375rem;font-weight:600;color:var(--text-primary);">MIT World Peace University</p>
-            <p style="font-size:0.8125rem;color:var(--text-secondary);">B.Tech CSE (AI &amp; Data Science) · 2023–Present · CGPA 7.43</p>
-          </div>
-        </div>
-        <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--r-lg); padding:var(--s-lg); display:flex; align-items:center; gap:var(--s-md);">
-          <div style="width:44px;height:44px;border-radius:var(--r-md);background:var(--accent-dim);border:1px solid var(--border-accent);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;">
-            🔬
-          </div>
-          <div>
-            <p style="font-size:0.9375rem;font-weight:600;color:var(--text-primary);">Anthropic Certified — AI Fluency & Claude Code</p>
-            <p style="font-size:0.8125rem;color:var(--text-secondary);">2026 · AI capabilities, safe deployment, AI-assisted coding</p>
-          </div>
-        </div>
-        <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--r-lg); padding:var(--s-lg); display:flex; align-items:center; gap:var(--s-md);">
-          <div style="width:44px;height:44px;border-radius:var(--r-md);background:var(--accent-dim);border:1px solid var(--border-accent);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;">
-            🏆
-          </div>
-          <div>
-            <p style="font-size:0.9375rem;font-weight:600;color:var(--text-primary);">IBM SkillsBuild — AI Fundamentals</p>
-            <p style="font-size:0.8125rem;color:var(--text-secondary);">2025 · Core AI concepts and ML pipeline engineering</p>
-          </div>
-        </div>
-        <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--r-lg); padding:var(--s-lg); display:flex; align-items:center; gap:var(--s-md);">
-          <div style="width:44px;height:44px;border-radius:var(--r-md);background:var(--accent-dim);border:1px solid var(--border-accent);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;">
-            ⚡
-          </div>
-          <div>
-            <p style="font-size:0.9375rem;font-weight:600;color:var(--text-primary);">Open to internships &amp; collaborations</p>
-            <p style="font-size:0.8125rem;color:var(--text-secondary);">AI/ML engineering · Research · Full-stack AI apps</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── FINAL CTA ───────────────────────────────────────── -->
-<section class="section" style="background:var(--bg-surface); border-top:1px solid var(--border-subtle);">
-  <div class="container">
-    <div style="max-width:680px; margin:0 auto; text-align:center;" class="reveal">
-      <p class="section-label" style="justify-content:center;">Ready to build?</p>
-      <h2 class="display-md" style="margin-bottom:var(--s-lg);">
-        Let's build something<br>
-        <span style="color:var(--accent);">that actually works.</span>
-      </h2>
-      <p style="font-size:1.0625rem; color:var(--text-secondary); line-height:1.7; margin-bottom:var(--s-xl);">
-        Whether it's an AI system, a computer vision pipeline, or an LLM application — I'm interested in problems worth solving.
+      <p class="hero__bio">
+        I build AI systems that work offline, understand multiple languages,
+        and ship to production. Currently finishing B.Tech at MIT-WPU.
+        Open to SDE and AI/ML roles from June 2026.
       </p>
-      <div style="display:flex; gap:var(--s-md); justify-content:center; flex-wrap:wrap;">
-        <a href="contact.html" class="btn btn--primary">Get in touch</a>
-        <a href="https://github.com/Rishav408" target="_blank" rel="noopener" class="btn btn--ghost">
-          <i class="fab fa-github"></i> GitHub
+
+      <div class="hero__social">
+        <a href="https://github.com/Rishav408" target="_blank" rel="noopener" class="hero__social-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/rishavsingh408" target="_blank" rel="noopener" class="hero__social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:rishav4805@gmail.com" class="hero__social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Email
         </a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── ABOUT ─────────────────────────────────────────── -->
+  <section id="about">
+    <div class="container">
+      <h2>About</h2>
+
+      <div class="about__prose">
+        <p>
+          I got into AI because I saw a gap: impressive demos rarely become reliable systems.
+          Most ML models never leave a notebook. Mine do. I build end-to-end — from dataset curation
+          and model training to FastAPI backends, React frontends, and production deployment.
+          My projects span NLP, computer vision, and legal tech — all deployed, not just demonstrated.
+        </p>
+
+        <p>
+          I'm finishing my B.Tech in Computer Science (AI &amp; Data Science) at MIT World Peace University, Pune.
+          Along the way, I've worked as a Digital &amp; Strategy Partner at Kubera Kapital, built real-time trading
+          pipelines at APT Atypical Technologies, and shipped 14+ projects across five domains.
+          I care deeply about privacy-first architectures — if a system can run locally, it should.
+        </p>
+
+        <p>
+          I'm currently open to SDE, AI/ML, and full-stack roles starting June 2026. I'm interested in
+          problems worth solving — especially at the intersection of offline AI, multilingual NLP,
+          and edge inference. If you're building something that needs to work in the real world,
+          not just on a slide deck, let's talk.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── EXPERIENCE ────────────────────────────────────── -->
+  <section id="experience">
+    <div class="container">
+      <h2>Experience</h2>
+
+      <div class="exp__list">
+
+        <!-- Kubera Kapital -->
+        <div class="exp__item">
+          <div class="exp__logo--placeholder">KK</div>
+          <div>
+            <h3 class="exp__role">Digital &amp; Strategy Partner</h3>
+            <p class="exp__meta">Kubera Kapital · 2024 – Present · Pune, India</p>
+            <p class="exp__desc">
+              Leading digital strategy and technology direction for the firm. Built and maintained
+              the web presence, designed data workflows for investment analysis, and developed
+              internal tools for portfolio tracking and client reporting.
+            </p>
+          </div>
+        </div>
+
+        <!-- APT Atypical Technologies -->
+        <div class="exp__item">
+          <div class="exp__logo--placeholder">AT</div>
+          <div>
+            <h3 class="exp__role">Software Engineering Intern — TradeFlow Engine</h3>
+            <p class="exp__meta">APT Atypical Technologies · 2024 · Pune, India</p>
+            <p class="exp__desc">
+              Built a real-time trading data pipeline processing market feeds with sub-100ms latency.
+              Architected the system around Node.js, PostgreSQL LISTEN/NOTIFY for live event propagation,
+              and Socket.IO for real-time client delivery. Production-deployed and actively handling
+              live trading data.
+            </p>
+          </div>
+        </div>
+
+        <!-- Aeron Systems -->
+        <div class="exp__item">
+          <div class="exp__logo--placeholder">AS</div>
+          <div>
+            <h3 class="exp__role">Shortlisted — Engineering Role</h3>
+            <p class="exp__meta">Aeron Systems · 2024 · Pune, India</p>
+            <p class="exp__desc">
+              Shortlisted for an engineering position at Aeron Systems, a defence and aerospace
+              technology company. Evaluated on embedded systems and real-time data processing capabilities.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── PROJECTS ──────────────────────────────────────── -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="project__list">
+
+        <!-- 1. Justify-AI -->
+        <div class="project__item">
+          <div class="project__header">
+            <h3 class="project__name">Justify-AI</h3>
+            <div class="project__links">
+              <a href="https://github.com/Rishav408/justify-ai" target="_blank" rel="noopener" class="project__link">
+                GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <p class="project__short">Multilingual hate speech detection — English, Hindi, Marathi, Bhojpuri, Marwari. IEEE paper.</p>
+          <div class="project__tags">
+            <span class="tag">Python</span>
+            <span class="tag">NLTK</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Naive Bayes</span>
+          </div>
+          <p class="project__detail">
+            Built an explainable hate-speech detection framework using classical NLP and Naive Bayes — no transformers.
+            Supports five Indian languages with transparent risk breakdowns across lexical, causal, and demographic bias dimensions.
+            Every risk score comes with a full explanation of which words, which causal links, and which demographic signals triggered it.
+            What makes it different: fully interpretable pipeline where the model's reasoning is auditable, not a black box.
+          </p>
+        </div>
+
+        <!-- 2. TradeFlow Engine -->
+        <div class="project__item">
+          <div class="project__header">
+            <h3 class="project__name">TradeFlow Engine</h3>
+            <div class="project__links">
+              <a href="https://github.com/Rishav408/tradeflow-engine" target="_blank" rel="noopener" class="project__link">
+                GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <p class="project__short">Real-time trading data pipeline with sub-100ms latency. Built during internship at APT Atypical Technologies.</p>
+          <div class="project__tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">LISTEN/NOTIFY</span>
+            <span class="tag">Socket.IO</span>
+          </div>
+          <p class="project__detail">
+            Engineered a production data pipeline that ingests live market feeds, propagates events in real-time via
+            PostgreSQL LISTEN/NOTIFY, and delivers updates to connected clients through Socket.IO. Handles concurrent
+            data streams with consistent sub-100ms end-to-end latency.
+            What makes it different: production-deployed and handling live trading data, not a demo project.
+          </p>
+        </div>
+
+        <!-- 3. AI Dashcam Explainer -->
+        <div class="project__item">
+          <div class="project__header">
+            <h3 class="project__name">AI Dashcam Explainer</h3>
+            <div class="project__links">
+              <a href="https://github.com/Rishav408/local-ai-dashcam" target="_blank" rel="noopener" class="project__link">
+                GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <p class="project__short">Offline computer vision on edge hardware. 100% local — no cloud APIs, automatic privacy filtering.</p>
+          <div class="project__tags">
+            <span class="tag">Python</span>
+            <span class="tag">YOLO11</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Ollama</span>
+            <span class="tag">MiniCPM-V</span>
+            <span class="tag">Gradio</span>
+          </div>
+          <p class="project__detail">
+            5-phase pipeline: FFmpeg keyframe extraction → YOLO11+SORT+optical flow incident detection →
+            Multi-modal VLM narration (MiniCPM-V + Mistral 7B via Ollama) → automatic face/license plate
+            blurring → Gradio UI with PDF export. Entire system runs offline with zero internet dependency.
+            What makes it different: I think cloud dependence is a design flaw for surveillance data — this proves
+            you can do full multi-modal AI analysis without sending a single frame to a server.
+          </p>
+        </div>
+
+        <!-- 4. VaniCure -->
+        <div class="project__item">
+          <div class="project__header">
+            <h3 class="project__name">VaniCure — AI Respiratory Diagnostics</h3>
+            <div class="project__links">
+              <a href="https://github.com/Rishav408/vanicure" target="_blank" rel="noopener" class="project__link">
+                GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <p class="project__short">Offline-first medical screening using deep learning on respiratory audio — designed for remote clinics.</p>
+          <div class="project__tags">
+            <span class="tag">PyTorch</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">React</span>
+            <span class="tag">librosa</span>
+          </div>
+          <p class="project__detail">
+            Three-model ensemble (PANNs CNN14 + YAMNet + custom CNN-BiLSTM) analyzes cough and breathing audio
+            for TB and Asthma risk prediction. Runs entirely on-device for complete patient data privacy.
+            Includes multilingual triage agent (Hindi, Gujarati, Marathi, English) and dynamic outbreak alerting.
+            What makes it different: designed for clinics with zero internet, where patient data cannot leave the building.
+          </p>
+        </div>
+
+        <!-- 5. VoteChain -->
+        <div class="project__item">
+          <div class="project__header">
+            <h3 class="project__name">VoteChain</h3>
+            <div class="project__links">
+              <a href="https://github.com/Rishav408/votechain" target="_blank" rel="noopener" class="project__link">
+                GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <p class="project__short">Blockchain-based e-voting system for Maharashtra elections.</p>
+          <div class="project__tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spark Java</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Blockchain</span>
+          </div>
+          <p class="project__detail">
+            Tamper-proof electronic voting platform using blockchain for vote integrity and MongoDB for voter registration.
+            Built with Java and Spark Java framework, implementing SHA-256 hashing for chain validation.
+            What makes it different: applies blockchain where it actually makes architectural sense — immutable audit trails for democratic processes.
+          </p>
+        </div>
+
+        <!-- 6. NyayaAI -->
+        <div class="project__item">
+          <div class="project__header">
+            <h3 class="project__name">NyayaAI — Legal AI Assistant</h3>
+            <div class="project__links">
+              <a href="https://github.com/Rishav408/nyaya-ai" target="_blank" rel="noopener" class="project__link">
+                GitHub
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <p class="project__short">RAG-based legal AI for Indian jurisprudence. Currently in revamp.</p>
+          <div class="project__tags">
+            <span class="tag">Python</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">RAG</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Vector DB</span>
+          </div>
+          <p class="project__detail">
+            Context-aware legal Q&amp;A system combining a local knowledge base with real-time web search for
+            comprehensive Indian legal information. Uses RAG pipeline with LangChain orchestration
+            for retrieval-augmented generation with source citations.
+            What makes it different: hybrid retrieval — local knowledge base + live web search — so answers are both grounded and current.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── SKILLS ────────────────────────────────────────── -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+
+      <div class="skills__list">
+        <div class="skills__row">
+          <span class="skills__label">Languages</span>
+          <span class="skills__items">Python · JavaScript · TypeScript · Java · SQL</span>
+        </div>
+        <div class="skills__row">
+          <span class="skills__label">AI / ML</span>
+          <span class="skills__items">PyTorch · YOLOv8 · HuggingFace · LangChain · Ollama</span>
+        </div>
+        <div class="skills__row">
+          <span class="skills__label">Backend</span>
+          <span class="skills__items">FastAPI · Node.js · PostgreSQL · MongoDB · Docker</span>
+        </div>
+        <div class="skills__row">
+          <span class="skills__label">Frontend</span>
+          <span class="skills__items">React · Next.js · Tailwind CSS · Firebase</span>
+        </div>
+        <div class="skills__row">
+          <span class="skills__label">Tools</span>
+          <span class="skills__items">Git · Linux · AWS · Vercel · Jupyter</span>
+        </div>
+        <div class="skills__row">
+          <span class="skills__label">Interests</span>
+          <span class="skills__items">Offline AI · RAG systems · Edge inference · NLP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── WRITING ───────────────────────────────────────── -->
+  <section id="writing">
+    <div class="container">
+      <h2>Writing</h2>
+
+      <div class="writing__list">
+        <div class="writing__item">
+          <p class="writing__title">
+            <a href="https://github.com/Rishav408/justify-ai" target="_blank" rel="noopener">
+              Explainable Multilingual Hate Speech Detection Using Classical NLP — IEEE Paper ↗
+            </a>
+          </p>
+          <p class="writing__meta">IEEE · 2024 — Lead author. Classical NLP approach to hate speech detection across 5 Indian languages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ── CONTACT ───────────────────────────────────────── -->
+  <section id="contact">
+    <div class="container">
+      <h2>Get in touch</h2>
+
+      <p class="contact__text">
+        I'm currently open to SDE, AI/ML, and full-stack roles.<br>
+        Reach me directly:
+      </p>
+
+      <a href="mailto:rishav4805@gmail.com" class="contact__email">rishav4805@gmail.com</a>
+
+      <div class="contact__links">
+        <a href="https://linkedin.com/in/rishavsingh408" target="_blank" rel="noopener" class="contact__link">
+          LinkedIn
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+        <a href="https://github.com/Rishav408" target="_blank" rel="noopener" class="contact__link">
+          GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+        <a href="assets/img/Rishav-Resume.pdf" target="_blank" rel="noopener" class="contact__link">
+          Resume (PDF)
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
 </main>
-
-<!-- ── PROJECT MODAL ──────────────────────────────────── -->
-<div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
-  <div class="modal__backdrop" tabindex="-1" data-modal-close></div>
-  <div class="modal__box">
-    <div class="modal__head">
-      <button class="modal__close" aria-label="Close" data-modal-close>
-        <i class="fas fa-times"></i>
-      </button>
-      <p class="modal__category" id="modalCategory"></p>
-      <h2 class="modal__title" id="modalTitle"></h2>
-    </div>
-
-    <div class="modal__body">
-      <!-- Problem -->
-      <div class="modal__section">
-        <p class="modal__section-title">Problem &amp; concept</p>
-        <p class="modal__text" id="modalConcept"></p>
-      </div>
-
-      <!-- Architecture -->
-      <div class="modal__section">
-        <p class="modal__section-title">System architecture</p>
-        <div class="modal__arch" id="modalArchitecture"></div>
-        <p class="modal__text" id="modalArchDesc" style="margin-top:var(--s-md);"></p>
-      </div>
-
-      <!-- Tech stack -->
-      <div class="modal__section">
-        <p class="modal__section-title">Tech stack</p>
-        <div class="modal__tech-stack" id="modalTechStack"></div>
-      </div>
-
-      <!-- Differentiators -->
-      <div class="modal__section">
-        <p class="modal__section-title">Key differentiators</p>
-        <div class="modal__diff-list" id="modalDifferentiators"></div>
-      </div>
-    </div>
-
-    <div class="modal__footer">
-      <a href="#" target="_blank" rel="noopener" class="btn btn--ghost btn--sm" id="modalGithub">
-        <i class="fab fa-github"></i> View Code
-      </a>
-    </div>
-  </div>
-</div>
 
 <!-- ── FOOTER ──────────────────────────────────────────── -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer__inner">
-      <div>
-        <p class="footer__brand">rishav<span>.dev</span></p>
-        <p class="footer__blurb">
-          AI Systems Engineer specializing in LLM pipelines, computer vision, and production ML. Based in Pune, India.
-        </p>
-        <div class="footer__social">
-          <a href="https://github.com/Rishav408" target="_blank" rel="noopener" class="footer__social-link" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://linkedin.com/in/rishavsingh408" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://x.com/RishavSingh408" target="_blank" rel="noopener" class="footer__social-link" aria-label="X">
-            <i class="fab fa-x-twitter"></i>
-          </a>
-        </div>
-      </div>
-
-      <div>
-        <p class="footer__col-title">Navigation</p>
-        <ul class="footer__links">
-          <li><a href="index.html"    class="footer__link">Home</a></li>
-          <li><a href="about.html"    class="footer__link">About</a></li>
-          <li><a href="projects.html" class="footer__link">Projects</a></li>
-          <li><a href="contact.html"  class="footer__link">Contact</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="footer__col-title">Contact</p>
-        <ul class="footer__links">
-          <li><a href="mailto:rishav4805@gmail.com" class="footer__link">rishav4805@gmail.com</a></li>
-          <li><a href="https://linkedin.com/in/rishavsingh408" target="_blank" rel="noopener" class="footer__link">linkedin.com/in/rishavsingh408</a></li>
-          <li><span class="footer__link" style="cursor:default;">Pune, Maharashtra, India</span></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer__bottom">
-      <p class="footer__copy">
-        &copy; <span id="footerYear"></span> Rishav Singh. All rights reserved.
-      </p>
-      <p class="footer__made">
-        Built with <i class="fas fa-heart"></i> and too much coffee
-      </p>
+  <div class="footer__inner">
+    <p class="footer__copy">&copy; <span id="footerYear"></span> Rishav Singh</p>
+    <div class="footer__links">
+      <a href="https://github.com/Rishav408" target="_blank" rel="noopener" class="footer__link">GitHub</a>
+      <a href="https://linkedin.com/in/rishavsingh408" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
     </div>
   </div>
 </footer>
 
-<!-- Scroll to top -->
-<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-  <i class="fas fa-chevron-up"></i>
-</button>
-
-<!-- ── SCRIPTS ─────────────────────────────────────────── -->
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script type="module" src="assets/js/main.js"></script>
-
-<!-- Particle canvas script (inline, self-contained) -->
-<script>
-(function() {
-  const canvas = document.getElementById('hero-canvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const ACCENT = [200, 240, 77];
-  let W, H, particles = [], animId;
-
-  function resize() {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-  }
-
-  function createParticle() {
-    return {
-      x: Math.random() * W,
-      y: Math.random() * H,
-      vx: (Math.random() - 0.5) * 0.3,
-      vy: (Math.random() - 0.5) * 0.3,
-      r: Math.random() * 1.5 + 0.3,
-      a: Math.random() * 0.4 + 0.1
-    };
-  }
-
-  function init() {
-    resize();
-    particles = Array.from({ length: 90 }, createParticle);
-  }
-
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-
-    // Draw connections
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 100) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(${ACCENT},${(1 - dist / 100) * 0.12})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
-        }
-      }
-    }
-
-    // Draw particles
-    particles.forEach(p => {
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(${ACCENT},${p.a})`;
-      ctx.fill();
-
-      p.x += p.vx;
-      p.y += p.vy;
-      if (p.x < 0) p.x = W;
-      if (p.x > W) p.x = 0;
-      if (p.y < 0) p.y = H;
-      if (p.y > H) p.y = 0;
-    });
-
-    animId = requestAnimationFrame(draw);
-  }
-
-  // Respect reduced motion
-  const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (!mq.matches) {
-    init();
-    draw();
-    window.addEventListener('resize', () => { resize(); });
-  }
-})();
-</script>
-
-<!-- About teaser responsive fix -->
-<script>
-(function() {
-  const grid = document.getElementById('aboutTeaserGrid');
-  if (!grid) return;
-  function check() {
-    if (window.innerWidth < 768) {
-      grid.style.gridTemplateColumns = '1fr';
-    } else {
-      grid.style.gridTemplateColumns = '1fr 1fr';
-    }
-  }
-  check();
-  window.addEventListener('resize', check);
-})();
-</script>
+<!-- ── SCRIPT ──────────────────────────────────────────── -->
+<script src="assets/js/main.js"></script>
 </body>
 </html>
