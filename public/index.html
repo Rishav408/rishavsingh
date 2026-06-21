@@ -90,23 +90,26 @@
 
       <div class="nav__right">
         <ul class="nav__links" id="navLinks" role="list">
-          <li><a href="#about" class="nav__link">ABOUT</a></li>
+          <li><a href="#about"      class="nav__link">ABOUT</a></li>
           <li><a href="#experience" class="nav__link">EXPERIENCE</a></li>
-          <li><a href="#projects" class="nav__link">PROJECTS</a></li>
-          <li><a href="#skills" class="nav__link">SKILLS</a></li>
-          <li><a href="#contact" class="nav__link">CONTACT</a></li>
+          <li><a href="#projects"   class="nav__link">PROJECTS</a></li>
+          <li><a href="#skills"     class="nav__link">SKILLS</a></li>
+          <li><a href="#contact"    class="nav__link">CONTACT</a></li>
         </ul>
 
-        <button class="nav__settings-btn" id="themeToggle" aria-label="Toggle theme">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"
-            aria-hidden="true">
-            <circle cx="12" cy="12" r="3" />
-            <path
-              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-          </svg>
-        </button>
+        <div class="nav__status" aria-label="Employment status">
+          <span class="nav__status-dot"></span>
+          <span class="nav__status-text">Open to work</span>
+        </div>
 
-        <a href="#contact" class="nav__cta-btn">Let's Talk</a>
+        <a href="assets/img/Rishav-Resume.pdf" target="_blank" rel="noopener" class="nav__resume-btn" aria-label="Download Resume PDF">
+          Resume
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+        </a>
 
         <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navDrawer"
           aria-label="Toggle menu">
@@ -137,101 +140,144 @@
         <div class="hero__layout">
           <!-- Left: main content -->
           <div class="hero__content">
-            <div class="hero__badge-container">
+
+            <!-- Badge -->
+            <div class="hero__badge-row">
               <span class="badge badge--open">
-                <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
-                  <circle cx="4" cy="4" r="3" fill="currentColor" />
+                <svg width="7" height="7" viewBox="0 0 8 8" fill="none">
+                  <circle cx="4" cy="4" r="3" fill="currentColor"/>
                 </svg>
-                Open to SDE &amp; AI/ML roles from June 2026
+                Open to SDE &amp; AI/ML roles · June 2026
               </span>
             </div>
 
-            <h1 class="hero__name-title">Building AI systems that work offline, understand languages, and scale.</h1>
-            <p class="hero__subtitle">Rishav Singh · AI &amp; Systems Engineer based in Pune, India</p>
+            <!-- Identity -->
+            <div class="hero__identity">
+              <h1 class="hero__name">Rishav Singh</h1>
+              <p class="hero__title-line">AI &amp; Systems Engineer · Pune, India</p>
+            </div>
 
+            <!-- Bio -->
             <p class="hero__bio">
-              I build end-to-end ML pipelines — from dataset curation and local training to FastAPI backends,
-              responsive frontends, and edge deployment. With 14 projects shipped, I design privacy-first
-              architectures that perform offline, zero cloud dependency by design.
+              I build AI systems that work offline, understand multiple
+              languages, and ship to production. 14 projects across NLP,
+              computer vision, healthcare AI, and legal tech — all deployed,
+              not just demonstrated.
             </p>
 
-            <div class="hero__social">
-              <a href="https://github.com/Rishav408" target="_blank" rel="noopener" class="hero__social-link"
-                aria-label="GitHub profile">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path
-                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            <!-- Social icon links -->
+            <div class="hero__social-row">
+              <a href="https://github.com/Rishav408" target="_blank" rel="noopener" class="hero__icon-link" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
                 </svg>
-                GitHub
               </a>
-              <a href="https://linkedin.com/in/rishavsingh408" target="_blank" rel="noopener" class="hero__social-link"
-                aria-label="LinkedIn profile">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                  <rect x="2" y="9" width="4" height="12" />
-                  <circle cx="4" cy="4" r="2" />
+              <a href="https://linkedin.com/in/rishavsingh408" target="_blank" rel="noopener" class="hero__icon-link" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
                 </svg>
-                LinkedIn
               </a>
-              <a href="https://x.com/RishavSingh408" target="_blank" rel="noopener" class="hero__social-link"
-                aria-label="X profile">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path
-                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+              <a href="https://x.com/RishavSingh408" target="_blank" rel="noopener" class="hero__icon-link" aria-label="X / Twitter">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
                 </svg>
-                X / Twitter
               </a>
-              <a href="mailto:rishav4805@gmail.com" class="hero__social-link" aria-label="Send email">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                  <polyline points="22,6 12,13 2,6" />
+              <a href="mailto:rishav4805@gmail.com" class="hero__icon-link" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
                 </svg>
-                Email
-              </a>
-              <a href="assets/img/Rishav-Resume.pdf" target="_blank" rel="noopener" class="hero__social-link"
-                aria-label="Download resume">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <polyline points="14 2 14 8 20 8" />
-                  <line x1="16" y1="13" x2="8" y2="13" />
-                  <line x1="16" y1="17" x2="8" y2="17" />
-                  <polyline points="10 9 9 9 8 9" />
-                </svg>
-                Resume
               </a>
             </div>
+
+            <!-- CTA buttons -->
+            <div class="hero__cta-row">
+              <a href="#projects" class="hero__cta-primary">
+                View Projects
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"/>
+                  <polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a>
+              <a href="assets/img/Rishav-Resume.pdf" target="_blank" rel="noopener" class="hero__cta-secondary">
+                Download Resume
+              </a>
+            </div>
+
           </div>
 
           <!-- Right: photo & stats box -->
           <div class="hero__sidebar">
-            <div class="hero__photo-wrapper">
-              <img src="assets/img/rks.jpg" alt="Rishav Singh" class="hero__photo-large" width="140" height="140"
-                loading="eager">
+
+            <!-- Photo — square, full width of card -->
+            <div class="hero__photo-frame">
+              <img
+                src="assets/img/rks.jpg"
+                alt="Rishav Singh"
+                class="hero__photo-img"
+                width="300"
+                height="300"
+                loading="eager"
+              >
+              <!-- Available badge overlaid on photo -->
+              <div class="hero__photo-badge">
+                <span class="hero__photo-badge-dot"></span>
+                Available
+              </div>
             </div>
 
-            <div class="hero__metrics-grid">
-              <div class="hero__metric">
-                <span class="hero__metric-val">14</span>
-                <span class="hero__metric-label">Projects Shipped</span>
+            <!-- Identity block below photo -->
+            <div class="hero__card-identity">
+              <div class="hero__card-name-row">
+                <span class="hero__card-name">Rishav Singh</span>
               </div>
-              <div class="hero__metric">
-                <span class="hero__metric-val">3</span>
-                <span class="hero__metric-label">Offline AI Apps</span>
-              </div>
-              <div class="hero__metric">
-                <span class="hero__metric-val">5+</span>
-                <span class="hero__metric-label">Languages</span>
-              </div>
-              <div class="hero__metric">
-                <span class="hero__metric-val">1</span>
-                <span class="hero__metric-label">IEEE Paper</span>
+              <span class="hero__card-role">AI &amp; Systems Engineer</span>
+              <div class="hero__card-meta">
+                <span class="hero__card-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                  </svg>
+                  MIT World Peace University
+                </span>
+                <span class="hero__card-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Pune, India · UTC+5:30
+                </span>
               </div>
             </div>
+
+            <!-- Divider -->
+            <div class="hero__card-divider"></div>
+
+            <!-- Stats row -->
+            <div class="hero__card-stats">
+              <div class="hero__card-stat">
+                <span class="hero__card-stat-num">14</span>
+                <span class="hero__card-stat-label">Projects</span>
+              </div>
+              <div class="hero__card-stat-sep"></div>
+              <div class="hero__card-stat">
+                <span class="hero__card-stat-num">3</span>
+                <span class="hero__card-stat-label">Offline AI</span>
+              </div>
+              <div class="hero__card-stat-sep"></div>
+              <div class="hero__card-stat">
+                <span class="hero__card-stat-num">5+</span>
+                <span class="hero__card-stat-label">Languages</span>
+              </div>
+              <div class="hero__card-stat-sep"></div>
+              <div class="hero__card-stat">
+                <span class="hero__card-stat-num">1</span>
+                <span class="hero__card-stat-label">IEEE Paper</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
