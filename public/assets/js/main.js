@@ -17,12 +17,21 @@
   // ── 1. NAV BORDER ON SCROLL ──────────────────────────────
 
   var nav = document.getElementById('nav');
+  var scrollProgress = document.getElementById('scrollProgress');
 
   function handleNavScroll() {
     if (window.scrollY > 10) {
       nav.classList.add('nav--scrolled');
     } else {
       nav.classList.remove('nav--scrolled');
+    }
+
+    // Update scroll progress
+    var scrollTop = window.scrollY;
+    var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    var scrollPercent = (scrollTop / docHeight) * 100;
+    if (scrollProgress) {
+      scrollProgress.style.width = scrollPercent + '%';
     }
   }
 
@@ -254,13 +263,14 @@
 
     var arrowSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
 
-    filtered.forEach(function (project) {
+    filtered.forEach(function (project, index) {
       var tagsHtml = (project.tags || []).map(function (tag) {
         return '<span class="tag">' + tag + '</span>';
       }).join('');
 
       var card = document.createElement('article');
       card.className = 'project-card fade-in';
+      card.style.transitionDelay = (index * 50) + 'ms';
       card.setAttribute('tabindex', '0');
       card.setAttribute('role', 'button');
       card.setAttribute('aria-label', 'View details for ' + project.title);
@@ -292,6 +302,46 @@
     });
 
     if (typeof initScrollFadeIn === 'function') initScrollFadeIn();
+
+    // Initialize 3D tilt effect on project cards
+    initCardTilt();
+  }
+
+  // ── 3D CARD TILT EFFECT ───────────────────────────────────
+
+  function initCardTilt() {
+    var cards = document.querySelectorAll('.project-card');
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReduced) return;
+
+    cards.forEach(function (card) {
+      card.addEventListener('mousemove', handleCardTilt);
+      card.addEventListener('mouseleave', resetCardTilt);
+    });
+  }
+
+  function handleCardTilt(e) {
+    var card = e.currentTarget;
+    var rect = card.getBoundingClientRect();
+    var centerX = rect.left + rect.width / 2;
+    var centerY = rect.top + rect.height / 2;
+    
+    var mouseX = e.clientX - centerX;
+    var mouseY = e.clientY - centerY;
+    
+    var maxRotation = 6;
+    var rotateX = (mouseY / (rect.height / 2)) * -maxRotation;
+    var rotateY = (mouseX / (rect.width / 2)) * maxRotation;
+    
+    card.classList.add('tilting');
+    card.style.transform = 'perspective(1000px) rotateX(' + rotateX + 'deg) rotateY(' + rotateY + 'deg) translateY(-3px)';
+  }
+
+  function resetCardTilt(e) {
+    var card = e.currentTarget;
+    card.classList.remove('tilting');
+    card.style.transform = '';
   }
 
   // Populate and open custom modal
