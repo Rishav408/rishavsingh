@@ -351,34 +351,40 @@
 
         <div class="exp__list">
 
-          <div class="exp__item">
-            <div class="exp__logo-box" aria-hidden="true">KK</div>
+          <div class="exp__entry exp__entry--current">
+            <div class="exp__logo-col">
+              <div class="exp__logo-box">KK</div>
+            </div>
             <div class="exp__body">
-              <div class="exp__header">
-                <div>
-                  <p class="exp__role">Digital & Strategy Partner</p>
-                  <p class="exp__company">Kubera Kapital · Pune, India</p>
-                </div>
+              <h3 class="exp__role">Digital &amp; Strategy Partner</h3>
+              <div class="exp__meta-row">
+                <span class="exp__company">Kubera Kapital</span>
+                <span class="exp__meta-sep">·</span>
                 <span class="exp__period">2024 – Present</span>
+                <span class="exp__current-badge">
+                  <span class="exp__current-dot"></span>
+                  Current
+                </span>
               </div>
               <p class="exp__desc">
-                Leading digital strategy and technology direction. Built the complete web presence
-                (responsive, SEO-optimized, Lighthouse 95+), designed automated data workflows for
-                investment analysis using Python and Pandas, and developed internal dashboards for
-                portfolio tracking and client reporting. Reduced manual reporting time by ~60%
-                through automated pipeline generation.
+                Leading digital strategy and technology direction for the firm. Built and deployed
+                the complete web presence (responsive, SEO-optimized, Lighthouse 95+), designed
+                automated data workflows for investment analysis using Python and Pandas, and
+                developed internal dashboards for portfolio tracking and client reporting.
+                Reduced manual reporting time by ~60% through automated pipeline generation.
               </p>
             </div>
           </div>
 
-          <div class="exp__item">
-            <div class="exp__logo-box" aria-hidden="true">AT</div>
+          <div class="exp__entry">
+            <div class="exp__logo-col">
+              <div class="exp__logo-box">AT</div>
+            </div>
             <div class="exp__body">
-              <div class="exp__header">
-                <div>
-                  <p class="exp__role">Software Engineering Intern — TradeFlow Engine</p>
-                  <p class="exp__company">APT Atypical Technologies · Pune, India</p>
-                </div>
+              <h3 class="exp__role">Software Engineering Intern — TradeFlow Engine</h3>
+              <div class="exp__meta-row">
+                <span class="exp__company">APT Atypical Technologies</span>
+                <span class="exp__meta-sep">·</span>
                 <span class="exp__period">2024</span>
               </div>
               <p class="exp__desc">
@@ -387,18 +393,20 @@
                 PostgreSQL LISTEN/NOTIFY for zero-polling event propagation and Socket.IO for
                 real-time client delivery. Handles 500+ concurrent WebSocket connections in
                 production with automatic reconnection and backpressure handling.
+                Production-deployed and actively processing live trading data.
               </p>
             </div>
           </div>
 
-          <div class="exp__item">
-            <div class="exp__logo-box" aria-hidden="true">AS</div>
+          <div class="exp__entry">
+            <div class="exp__logo-col">
+              <div class="exp__logo-box">AS</div>
+            </div>
             <div class="exp__body">
-              <div class="exp__header">
-                <div>
-                  <p class="exp__role">Shortlisted — Engineering Role</p>
-                  <p class="exp__company">Aeron Systems · Pune, India</p>
-                </div>
+              <h3 class="exp__role">Shortlisted — Engineering Role</h3>
+              <div class="exp__meta-row">
+                <span class="exp__company">Aeron Systems</span>
+                <span class="exp__meta-sep">·</span>
                 <span class="exp__period">2024</span>
               </div>
               <p class="exp__desc">
@@ -421,360 +429,17 @@
       <div class="container">
         <h2>Projects</h2>
 
-        <!-- Filter buttons -->
+        <!-- Filter buttons — keep exactly as-is, just add count -->
         <div class="project__filters" role="group" aria-label="Filter projects by category">
           <button class="filter-btn filter-btn--active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="ai">AI / ML</button>
           <button class="filter-btn" data-filter="backend">Backend</button>
           <button class="filter-btn" data-filter="web">Web</button>
+          <span class="project__count" id="projectCount"></span>
         </div>
 
-        <div class="project__grid" id="projectList">
-
-          <!-- 1. Justify-AI -->
-          <article class="project-card" data-category="ai">
-            <div class="project-card__header">
-              <h3 class="project-card__name">Justify-AI</h3>
-              <a href="https://github.com/Rishav408/justify-ai" target="_blank" rel="noopener" class="project-card__gh"
-                aria-label="Justify-AI GitHub repository">
-                GitHub
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <p class="project-card__desc">Multilingual hate speech detection across 5 Indian languages — fully
-              explainable, no black-box models. IEEE published.</p>
-            <div class="project-card__tags">
-              <span class="tag">Python 3.11</span>
-              <span class="tag">NLTK</span>
-              <span class="tag">scikit-learn</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">Naive Bayes</span>
-              <span class="tag">gTTS</span>
-            </div>
-
-            <details class="project-card__details">
-              <summary>More detail</summary>
-              <div class="project-card__details-body">
-                <p>Built an explainable hate-speech detection framework using classical NLP and Naive Bayes —
-                  deliberately
-                  avoiding transformers to maintain full interpretability. Supports English, Hindi, Marathi, Bhojpuri,
-                  and Marwari with transparent risk scoring across three dimensions: lexical severity (hate lexicon
-                  matching
-                  with language-specific stemming), causal analysis (rule-based extraction of causality chains), and
-                  demographic bias auditing. Every risk score comes with a full breakdown of exactly which words,
-                  causal links, and demographic signals triggered it.</p>
-
-                <p>
-                  <strong>Architecture:</strong> Input text → language detection → language-specific preprocessing
-                  (tokenization, stemming, lemmatization per language) → hate lexicon matching with severity span
-                  scoring
-                  → rule-based causality extraction → demographic bias auditing → composite risk scoring → FastAPI
-                  backend + visual dashboard with per-dimension breakdowns.
-                </p>
-                <p>
-                  <strong>Why classical NLP over transformers:</strong> The goal was auditability. A Naive Bayes
-                  classifier with explicit feature extraction produces decisions you can trace back to specific lexical
-                  features — critical for hate speech moderation where "the model said so" isn't acceptable.
-                  Classification accuracy: 87% F1-score on the combined multilingual test set.
-                </p>
-                <p>
-                  <strong>Challenge solved:</strong> Building language-specific preprocessing for Bhojpuri and Marwari —
-                  languages with minimal NLP tooling. Required custom tokenizers and hand-curated hate lexicons
-                  validated with native speakers.
-                </p>
-              </div>
-            </details>
-          </article>
-
-          <!-- 2. TradeFlow Engine -->
-          <article class="project-card" data-category="backend">
-            <div class="project-card__header">
-              <h3 class="project-card__name">TradeFlow Engine</h3>
-              <a href="https://github.com/Rishav408/tradeflow-engine" target="_blank" rel="noopener"
-                class="project-card__gh" aria-label="TradeFlow Engine GitHub repository">
-                GitHub
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <p class="project-card__desc">Production real-time trading data pipeline — sub-100ms latency, 500+
-              concurrent connections. Built during internship.</p>
-            <div class="project-card__tags">
-              <span class="tag">Node.js 18</span>
-              <span class="tag">PostgreSQL 15</span>
-              <span class="tag">LISTEN/NOTIFY</span>
-              <span class="tag">Socket.IO 4</span>
-              <span class="tag">Express</span>
-            </div>
-
-            <details class="project-card__details">
-              <summary>More detail</summary>
-              <div class="project-card__details-body">
-                <p>Engineered a production data pipeline that ingests live market feeds, propagates events in real-time
-                  via
-                  PostgreSQL LISTEN/NOTIFY (zero-polling architecture), and delivers updates to connected trading
-                  clients
-                  through Socket.IO. Handles 500+ concurrent WebSocket connections with consistent sub-100ms end-to-end
-                  latency, automatic reconnection with exponential backoff, and server-side backpressure management.</p>
-
-                <p>
-                  <strong>Architecture:</strong> Market data feed → Node.js ingestion layer → PostgreSQL
-                  (INSERT + NOTIFY trigger) → LISTEN channel handler → Socket.IO broadcast → connected trading clients.
-                  No polling at any layer — entirely event-driven from database to browser.
-                </p>
-                <p>
-                  <strong>Performance:</strong> P95 latency &lt;85ms from feed ingestion to client delivery.
-                  Tested at 500+ simultaneous WebSocket connections with zero message drops. Connection pool
-                  management via pg-pool with configurable max connections and idle timeout.
-                </p>
-                <p>
-                  <strong>Challenge solved:</strong> PostgreSQL LISTEN/NOTIFY has no built-in delivery guarantee.
-                  Implemented a sequence-number-based reconciliation system where clients can request missed events
-                  on reconnection, ensuring eventual consistency without adding a message queue dependency.
-                </p>
-              </div>
-            </details>
-          </article>
-
-          <!-- 3. AI Dashcam Explainer -->
-          <article class="project-card" data-category="ai">
-            <div class="project-card__header">
-              <h3 class="project-card__name">AI Dashcam Explainer</h3>
-              <a href="https://github.com/Rishav408/local-ai-dashcam" target="_blank" rel="noopener"
-                class="project-card__gh" aria-label="AI Dashcam GitHub repository">
-                GitHub
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <p class="project-card__desc">100% offline multi-modal AI dashcam analysis — YOLO11 + VLM narration,
-              automatic privacy filtering, zero cloud dependency.</p>
-            <div class="project-card__tags">
-              <span class="tag">Python 3.11</span>
-              <span class="tag">YOLO11</span>
-              <span class="tag">OpenCV</span>
-              <span class="tag">Ollama</span>
-              <span class="tag">MiniCPM-V</span>
-              <span class="tag">Mistral 7B</span>
-              <span class="tag">Gradio</span>
-              <span class="tag">FFmpeg</span>
-            </div>
-
-            <details class="project-card__details">
-              <summary>More detail</summary>
-              <div class="project-card__details-body">
-                <p>5-phase pipeline: FFmpeg keyframe extraction with motion-based scoring → YOLO11 + SORT tracker +
-                  Farneback optical flow fusion for incident detection → Multi-modal VLM narration using MiniCPM-V
-                  for frame understanding + Mistral 7B for coherent narrative generation (both via Ollama) →
-                  automatic face and license plate blurring using Haar cascades → Gradio UI with ReportLab PDF export.
-                  Entire system runs offline — no API calls, no internet, no data leaving the machine.</p>
-
-                <p>
-                  <strong>Architecture:</strong> Video input → FFmpeg keyframe extraction (scene change detection +
-                  motion scoring) → YOLO11 object detection + SORT multi-object tracking + Farneback dense optical flow
-                  → anomaly scoring (velocity spikes, trajectory intersections, sudden object appearances) → MiniCPM-V
-                  per-frame visual Q&amp;A → Mistral 7B narrative synthesis → privacy filtering → PDF report generation.
-                </p>
-                <p>
-                  <strong>Performance:</strong> Processes 1-minute dashcam video in ~4 minutes on consumer hardware
-                  (RTX 3060). BLEU score 0.34 and ROUGE-L 0.41 on narrative coherence evaluation. Ablation study
-                  shows optical flow fusion improves incident detection recall by 23% over YOLO-only baseline.
-                </p>
-                <p>
-                  <strong>Why offline:</strong> Cloud dependence is a design flaw for surveillance data. Dashcam footage
-                  contains faces, license plates, and location data. This system proves you can do full multi-modal AI
-                  analysis — object tracking, scene understanding, natural language narration — without sending a single
-                  frame to a server.
-                </p>
-              </div>
-            </details>
-          </article>
-
-          <!-- 4. VaniCure -->
-          <article class="project-card" data-category="ai">
-            <div class="project-card__header">
-              <h3 class="project-card__name">VaniCure — AI Respiratory Diagnostics</h3>
-              <a href="https://github.com/Rishav408/vanicure" target="_blank" rel="noopener" class="project-card__gh"
-                aria-label="VaniCure GitHub repository">
-                GitHub
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <p class="project-card__desc">Offline-first respiratory diagnostics — 3-model ensemble for TB/Asthma
-              screening, designed for clinics with zero internet.</p>
-            <div class="project-card__tags">
-              <span class="tag">PyTorch 2.0</span>
-              <span class="tag">TensorFlow 2.x</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">React 18</span>
-              <span class="tag">TypeScript</span>
-              <span class="tag">librosa</span>
-              <span class="tag">Recharts</span>
-            </div>
-
-            <details class="project-card__details">
-              <summary>More detail</summary>
-              <div class="project-card__details-body">
-                <p>Three-model ensemble (PANNs CNN14 for robust feature extraction + YAMNet for fast anomaly detection +
-                  custom CNN-BiLSTM for targeted respiratory classification) analyzes cough and breathing audio for
-                  TB and Asthma risk prediction. Runs entirely on-device — complete patient data privacy with zero
-                  network requests. Includes multilingual triage agent supporting Hindi, Gujarati, Marathi, and English,
-                  plus dynamic outbreak alerting based on spatial case clustering.</p>
-
-                <p>
-                  <strong>Architecture:</strong> Audio capture (16kHz WAV) → mel-spectrogram extraction via librosa →
-                  parallel inference across 3 models → weighted ensemble voting (0.4 PANNs + 0.3 YAMNet + 0.3
-                  CNN-BiLSTM)
-                  → risk classification → triage Q&amp;A agent → localStorage patient records → outbreak heatmap.
-                  FastAPI backend serves models, React 18 + TypeScript frontend handles UI and local state.
-                </p>
-                <p>
-                  <strong>Why 3 models:</strong> Single-model respiratory classification is unreliable — audio quality
-                  varies wildly in field conditions (background noise, mic quality, recording distance). The ensemble
-                  cross-validates predictions: PANNs provides robust general audio understanding, YAMNet catches
-                  anomalies the others miss, and the custom CNN-BiLSTM is fine-tuned specifically on respiratory audio.
-                  Combined accuracy: 91% on validation set with &lt;3% false negative rate on TB indicators.
-                </p>
-                <p>
-                  <strong>Challenge solved:</strong> Designing for clinics with zero internet and health workers who may
-                  not speak English. The multilingual triage agent generates follow-up questions in the patient's
-                  language,
-                  and all patient records persist locally via localStorage — no server required for data continuity.
-                </p>
-              </div>
-            </details>
-          </article>
-
-          <!-- 5. VoteChain -->
-          <article class="project-card" data-category="web">
-            <div class="project-card__header">
-              <h3 class="project-card__name">VoteChain</h3>
-              <a href="https://github.com/Rishav408/votechain" target="_blank" rel="noopener" class="project-card__gh"
-                aria-label="VoteChain GitHub repository">
-                GitHub
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <p class="project-card__desc">Blockchain e-voting with SHA-256 chain validation, Aadhaar-based voter auth,
-              designed for Maharashtra state elections.</p>
-            <div class="project-card__tags">
-              <span class="tag">Java 17</span>
-              <span class="tag">Spark Java</span>
-              <span class="tag">MongoDB</span>
-              <span class="tag">SHA-256</span>
-              <span class="tag">Blockchain</span>
-            </div>
-
-            <details class="project-card__details">
-              <summary>More detail</summary>
-              <div class="project-card__details-body">
-                <p>Tamper-proof electronic voting platform using a custom blockchain implementation for vote integrity —
-                  each vote is a block with SHA-256 hash linking and Merkle tree verification. MongoDB handles voter
-                  registration with Aadhaar-based authentication (simulated). Real-time vote tallying with automatic
-                  chain validation on every new block addition.</p>
-
-                <p>
-                  <strong>Architecture:</strong> Voter registration (MongoDB + Aadhaar lookup) → authentication →
-                  vote casting → block creation (vote data + previous hash + timestamp + nonce) → SHA-256 hash
-                  computation → chain append with Merkle root update → real-time tally aggregation → admin dashboard.
-                </p>
-                <p>
-                  <strong>Why blockchain here:</strong> Most "blockchain projects" are solutions looking for a problem.
-                  E-voting is one of the few domains where blockchain's core property — immutable, append-only audit
-                  trails — is architecturally essential. The chain provides tamper-evidence: any modification to a past
-                  vote invalidates all subsequent hashes, making fraud detectable in O(n) time.
-                </p>
-                <p>
-                  <strong>Challenge solved:</strong> Balancing vote anonymity with auditability. Votes are stored as
-                  hashed representations — the chain proves a vote was cast and unchanged, but the voter's identity
-                  is decoupled from their ballot through a two-phase commit protocol.
-                </p>
-              </div>
-            </details>
-          </article>
-
-          <!-- 6. NyayaAI -->
-          <article class="project-card" data-category="ai">
-            <div class="project-card__header">
-              <h3 class="project-card__name">NyayaAI — Legal AI Assistant</h3>
-              <a href="https://github.com/Rishav408/nyaya-ai" target="_blank" rel="noopener" class="project-card__gh"
-                aria-label="NyayaAI GitHub repository">
-                GitHub
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" aria-hidden="true">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                  <polyline points="15 3 21 3 21 9" />
-                  <line x1="10" y1="14" x2="21" y2="3" />
-                </svg>
-              </a>
-            </div>
-            <p class="project-card__desc">RAG-based legal AI for Indian jurisprudence — hybrid retrieval combining local
-              knowledge base + live web search. In revamp.</p>
-            <div class="project-card__tags">
-              <span class="tag">Python 3.11</span>
-              <span class="tag">LangChain</span>
-              <span class="tag">RAG</span>
-              <span class="tag">Flask</span>
-              <span class="tag">ChromaDB</span>
-              <span class="tag">Sentence-Transformers</span>
-            </div>
-
-            <details class="project-card__details">
-              <summary>More detail</summary>
-              <div class="project-card__details-body">
-                <p>Context-aware legal Q&amp;A system combining a local vector knowledge base (ChromaDB with
-                  sentence-transformer embeddings) with real-time web search for comprehensive Indian legal
-                  information. Uses RAG pipeline with LangChain orchestration — queries first hit the local
-                  corpus of Indian legal documents, then augment with live web results for currency.
-                  Every answer includes source citations with relevance scores.</p>
-
-                <p>
-                  <strong>Architecture:</strong> User query → query embedding (sentence-transformers all-MiniLM-L6-v2) →
-                  ChromaDB similarity search (top-k=5, cosine distance) → web search augmentation (SerpAPI fallback) →
-                  context assembly with source deduplication → LLM generation with citation formatting → response
-                  with inline source links and confidence scores.
-                </p>
-                <p>
-                  <strong>Why hybrid retrieval:</strong> Legal information has a freshness problem — statutes change,
-                  new judgments are delivered, amendments are passed. A pure local corpus goes stale. The hybrid
-                  approach
-                  grounds answers in curated legal texts (accuracy) while supplementing with current web data
-                  (currency).
-                  Retrieval precision: 78% on Indian legal Q&amp;A benchmark.
-                </p>
-                <p>
-                  <strong>Status:</strong> Currently in revamp — migrating from Flask to FastAPI, upgrading embeddings
-                  to legal-domain-specific models, and expanding the corpus to cover recent Supreme Court judgments
-                  through 2025.
-                </p>
-              </div>
-            </details>
-          </article>
-
-        </div>
+        <!-- 4-column grid -->
+        <div class="project__grid" id="projectGrid"></div>
       </div>
     </section>
 
@@ -786,32 +451,81 @@
         <h2>Skills</h2>
 
         <div class="skills__table">
+
           <div class="skills__row">
             <span class="skills__label">Languages</span>
-            <span class="skills__items">Python · JavaScript · TypeScript · Java · SQL · Bash</span>
+            <div class="skills__chips">
+              <span class="tag">Python</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Java</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Bash</span>
+            </div>
           </div>
+
           <div class="skills__row">
             <span class="skills__label">AI / ML</span>
-            <span class="skills__items">PyTorch · TensorFlow · YOLOv8/v11 · HuggingFace · LangChain · Ollama ·
-              scikit-learn · NLTK</span>
+            <div class="skills__chips">
+              <span class="tag">PyTorch</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">YOLOv8 / v11</span>
+              <span class="tag">HuggingFace</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">Ollama</span>
+              <span class="tag">scikit-learn</span>
+              <span class="tag">NLTK</span>
+            </div>
           </div>
+
           <div class="skills__row">
             <span class="skills__label">Backend</span>
-            <span class="skills__items">FastAPI · Node.js · Flask · PostgreSQL · MongoDB · Docker · REST APIs</span>
+            <div class="skills__chips">
+              <span class="tag">FastAPI</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Flask</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Docker</span>
+              <span class="tag">REST APIs</span>
+            </div>
           </div>
+
           <div class="skills__row">
             <span class="skills__label">Frontend</span>
-            <span class="skills__items">React · Next.js · TypeScript · Tailwind CSS · Gradio</span>
+            <div class="skills__chips">
+              <span class="tag">React</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">Gradio</span>
+            </div>
           </div>
+
           <div class="skills__row">
             <span class="skills__label">Infra</span>
-            <span class="skills__items">Git · Linux · Firebase · Vercel · AWS · FFmpeg · Jupyter</span>
+            <div class="skills__chips">
+              <span class="tag">Git</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Vercel</span>
+              <span class="tag">AWS</span>
+              <span class="tag">FFmpeg</span>
+              <span class="tag">Jupyter</span>
+            </div>
           </div>
-          <div class="skills__row">
+
+          <div class="skills__row skills__row--interests">
             <span class="skills__label">Interests</span>
-            <span class="skills__items">Offline AI · RAG systems · Edge inference · Multilingual NLP · Privacy-first
-              architectures</span>
+            <div class="skills__chips">
+              <span class="tag tag--interest">Offline AI</span>
+              <span class="tag tag--interest">RAG systems</span>
+              <span class="tag tag--interest">Edge inference</span>
+              <span class="tag tag--interest">Multilingual NLP</span>
+              <span class="tag tag--interest">Privacy-first architectures</span>
+            </div>
           </div>
+
         </div>
       </div>
     </section>

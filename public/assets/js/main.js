@@ -118,7 +118,6 @@
 
   // ── 4. DYNAMIC PROJECTS & MODAL DEEP-DIVE ───────────────
 
-  var projectList = document.getElementById('projectList');
   var filterButtons = document.querySelectorAll('.filter-btn');
   var allProjects = [];
 
@@ -239,47 +238,49 @@
     return false;
   }
 
-  // Render project cards to container
+  // Render project cards to grid container
   function renderProjects(projects, filter) {
-    if (!projectList) return;
-    projectList.innerHTML = '';
+    var gridContainer = document.getElementById('projectGrid');
+    if (!gridContainer) return;
+
+    gridContainer.innerHTML = '';
 
     var filtered = projects.filter(function (p) {
       return projectMatchesFilter(p, filter);
     });
 
+    var countEl = document.getElementById('projectCount');
+    if (countEl) countEl.textContent = filtered.length + ' projects';
+
+    var arrowSvg = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+
     filtered.forEach(function (project) {
-      var card = document.createElement('div');
+      var tagsHtml = (project.tags || []).map(function (tag) {
+        return '<span class="tag">' + tag + '</span>';
+      }).join('');
+
+      var card = document.createElement('article');
       card.className = 'project-card fade-in';
       card.setAttribute('tabindex', '0');
       card.setAttribute('role', 'button');
       card.setAttribute('aria-label', 'View details for ' + project.title);
 
-      var tagsHtml = (project.tags || []).map(function (tag) {
-        return '<span class="tag">' + tag + '</span>';
-      }).join('');
-
-      card.innerHTML = 
-        '<div class="project-card__image-wrapper">' +
-          '<img src="' + project.image + '" alt="' + project.title + '" class="project-card__image" loading="lazy">' +
+      card.innerHTML =
+        '<div class="project-card__img-wrap">' +
+          '<img src="' + (project.image || '') + '" alt="' + project.title + '" class="project-card__img" loading="lazy">' +
         '</div>' +
-        '<div class="project-card__content">' +
-          '<h3 class="project-card__name">' + project.title + '</h3>' +
+        '<div class="project-card__body">' +
+          '<div class="project-card__header">' +
+            '<h3 class="project-card__name">' + project.title + '</h3>' +
+            (project.github
+              ? '<a href="' + project.github + '" target="_blank" rel="noopener" class="project-card__gh-link" aria-label="GitHub" onclick="event.stopPropagation()">' + arrowSvg + '</a>'
+              : '') +
+          '</div>' +
           '<p class="project-card__desc">' + project.description + '</p>' +
           '<div class="project-card__tags">' + tagsHtml + '</div>' +
-          '<div class="project-card__footer">' +
-            '<span class="project-card__more">' +
-              'Technical deep-dive ' +
-              '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14" aria-hidden="true" style="margin-left: 4px; display: inline-block; vertical-align: middle;">' +
-                '<path d="M5 12h14M12 5l7 7-7 7"/>' +
-              '</svg>' +
-            '</span>' +
-          '</div>' +
         '</div>';
 
-      card.addEventListener('click', function () {
-        openModal(project);
-      });
+      card.addEventListener('click', function () { openModal(project); });
       card.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
@@ -287,13 +288,10 @@
         }
       });
 
-      projectList.appendChild(card);
+      gridContainer.appendChild(card);
     });
 
-    // Re-initialize fade-in transitions for dynamically loaded cards
-    if (typeof initScrollFadeIn === 'function') {
-      initScrollFadeIn();
-    }
+    if (typeof initScrollFadeIn === 'function') initScrollFadeIn();
   }
 
   // Populate and open custom modal
