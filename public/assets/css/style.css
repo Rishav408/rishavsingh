@@ -1142,7 +1142,6 @@ a.link-accent:hover {
   font-size: 0.9375rem;
   color: var(--text-primary);
   line-height: 1.78;
-  max-width: 680px;
 }
 
 @media (max-width: 640px) {
@@ -1764,7 +1763,6 @@ body.modal-open {
 .writing__list {
   display: flex;
   flex-direction: column;
-  max-width: 720px;
 }
 
 .writing__item {
