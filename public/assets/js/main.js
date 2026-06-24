@@ -14,6 +14,36 @@
 (function () {
   'use strict';
 
+  // ── THEME TOGGLE ───────────────────────────────────────────
+
+  var themeToggle = document.getElementById('theme-toggle');
+  var iconSun = document.getElementById('icon-sun');
+  var iconMoon = document.getElementById('icon-moon');
+  var root = document.documentElement;
+
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    if (theme === 'dark') {
+      iconSun.style.display = 'none';
+      iconMoon.style.display = 'block';
+    } else {
+      iconSun.style.display = 'block';
+      iconMoon.style.display = 'none';
+    }
+  }
+
+  var savedTheme = localStorage.getItem('theme');
+  var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(savedTheme || (prefersDark ? 'dark' : 'light'));
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', function () {
+      var current = root.getAttribute('data-theme');
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+  }
+
   // ── 1. NAV BORDER ON SCROLL ──────────────────────────────
 
   var nav = document.getElementById('nav');

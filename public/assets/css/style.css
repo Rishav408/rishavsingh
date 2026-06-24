@@ -112,6 +112,94 @@ button {
   --lh-heading: 1.2;
 }
 
+[data-theme="dark"] {
+  --bg: #1A1917;
+  --surface: #232220;
+  --tag-bg: #2C2B29;
+  --text-primary: #ECECEC;
+  --text-secondary: #9B9B9B;
+  --text-tertiary: #6B6B6B;
+  --tag-text: #C2C2C2;
+  --accent: #C5C2BB;
+  --accent-hover: #E8E6E1;
+  --border: #2E2D2B;
+  --success: #4ADE80;
+  --error: #F87171;
+  --focus-ring: rgba(197, 194, 187, 0.3);
+}
+
+[data-theme="dark"] .status-badge,
+[data-theme="dark"] .availability-pill {
+  background: #14532D;
+  color: #4ADE80;
+}
+
+[data-theme="dark"] .status-dot {
+  background: #4ADE80;
+}
+
+[data-theme="dark"] .btn-primary {
+  background: #C5C2BB;
+  color: #1A1917;
+  border-color: #C5C2BB;
+}
+
+[data-theme="dark"] .btn-primary:hover {
+  background: #E8E6E1;
+  border-color: #E8E6E1;
+  color: #1A1917;
+}
+
+[data-theme="dark"] .modal-banner {
+  background: #2C2B29;
+}
+
+[data-theme="dark"] .card:hover {
+  border-color: #3D3C3A;
+}
+
+[data-theme="dark"] .project-card:hover {
+  border-color: #3D3C3A;
+}
+
+[data-theme="dark"] .modal-overlay {
+  background: rgba(0, 0, 0, 0.72);
+}
+
+[data-theme="dark"] .photo-badge {
+  background: rgba(35, 34, 32, 0.92);
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
+[data-theme="dark"] .modal-close {
+  background: rgba(44, 43, 41, 0.85);
+}
+
+[data-theme="dark"] .btn-secondary:hover {
+  background: rgba(197, 194, 187, 0.07);
+}
+
+[data-theme="dark"] .btn-secondary:active {
+  background: rgba(197, 194, 187, 0.12);
+}
+
+[data-theme="dark"] .icon-link:hover {
+  background: rgba(197, 194, 187, 0.10);
+}
+
+[data-theme="dark"] .current-exp-logo {
+  border-color: rgba(197, 194, 187, 0.20);
+  background: rgba(197, 194, 187, 0.05);
+}
+
+*, *::before, *::after {
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 150ms ease,
+    box-shadow 200ms ease;
+}
+
 
 /* ── 3. BASE TYPOGRAPHY ───────────────────────────────────── */
 
@@ -492,6 +580,24 @@ a.link-accent:hover {
 
 .nav__toggle--open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
+}
+
+.theme-toggle-btn {
+  background: transparent;
+  border: 0.5px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 8px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--tag-bg);
+  color: var(--text-primary);
 }
 
 /* Mobile drawer */
