@@ -47,7 +47,7 @@
       "Local LLM",
       "Privacy"
     ],
-    "image": "https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=600&h=400&fit=crop",
+    "image": "https://cdn.mos.cms.futurecdn.net/SSPqMq8aUrp3Fy5uyHTByN.jpg",
     "description": "Fully local, privacy‑preserving dashcam incident analysis using YOLO11, SORT tracking, optical flow, and local VLMs via Ollama—no cloud APIs required.",
     "concept": "Solves automated incident detection and explanation from dashcam footage while maintaining complete privacy. Ideal for scenarios where sensitive video data cannot leave local infrastructure, delivering intelligent analysis with zero internet dependency.",
     "architecture": "5‑phase pipeline: (1) FFmpeg keyframe extraction with motion scoring, (2) Incident detection via YOLO11+SORT+Farneback optical flow fusion, (3) Multi‑modal VLM narration using MiniCPM‑V + Mistral 7B via Ollama, (4) Privacy filtering with face/LP blurring, (5) Gradio UI + ReportLab PDF export.",
