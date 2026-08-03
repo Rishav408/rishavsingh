@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — Rishav Singh</title>
+  <meta name="description"
+    content="Notes and writeups on offline AI systems, explainable NLP, and shipping privacy-first machine learning.">
+  <meta name="author" content="Rishav Singh">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://rishavsingh4805.web.app/writing.html">
+
+  <meta property="og:title" content="Writing — Rishav Singh">
+  <meta property="og:description"
+    content="Notes and writeups on offline AI systems, explainable NLP, and shipping privacy-first machine learning.">
+  <meta property="og:url" content="https://rishavsingh4805.web.app/writing.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rishav Singh Portfolio">
+
+  <link rel="icon" type="image/jpeg" href="assets/img/Rlogo.jpg">
+  <link rel="apple-touch-icon" href="assets/img/Rlogo.jpg">
+  <link rel="preload" href="assets/css/style.css" as="style">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Rishav Singh — home">
+        <img src="assets/img/Rlogo.jpg" alt="Rishav Singh Logo" class="nav__logo-img" width="28" height="28">
+        Rishav Singh
+      </a>
+
+      <div class="nav__right">
+        <ul class="nav__links" id="navLinks" role="list">
+          <li><a href="index.html#about" class="nav__link">ABOUT</a></li>
+          <li><a href="index.html#experience" class="nav__link">EXPERIENCE</a></li>
+          <li><a href="index.html#projects" class="nav__link">PROJECTS</a></li>
+          <li><a href="writing.html" class="nav__link nav__link--active-page" aria-current="page">WRITING</a></li>
+          <li><a href="index.html#skills" class="nav__link">SKILLS</a></li>
+          <li><a href="index.html#contact" class="nav__link">CONTACT</a></li>
+        </ul>
+
+        <button id="theme-toggle" aria-label="Toggle dark mode" class="theme-toggle-btn">
+          <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            style="display:none;">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <div class="nav__status" aria-label="Employment status">
+          <span class="nav__status-dot"></span>
+          <span class="nav__status-text">Open to work</span>
+        </div>
+
+        <a href="assets/img/Rishav Singh - Resume.pdf" target="_blank" rel="noopener" class="nav__resume-btn" aria-label="Download Resume PDF">
+          Resume
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+        </a>
+
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navDrawer"
+          aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="nav__drawer" id="navDrawer" role="dialog" aria-label="Navigation menu">
+      <div class="nav__drawer-links">
+        <a href="index.html#about" class="nav__drawer-link">ABOUT</a>
+        <a href="index.html#experience" class="nav__drawer-link">EXPERIENCE</a>
+        <a href="index.html#projects" class="nav__drawer-link">PROJECTS</a>
+        <a href="writing.html" class="nav__drawer-link" aria-current="page">WRITING</a>
+        <a href="index.html#skills" class="nav__drawer-link">SKILLS</a>
+        <a href="index.html#contact" class="nav__drawer-link">CONTACT</a>
+        <a href="assets/img/Rishav Singh - Resume.pdf" target="_blank" rel="noopener" class="nav__drawer-link">RESUME ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main-content" class="writing-page">
+    <div class="container">
+
+      <!-- List mode -->
+      <div id="writingListView">
+        <header class="writing-page__intro fade-in">
+          <h1>Writing</h1>
+          <p class="writing-page__lede">
+            Notes on offline AI systems, explainable NLP, and shipping models that stay useful under real constraints.
+          </p>
+        </header>
+        <div id="writingTileGrid" class="writing-tile-grid fade-in"></div>
+        <p id="writingListStatus" class="writing-page__status" role="status" aria-live="polite"></p>
+      </div>
+
+      <!-- Article mode -->
+      <div id="writingArticleView" class="writing-layout" hidden>
+        <button type="button" class="writing-sidenav-toggle" id="writingSidenavToggle" aria-expanded="false" aria-controls="writingSidenav">
+          <span>Posts</span>
+          <span aria-hidden="true">▾</span>
+        </button>
+
+        <aside class="writing-sidenav" id="writingSidenav" aria-label="Post navigation">
+          <p class="writing-sidenav__label">All posts</p>
+          <nav class="writing-sidenav__list" id="writingSidenavList"></nav>
+        </aside>
+
+        <article class="writing-article" id="writingArticle">
+          <a href="writing.html" class="writing-article__back" id="writingBackLink">← All writing</a>
+
+          <header class="writing-article__header">
+            <div class="writing-article__meta">
+              <span class="writing-article__category" id="articleCategory"></span>
+              <span aria-hidden="true">·</span>
+              <time id="articleDate"></time>
+            </div>
+            <h1 class="writing-article__title" id="articleTitle"></h1>
+            <div class="writing-article__tags" id="articleTags"></div>
+          </header>
+
+          <img class="writing-article__banner" id="articleBanner" alt="" hidden>
+
+          <div class="writing-article__body" id="articleBody"></div>
+
+          <section class="writing-related" id="writingRelated" aria-labelledby="relatedTitle">
+            <h2 class="writing-related__title" id="relatedTitle">Related</h2>
+            <div class="writing-related__grid" id="relatedGrid"></div>
+          </section>
+        </article>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__left">
+        <p class="footer__name">Rishav Singh</p>
+        <p class="footer__sub">AI &amp; Systems Engineer · Pune, India · &copy; <span id="footerYear"></span></p>
+      </div>
+      <div class="footer__right">
+        <div class="footer__links">
+          <a href="https://github.com/Rishav408" target="_blank" rel="noopener" class="footer__link">GitHub</a>
+          <a href="https://linkedin.com/in/rishavsingh408" target="_blank" rel="noopener" class="footer__link">LinkedIn</a>
+          <a href="https://x.com/RishavSingh408" target="_blank" rel="noopener" class="footer__link">X</a>
+          <a href="assets/img/Rishav Singh - Resume.pdf" target="_blank" rel="noopener" class="footer__link">Resume</a>
+        </div>
+        <p class="footer__copy">Built with HTML, CSS, vanilla JS. No frameworks.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/writing.js"></script>
+</body>
+
+</html>
