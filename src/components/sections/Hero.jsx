@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Download, Mail } from 'lucide-react';
 import { Github, Linkedin, Twitter } from '../ui/Icons';
 import heroImg from '../../assets/img/hero-img.jpg';
-import resumePdf from '../../assets/img/Rishav Singh - Resume.pdf';
+import resumePdf from '../../assets/img/Rishav_Singh_Resume.pdf';
 import Badge from '../ui/Badge';
 
 export default function Hero({ projectCount = 18 }) {

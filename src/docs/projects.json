@@ -78,7 +78,7 @@
       "~80% reduction in VLM inference calls by running only on flagged keyframes",
       "Automatic face and license-plate blurring with BLEU/ROUGE evaluation suite"
     ],
-    "github": "https://github.com/Rishav408/local-ai-dashcam"
+    "github": "https://github.com/Rishav408/Local-AI-Dashcam-Incident-Explainer"
   },
   {
     "id": 1,
@@ -155,7 +155,8 @@
       "JSON-driven content layer — data fully separated from presentation",
       "Persistent theme preference via localStorage"
     ],
-    "github": "https://github.com/Rishav408/marvel-time-vault"
+    "github": "https://github.com/Rishav408/Marvel-Timevault",
+    "live": "https://marvel-timevault-4805.web.app/"
   },
   {
     "id": 5,

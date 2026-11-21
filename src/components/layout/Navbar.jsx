@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Sun, Moon, Download, Menu, X } from 'lucide-react';
-import resumePdf from '../../assets/img/Rishav Singh - Resume.pdf';
+import resumePdf from '../../assets/img/Rishav_Singh_Resume.pdf';
 import logoImg from '../../assets/img/Rlogo.jpg';
 
 export default function Navbar({ darkMode, setDarkMode }) {
@@ -22,7 +22,6 @@ export default function Navbar({ darkMode, setDarkMode }) {
     { name: 'RESEARCH', href: '/#research' },
     { name: 'ABOUT', href: '/#about' },
     { name: 'SKILLS', href: '/#skills' },
-    { name: 'WRITING', href: '/writing', isRoute: true },
     { name: 'CONTACT', href: '/#contact' },
   ];
 

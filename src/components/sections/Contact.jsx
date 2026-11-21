@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, FileText, Send, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Mail, FileText, Send, CheckCircle2, AlertCircle, Globe } from 'lucide-react';
 import { Github, Linkedin, Twitter } from '../ui/Icons';
-import resumePdf from '../../assets/img/Rishav Singh - Resume.pdf';
+import resumePdf from '../../assets/img/Rishav_Singh_Resume.pdf';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -103,6 +103,18 @@ export default function Contact() {
                     <FileText size={16} />
                   </div>
                   <span>Download Resume PDF</span>
+                </a>
+
+                <a
+                  href="https://rishavsingh4805.web.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-sm text-stone-700 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
+                >
+                  <div className="p-2 rounded-xl bg-[#F4F0E8] dark:bg-[#181614] text-stone-600 dark:text-stone-300 border border-[#E7E2DA] dark:border-[#2A2724]">
+                    <Globe size={16} />
+                  </div>
+                  <span>rishavsingh4805.web.app</span>
                 </a>
               </div>
             </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { FileText } from 'lucide-react';
 import { Github, Linkedin, Twitter } from '../ui/Icons';
-import resumePdf from '../../assets/img/Rishav Singh - Resume.pdf';
+import resumePdf from '../../assets/img/Rishav_Singh_Resume.pdf';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
