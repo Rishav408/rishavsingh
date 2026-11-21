@@ -1,152 +1,24 @@
-# ============================================
-# OS Files
-# ============================================
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-Thumbs.db:encryptable
-desktop.ini
-$RECYCLE.BIN/
-
-# ============================================
-# IDEs & Editors
-# ============================================
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-*.sublime-workspace
-*.sublime-project
-.project
-.classpath
-.settings/
-
-# ============================================
-# Local AI Assistant Config
-# ============================================
-.qwen/
-
-# ============================================
-# Terminal & Shell
-# ============================================
+# Logs
+logs
 *.log
-*.log.*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
-# ============================================
-# Dependencies & Build
-# ============================================
-node_modules/
-bower_components/
-dist/
-build/
-out/
-.next/
+node_modules
+dist
+dist-ssr
+*.local
 
-# ============================================
-# Environment & Secrets
-# ============================================
-.env
-.env.local
-.env.*.local
-.env.development
-.env.production
-.env.staging
-*.pem
-*.key
-*.cert
-secrets.json
-service-account.json
-
-# ============================================
-# Firebase (local deploy config only)
-# ============================================
-.firebaserc
-.firebase/
-firebase.json
-firestore.rules
-firebase-debug.log*
-firestore-debug.log*
-ui-debug.log*
-.runtimeconfig.json
-deploy.ps1
-
-# ============================================
-# Python (for any local scripts)
-# ============================================
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-*.egg-info/
-*.egg
-venv/
-.venv/
-env/
-ENV/
-
-# ============================================
-# Jupyter & Notebooks
-# ============================================
-.ipynb_checkpoints/
-*.ipynb_checkpoints
-
-# ============================================
-# Docker
-# ============================================
-.env.docker
-docker-compose.override.yml
-
-# ============================================
-# Package Managers
-# ============================================
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# ============================================
-# Misc
-# ============================================
-*.tmp
-*.temp
-.cache/
-coverage/
-.nyc_output/
-.parcel-cache/
-.eslintcache
-
-# ============================================
-# AI & ML Models / Data (don't push large files)
-# ============================================
-*.h5
-*.pkl
-*.onnx
-*.pb
-*.pt
-*.pth
-*.ckpt
-*.bin
-*.weights
-models/
-checkpoints/
-*.model
-
-# ============================================
-# Large Media (keep in .gitignore, use CDN/Firebase)
-# ============================================
-*.mp4
-*.avi
-*.mov
-*.mkv
-*.zip
-*.rar
-*.tar.gz
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

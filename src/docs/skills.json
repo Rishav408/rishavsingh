@@ -1,0 +1,88 @@
+{
+  "categories": [
+    {
+      "name": "AI & GenAI",
+      "description": "Core specialty in agentic workflows, RAG, and local model inference",
+      "skills": [
+        "LangChain",
+        "LangGraph",
+        "RAG Architectures",
+        "Google Gemini API",
+        "Ollama",
+        "LM Studio",
+        "Chroma DB",
+        "Prompt Engineering",
+        "Hugging Face (Inference)",
+        "Qwen2.5-VL",
+        "faster-whisper"
+      ]
+    },
+    {
+      "name": "Data Analysis & Visualization",
+      "description": "Specialty in data pipelines, indicator analytics, and exploratory dashboards",
+      "skills": [
+        "Python",
+        "Pandas",
+        "NumPy",
+        "SQL",
+        "Streamlit",
+        "Plotly",
+        "Data Profiling",
+        "ETL Pipelines",
+        "Time-Series Analysis"
+      ]
+    },
+    {
+      "name": "NLP & Audio",
+      "description": "Multilingual corpora, text processing, and speech intelligence",
+      "skills": [
+        "Embeddings",
+        "Tokenization",
+        "Text Classification",
+        "NLTK",
+        "Multilingual NLP (5 Indian languages)",
+        "Audio Feature Extraction (librosa)",
+        "Scikit-learn"
+      ]
+    },
+    {
+      "name": "Full-Stack with AI",
+      "description": "End-to-end web architecture with agentic tool integration",
+      "skills": [
+        "FastAPI",
+        "Flask",
+        "REST APIs",
+        "React 18",
+        "TypeScript",
+        "Tailwind CSS",
+        "Vite",
+        "Node.js",
+        "MongoDB",
+        "JWT Auth",
+        "SSE Streaming"
+      ]
+    },
+    {
+      "name": "Platforms & Tools",
+      "description": "Infrastructure, local inference, and testing environments",
+      "skills": [
+        "Git",
+        "GitHub",
+        "Docker",
+        "Render",
+        "Firebase Hosting",
+        "OpenCV",
+        "FFmpeg",
+        "ReportLab",
+        "Pytest",
+        "Vitest"
+      ]
+    }
+  ],
+  "softSkills": [
+    "Problem Solving",
+    "Technical Documentation",
+    "Decision Making",
+    "System Decomposition"
+  ]
+}

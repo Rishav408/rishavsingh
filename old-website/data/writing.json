@@ -6,20 +6,34 @@
     "category": "systems",
     "excerpt": "How a fully local vision + VLM pipeline can explain dashcam incidents without sending a single frame to the cloud.",
     "image": "https://cdn.mos.cms.futurecdn.net/SSPqMq8aUrp3Fy5uyHTByN.jpg",
-    "tags": ["Computer Vision", "Privacy", "Edge AI"],
-    "related": ["explainable-hate-speech", "offline-rag-notes"],
+    "tags": [
+      "Computer Vision",
+      "Privacy",
+      "Edge AI"
+    ],
+    "related": [
+      "explainable-hate-speech",
+      "offline-rag-notes"
+    ],
     "content": "<p>Most dashcam AI products treat the cloud as the default. Video leaves the device, models run remotely, and privacy becomes a policy document rather than an architecture constraint.</p><p>This writeup walks through a different approach: a five-phase offline pipeline that keeps every frame on-device while still producing useful incident explanations.</p><h2>Why offline matters</h2><p>Dashcam footage often includes faces, license plates, and location context. Shipping that data to a third-party API creates both regulatory and trust problems. A local stack—YOLO for detection, SORT for tracking, optical flow for motion cues, and a local VLM via Ollama—keeps the analysis private by design.</p><h2>Pipeline overview</h2><p>The system extracts motion-scored keyframes, fuses object tracking with optical flow to flag incidents, narrates events with a multimodal model, applies privacy blurring, then exports a readable report. Each stage is measurable, so ablation studies can show what each component actually contributes.</p><h2>Takeaways</h2><p>Privacy-first AI is not only a compliance checkbox. It forces clearer interfaces between perception, reasoning, and reporting—and those boundaries make the system easier to evaluate and ship.</p><p>Full architecture notes and evaluation methodology live in the <a href=\"https://github.com/Rishav408/local-ai-dashcam\" target=\"_blank\" rel=\"noopener\">project repository</a>.</p>"
   },
   {
     "id": "explainable-hate-speech",
-    "title": "Explainable Multilingual Hate Speech Detection",
-    "date": "2024-08-20",
+    "title": "A Real-time Multilingual Hate Speech Analysis Framework for Penta Language Corpus",
+    "date": "2026-10-01",
     "category": "nlp",
-    "excerpt": "Classical NLP, transparent risk scoring, and multilingual support without hiding decisions inside a black-box transformer.",
+    "excerpt": "IEEE conference paper on hate-speech analysis across five Indian languages with transparent risk scoring. Lead author. Accepted; revisions in progress.",
     "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop",
-    "tags": ["NLP", "Explainable AI", "Multilingual"],
-    "related": ["privacy-first-dashcam", "offline-rag-notes"],
-    "content": "<p>Transformer models dominate hate speech detection benchmarks, but many moderation and research settings need decisions that can be inspected, challenged, and audited.</p><p>Justify-AI explores a classical NLP path: language detection, language-specific preprocessing, lexicon matching with severity spans, causality heuristics, demographic bias checks, and a composite risk score exposed through a FastAPI backend and dashboard.</p><h2>What explainability buys you</h2><p>When a score is high, you can point to the lexical matches, causal patterns, and bias signals that moved the needle. That does not replace human judgment, but it gives reviewers a structured starting point instead of an opaque probability.</p><h2>Multilingual reality</h2><p>Supporting English, Hindi, Marathi, Bhojpuri, and Marwari means the pipeline must respect language-specific tokenization and stemming rather than assuming an English-centric tokenizer will transfer cleanly.</p><h2>Research framing</h2><p>The IEEE-oriented writeup for this work focuses on transparent risk scoring across Indian languages. The implementation and paper artifacts are available on <a href=\"https://github.com/Rishav408/justify-ai\" target=\"_blank\" rel=\"noopener\">GitHub</a>.</p>"
+    "tags": [
+      "NLP",
+      "Explainable AI",
+      "Multilingual"
+    ],
+    "related": [
+      "privacy-first-dashcam",
+      "offline-rag-notes"
+    ],
+    "content": "<p>Transformer models dominate hate speech detection benchmarks, but many moderation and research settings need decisions that can be inspected, challenged, and audited.</p><p>Justify-AI explores a classical NLP path: language detection, language-specific preprocessing, lexicon matching with severity spans, causality heuristics, demographic bias checks, and a composite risk score exposed through a FastAPI backend and dashboard.</p><h2>What explainability buys you</h2><p>When a score is high, you can point to the lexical matches, causal patterns, and bias signals that moved the needle. That does not replace human judgment, but it gives reviewers a structured starting point instead of an opaque probability.</p><h2>Multilingual reality</h2><p>Supporting English, Hindi, Marathi, Bhojpuri, and Marwari means the pipeline must respect language-specific tokenization and stemming rather than assuming an English-centric tokenizer will transfer cleanly.</p><h2>Research framing</h2><p>This IEEE conference paper focuses on a framework for hate-speech analysis across five Indian languages with transparent risk scoring. Accepted; revisions in progress. The implementation and paper artifacts are available on <a href=\"https://github.com/Rishav408/justify-ai\" target=\"_blank\" rel=\"noopener\">GitHub</a>.</p>"
   },
   {
     "id": "offline-rag-notes",
@@ -28,8 +42,15 @@
     "category": "ai",
     "excerpt": "Practical constraints that show up when retrieval-augmented generation must run without reliable internet access.",
     "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
-    "tags": ["RAG", "Offline AI", "Systems"],
-    "related": ["privacy-first-dashcam", "explainable-hate-speech"],
+    "tags": [
+      "RAG",
+      "Offline AI",
+      "Systems"
+    ],
+    "related": [
+      "privacy-first-dashcam",
+      "explainable-hate-speech"
+    ],
     "content": "<p>Online RAG tutorials often assume cheap embeddings APIs, large context windows, and always-on connectivity. Offline deployments invert those assumptions.</p><p>Model size, embedding storage, chunk strategy, and evaluation all change when the system must answer from a local corpus on modest hardware.</p><h2>Constraints that matter</h2><ul><li>Embedding indexes must fit local disk and memory budgets.</li><li>Retrieval quality becomes more important than generation flourish when the LLM is small.</li><li>Fallback behavior for empty or low-confidence retrieval should be explicit.</li></ul><h2>A useful evaluation habit</h2><p>Before tuning prompts, measure retrieval hit rate on a fixed question set. Many generation failures are actually retrieval failures wearing a fluent answer.</p><h2>Where this fits</h2><p>Offline RAG sits in the same design family as privacy-first vision systems: keep sensitive data local, make each stage inspectable, and optimize for reliability over spectacle.</p>"
   }
 ]

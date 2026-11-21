@@ -1,0 +1,456 @@
+[
+  {
+    "id": 3,
+    "title": "Jurista – Indian Legal Intelligence & Research Copilot",
+    "category": "ai",
+    "featured": true,
+    "tags": ["LLM", "LangChain", "Google Gemini", "LegalTech", "RAG"],
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop",
+    "description": "Full-stack Indian legal intelligence platform integrating LangChain orchestration, Google Gemini, and dynamic search routing for grounded statutory analysis and document intelligence.",
+    "concept": "Jurista addresses the dual challenges of statutory complexity and LLM hallucination in Indian law. Designed to serve both legal practitioners and citizens, it bridges codified Indian jurisprudence (Bare Acts, Constitution, landmark Supreme Court precedents) with dynamic web verification and multi-turn context retention.",
+    "architecture": "LangChain-orchestrated pipeline powered by Google Gemini with dynamic search routing (DuckDuckGo integration) and session-isolated conversation memory. Features an in-memory document parsing engine (PDF, DOCX, TXT) for contextual contract and petition analysis.",
+    "archSteps": [
+      { "icon": "Search", "label": "Legal Query / Doc" },
+      { "icon": "Sliders", "label": "Dynamic Router" },
+      { "icon": "Database", "label": "LangChain Memory" },
+      { "icon": "Cpu", "label": "Gemini 2.5" },
+      { "icon": "Scale", "label": "Grounded Counsel" }
+    ],
+    "techStack": ["Python", "Flask", "LangChain", "Google Gemini", "DuckDuckGo Search", "PyPDF2", "python-docx", "Firebase Hosting", "Render"],
+    "differentiators": [
+      "Grounded Indian jurisprudence reasoning across Bare Acts (BNS, IPC, CrPC, Constitution)",
+      "Intelligent search router that decides when to verify live judicial records vs. statutory corpus",
+      "In-memory parser for 3 document formats (PDF, DOCX, TXT) for contract and petition analysis",
+      "Deployed: Flask REST API on Render + static Firebase frontend, session-isolated memory"
+    ],
+    "github": "https://github.com/Rishav408/Jurista",
+    "live": "https://jurista408.web.app/"
+  },
+  {
+    "id": 8,
+    "title": "VeeraServe AI – Agentic AI Waiter",
+    "category": "ai",
+    "featured": true,
+    "tags": ["Multimodal AI", "React", "FastAPI", "LangGraph", "RAG", "LM Studio", "Voice", "Vision"],
+    "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+    "description": "Grounded, agentic AI waiter for the Veeradhar Dhaba restaurant — chat that never invents dishes or prices, takes real actions (cart, orders, reservations), and accepts text, voice, and image input, all on local open models.",
+    "concept": "Most restaurant chat UIs either do nothing useful or hallucinate dishes and prices. VeeraServe answers and acts only from the real menu: a RAG pipeline grounds every reply in menu data, and a LangGraph agent executes validated tools to add to cart, place orders, and check status. Voice input (whisper), vision input, full ordering flow, and an admin console ship as one measurable, evaluation-backed release.",
+    "architecture": "React 18 + Vite (TypeScript strict) front end with Tailwind CSS, TanStack Query, and Framer Motion. FastAPI + SQLAlchemy backend with JWT auth, role-based access, SQLite (Postgres-ready). Agent: LangGraph supervisor → guardrails → specialist graph with a validated 12-tool layer (session cart, confirmation-gated ordering), menu-DB-backed RAG using Chroma + nomic-embed-text embeddings, streamed over SSE. LLMs served locally by LM Studio's OpenAI-compatible API (Qwen2.5 chat, Qwen2.5-VL vision); faster-whisper for speech-to-text.",
+    "archSteps": [
+      { "icon": "MessageCircle", "label": "Text / Voice / Image" },
+      { "icon": "Database", "label": "RAG Grounding" },
+      { "icon": "Bot", "label": "LangGraph AI Waiter" },
+      { "icon": "ShoppingCart", "label": "Agentic Ordering" },
+      { "icon": "Settings", "label": "Admin Dashboard" }
+    ],
+    "techStack": ["React 18", "TypeScript", "Vite", "Tailwind CSS", "TanStack Query", "Framer Motion", "FastAPI", "SQLAlchemy", "LangGraph", "Chroma DB", "LM Studio", "Qwen2.5-VL", "faster-whisper", "SSE Streaming", "JWT Auth", "Vitest", "Pytest"],
+    "differentiators": [
+      "0% hallucinated prices in measured runs — every dish and price from real menu via RAG",
+      "LangGraph agent with 12 validated tools: takes real cart, order, and reservation actions",
+      "3 input modes: text, voice (faster-whisper), and image (Qwen2.5-VL) with SSE token streaming",
+      "Fully local LM Studio inference — zero cloud cost, works offline",
+      "Evaluation-backed: groundedness, RAG ablation, tool accuracy (1.000), STT WER, latency, safety suites",
+      "Live admin console: menu CRUD re-indexes RAG automatically, order management, DB analytics"
+    ],
+    "github": "https://github.com/Rishav408/VeeraServe"
+  },
+  {
+    "id": 2,
+    "title": "Local AI Dashcam – Incident Explainer",
+    "category": "ai",
+    "featured": true,
+    "tags": ["Computer Vision", "YOLO", "Local LLM", "Privacy"],
+    "image": "https://cdn.mos.cms.futurecdn.net/SSPqMq8aUrp3Fy5uyHTByN.jpg",
+    "description": "Fully local, privacy-preserving dashcam incident analysis using YOLO11, SORT tracking, optical flow, and local VLMs via Ollama — no cloud APIs required.",
+    "concept": "Solves automated incident detection and explanation from dashcam footage while maintaining complete privacy. Ideal for scenarios where sensitive video data cannot leave local infrastructure, delivering intelligent analysis with zero internet dependency.",
+    "architecture": "5-phase pipeline: (1) FFmpeg keyframe extraction with motion scoring, (2) Incident detection via YOLO11 + SORT + Farneback optical flow fusion, (3) Multi-modal VLM narration using MiniCPM-V + Mistral 7B via Ollama, (4) Privacy filtering with face/LP blurring, (5) Gradio UI + ReportLab PDF export.",
+    "archSteps": [
+      { "icon": "Video", "label": "Video Upload" },
+      { "icon": "Scan", "label": "Keyframe Extract" },
+      { "icon": "Target", "label": "Incident Detect" },
+      { "icon": "Brain", "label": "VLM Analysis" },
+      { "icon": "FileText", "label": "PDF Report" }
+    ],
+    "techStack": ["Python", "FFmpeg", "YOLO11", "SORT Tracker", "OpenCV", "Ollama", "MiniCPM-V", "Mistral 7B", "Gradio", "ReportLab"],
+    "differentiators": [
+      "100% offline — no cloud APIs or internet required at any stage",
+      "Multi-modal AI: fuses YOLO11 object tracking, SORT, and Farneback optical flow before any VLM call",
+      "~80% reduction in VLM inference calls by running only on flagged keyframes",
+      "Automatic face and license-plate blurring with BLEU/ROUGE evaluation suite"
+    ],
+    "github": "https://github.com/Rishav408/local-ai-dashcam"
+  },
+  {
+    "id": 1,
+    "title": "Justify-AI – Explainable Hate Analysis",
+    "category": "ai",
+    "featured": false,
+    "tags": ["NLP", "Naive Bayes", "Multilingual", "Explainable AI"],
+    "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop",
+    "description": "Explainable, multilingual hate-analysis framework built with classical NLP and Naive Bayes, combining lexical, causal, and demographic signals for interpretable risk scoring.",
+    "concept": "Justify-AI addresses the need for transparent, interpretable hate speech detection without relying on black-box transformers. It supports multiple Indian languages with clear risk breakdowns, making AI decisions auditable and understandable for research and moderation workflows.",
+    "architecture": "Classical NLP pipeline: Language Detection → Language-specific preprocessing (tokenization, stemming, lemmatization) → Hate lexicon matching with severity spans → Rule-based causality extraction → Demographic bias auditing → Composite risk scoring → FastAPI backend + visual dashboard.",
+    "archSteps": [
+      { "icon": "Type", "label": "Input Text" },
+      { "icon": "Globe", "label": "Language Detect" },
+      { "icon": "Filter", "label": "Preprocess" },
+      { "icon": "SearchCheck", "label": "Lexicon Match" },
+      { "icon": "Activity", "label": "Risk Dashboard" }
+    ],
+    "techStack": ["Python", "NLTK", "scikit-learn", "FastAPI", "uvicorn", "SpeechRecognition", "gTTS"],
+    "differentiators": [
+      "Pure statistical NLP — no transformers, fully interpretable pipeline",
+      "Multilingual support: English, Hindi, Marathi, Bhojpuri, Marwari",
+      "Transparent risk scoring with lexical + causal + demographic bias breakdowns",
+      "Also the basis of the IEEE conference paper (accepted; revisions in progress)"
+    ],
+    "github": "https://github.com/Rishav408/justify-ai"
+  },
+  {
+    "id": 4,
+    "title": "VaniCure – AI Respiratory Diagnostics",
+    "category": "ai",
+    "featured": false,
+    "tags": ["Healthcare AI", "Audio Analysis", "Offline-First", "PyTorch"],
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+    "description": "Offline-first medical screening app using deep learning to analyze respiratory audio (coughs, breathing) for TB and Asthma risk prediction — designed for remote clinics with zero cloud dependency.",
+    "concept": "Solves accessible respiratory diagnostics in resource-constrained settings by running full AI inference locally on-device. Protects patient privacy with complete offline operation while delivering ensemble-model predictions and multilingual triage support for health workers.",
+    "architecture": "Multi-model ensemble pipeline: (1) PANNs CNN14 for robust feature extraction, (2) YAMNet for fast anomaly detection, (3) Custom CNN-BiLSTM for targeted respiratory classification. FastAPI backend with React frontend, localStorage patient records, dynamic outbreak alerting, and multilingual triage agent.",
+    "archSteps": [
+      { "icon": "UserPlus", "label": "Patient Register" },
+      { "icon": "Mic", "label": "Audio Capture" },
+      { "icon": "Cpu", "label": "Multi-Model Inference" },
+      { "icon": "MessageCircle", "label": "Triage Q&A" },
+      { "icon": "ClipboardCheck", "label": "Risk Report" }
+    ],
+    "techStack": ["React 18", "TypeScript", "Tailwind CSS", "FastAPI", "PyTorch", "TensorFlow", "librosa", "Recharts"],
+    "differentiators": [
+      "Three-model ensemble (PANNs CNN14, YAMNet, CNN-BiLSTM) for cross-validated predictions",
+      "Complete offline operation — designed for remote/low-connectivity clinics",
+      "Dynamic outbreak alerting based on spatial case clustering",
+      "Multilingual triage agent (Hindi, Gujarati, Marathi, English) with exportable patient records"
+    ],
+    "github": "https://github.com/Rishav408/vanicure"
+  },
+  {
+    "id": 6,
+    "title": "MarvelTimeVault",
+    "category": "web",
+    "featured": false,
+    "tags": ["UI", "Animation", "GSAP", "Theming"],
+    "image": "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=600&h=400&fit=crop",
+    "description": "Cinematic timeline browser for Marvel films with dual theme system (Gold / Iron Man) and smooth GSAP animations.",
+    "concept": "MarvelTimeVault transforms movie timeline browsing into an immersive experience using advanced animation techniques and premium interaction design, with separate universes (MCU, FOX, SONY, Specials).",
+    "architecture": "JSON-driven content layer separates data from presentation. Animation-first rendering with GSAP and ScrollTrigger. Dual themes with CSS custom properties. Firebase hosting ready.",
+    "archSteps": [
+      { "icon": "Film", "label": "Timeline" },
+      { "icon": "Layers", "label": "Universe Tabs" },
+      { "icon": "Eye", "label": "Card Interactions" },
+      { "icon": "Moon", "label": "Theme Toggle" }
+    ],
+    "techStack": ["GSAP", "ScrollTrigger", "Tailwind CSS", "Vanilla JS", "Google Fonts", "Firebase Hosting"],
+    "differentiators": [
+      "Cinematic UX with 3D card tilt and parallax scroll",
+      "Dual theme system: Luxurious Gold & Futuristic Iron Man",
+      "JSON-driven content layer — data fully separated from presentation",
+      "Persistent theme preference via localStorage"
+    ],
+    "github": "https://github.com/Rishav408/marvel-time-vault"
+  },
+  {
+    "id": 5,
+    "title": "Urban Hive – Housing Society Management",
+    "category": "web",
+    "featured": false,
+    "tags": ["Node.js", "MongoDB", "JWT", "Role-based Auth"],
+    "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop",
+    "description": "Full-stack housing society management platform with role-based dashboards for Residents, Managers, and Workers — built with Node.js, Express, MongoDB, and vanilla frontend.",
+    "concept": "Urban Hive digitises fragmented society operations (complaints, payments, visitors, amenities, notices) into a cohesive platform. Each role gets a tailored dashboard with precise controls, eliminating confusion and streamlining daily workflows.",
+    "architecture": "REST API built with Node.js + Express, MongoDB with Mongoose ODM, JWT authentication with role guards. Frontend is static HTML/CSS/JS with role-specific pages. Covers complaint lifecycle, payment demo, visitor approvals, amenity bookings, and in-app notifications.",
+    "archSteps": [
+      { "icon": "Home", "label": "Landing Page" },
+      { "icon": "LogIn", "label": "Role Login" },
+      { "icon": "Users", "label": "Role Redirect" },
+      { "icon": "LayoutDashboard", "label": "Dashboard" },
+      { "icon": "Bell", "label": "Actions" }
+    ],
+    "techStack": ["Node.js", "Express.js", "MongoDB", "Mongoose", "JWT", "bcryptjs", "HTML5", "CSS3", "Vanilla JS"],
+    "differentiators": [
+      "Three distinct dashboards with granular role-based permissions",
+      "End-to-end complaint, payment, visitor, and amenity booking workflows",
+      "JWT authentication with role guards",
+      "Ready for deployment on Render + Atlas"
+    ],
+    "github": "https://github.com/Rishav408/urbanhive-web"
+  },
+  {
+    "id": 7,
+    "title": "Tulsi Disease Detection",
+    "category": "ai",
+    "featured": false,
+    "tags": ["Computer Vision", "CNN", "TensorFlow", "FastAPI", "Plant Disease"],
+    "image": "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&h=400&fit=crop",
+    "description": "Deep learning-based plant disease detection system for Tulsi (Holy Basil) with a web interface and API for image-based diagnosis and treatment advice.",
+    "concept": "Provides an accessible tool for farmers and gardeners to identify tulsi diseases using a custom CNN model, offering confidence scores, class probabilities, and treatment recommendations — all served via a user-friendly web UI.",
+    "architecture": "FastAPI server loading a trained TensorFlow CNN model. Frontend allows drag-and-drop image upload, displays diagnosis, confidence, probability distribution, and treatment advice. Training scripts and batch processing utilities included.",
+    "archSteps": [
+      { "icon": "Upload", "label": "Upload Image" },
+      { "icon": "Sliders", "label": "Preprocess" },
+      { "icon": "Cpu", "label": "CNN Inference" },
+      { "icon": "ClipboardCheck", "label": "Diagnosis + Advice" }
+    ],
+    "techStack": ["Python", "TensorFlow", "Keras", "FastAPI", "HTML/CSS/JS", "OpenCV"],
+    "differentiators": [
+      "Custom CNN model trained on tulsi disease dataset",
+      "Confidence scores and class probabilities per prediction",
+      "Drag-and-drop web interface",
+      "Training scripts with visualizations and model comparison utilities"
+    ],
+    "github": ""
+  },
+  {
+    "id": 9,
+    "title": "VoteChain – Blockchain E-Voting System",
+    "category": "app",
+    "featured": false,
+    "tags": ["Java", "Blockchain", "MongoDB", "Spark", "JavaFX", "RSA", "SHA-256"],
+    "image": "https://cf-images.assettype.com/theleaflet%2Fimport%2Fwp-content%2Fuploads%2F2022%2F01%2Fvidhanbhavan.jpeg?w=480&auto=format%2Ccompress&fit=max",
+    "description": "Blockchain-inspired e-voting demo with Web UI (Java/Spark + MongoDB) and JavaFX desktop app — featuring hash chaining, RSA signatures, and tamper detection.",
+    "concept": "Educational prototype demonstrating secure voting using blockchain principles: one-vote-per-voter, tamper-proof chain, and transparent results. Dual mode (web and desktop) showcases flexibility.",
+    "architecture": "Two independent modes: (1) Web: Spark Java REST API with MongoDB, BCrypt password hashing, and auto-seeding of elections; (2) Desktop: JavaFX app with local file persistence. Both use SHA-256 hashing and RSA signatures for vote blocks.",
+    "archSteps": [
+      { "icon": "LogIn", "label": "Voter Login" },
+      { "icon": "CheckSquare", "label": "Cast Vote" },
+      { "icon": "Link", "label": "Chain Validation" },
+      { "icon": "BarChart", "label": "View Results" }
+    ],
+    "techStack": ["Java 17", "Maven", "Spark Java", "MongoDB", "JavaFX", "jBCrypt", "SHA-256", "RSA"],
+    "differentiators": [
+      "Dual mode: Web API + Desktop app from one codebase",
+      "Tamper detection via SHA-256 hash chain",
+      "RSA digital signatures on vote blocks",
+      "Admin dashboard for chain validation and results"
+    ],
+    "github": ""
+  },
+  {
+    "id": 10,
+    "title": "ResolvAI – Offline Complaint Resolution",
+    "category": "ai",
+    "featured": false,
+    "tags": ["Local LLM", "Privacy", "Ollama", "Streamlit"],
+    "image": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?w=600&h=400&fit=crop",
+    "description": "Privacy-preserving AI tool for small businesses to draft professional, empathetic responses to customer complaints using local LLMs via Ollama — completely offline.",
+    "concept": "Solves AI-powered customer complaint resolution while keeping all data on-premises. In scenarios where sensitive customer data cannot leave local infrastructure, this system provides intelligent, policy-aware resolution using fully offline LLM inference.",
+    "architecture": "Streamlit frontend with Ollama LLM (Mistral 7B / Llama 3) running locally. Uses LangChain for prompt engineering and policy-aware response generation. Business profile and policies are integrated from text files. Conversation history maintained during sessions.",
+    "archSteps": [
+      { "icon": "MessageCircle", "label": "Complaint Input" },
+      { "icon": "Bot", "label": "Local LLM" },
+      { "icon": "Layers", "label": "LangChain" },
+      { "icon": "Check", "label": "Resolution Draft" }
+    ],
+    "techStack": ["Python", "Ollama", "LangChain", "Streamlit", "SQLite"],
+    "differentiators": [
+      "Complete offline operation — all customer data stays on-device",
+      "No API dependencies or per-request costs",
+      "Business-profile-aware, policy-conditioned empathetic responses",
+      "Streamlit interface with session-persisted chat history"
+    ],
+    "github": "https://github.com/Rishav408/resolv-ai"
+  },
+  {
+    "id": 11,
+    "title": "BharatNiti – Leadership Sim",
+    "category": "ai",
+    "featured": false,
+    "tags": ["LLM", "GenAI", "News API"],
+    "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600&h=400&fit=crop",
+    "description": "AI-driven political leadership simulation using live news to generate interactive decision-making scenarios for experiential learning.",
+    "concept": "BharatNiti converts live political news into structured decision-making simulations, enabling users to practice leadership skills in realistic governance contexts.",
+    "architecture": "News parsed into actors, conflicts, constraints, and objectives via LLM pipelines. Scenarios generated with prompt engineering and evaluated across leadership dimensions.",
+    "archSteps": [
+      { "icon": "Newspaper", "label": "Live News" },
+      { "icon": "GitBranch", "label": "Structured Tree" },
+      { "icon": "Bot", "label": "LLM Scenario" },
+      { "icon": "UserCheck", "label": "Evaluation" }
+    ],
+    "techStack": ["Python", "Flask", "NewsAPI", "LLaMA", "Ollama"],
+    "differentiators": [
+      "Real-world news-to-governance simulation pipeline",
+      "Skill-based AI feedback loops",
+      "Multi-dimensional leadership assessment"
+    ],
+    "github": "https://github.com/Rishav408/bharat-niti"
+  },
+  {
+    "id": 12,
+    "title": "Bias Detection AI",
+    "category": "ai",
+    "featured": false,
+    "tags": ["NLP", "CV", "Multimodal"],
+    "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&h=400&fit=crop",
+    "description": "Multimodal fairness intelligence for implicit bias detection across text, audio, and video channels.",
+    "concept": "Targets implicit bias using multimodal inference to detect subconscious bias patterns in communication and behaviour, informed by social psychology frameworks.",
+    "architecture": "Multimodal inference across three channels: Text (BERT), Audio (Wav2Vec), Video (OpenPose). Bias metrics derived from social psychology frameworks.",
+    "archSteps": [
+      { "icon": "MessageCircle", "label": "Text" },
+      { "icon": "Mic", "label": "Audio" },
+      { "icon": "Video", "label": "Video" },
+      { "icon": "Scale", "label": "Bias Metrics" }
+    ],
+    "techStack": ["BERT", "Wav2Vec", "OpenPose", "Multimodal Fusion"],
+    "differentiators": [
+      "Real-time bias nudging across three input modalities",
+      "Context-sensitive fairness modelling",
+      "Psychology-informed metrics"
+    ],
+    "github": "https://github.com/Rishav408/bias-detection-ai"
+  },
+  {
+    "id": 13,
+    "title": "FaceMark – Attendance System",
+    "category": "ai",
+    "featured": false,
+    "tags": ["CV", "OpenCV", "LBPH", "Flask"],
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+    "description": "Modern web-based face recognition attendance system using OpenCV, LBPH, and Haar Cascade — lightweight and explainable.",
+    "concept": "For environments where deep learning is overkill, FaceMark prioritises simplicity, deployability, and explainability using classical computer vision, automating attendance with a clean web interface.",
+    "architecture": "Flask backend serving a web UI. Core: Haar Cascade for face detection, LBPH for recognition. Training dataset stored locally, attendance logged in CSV. Real-time recognition and auto check-in/out.",
+    "archSteps": [
+      { "icon": "Camera", "label": "Capture" },
+      { "icon": "Smile", "label": "Haar Cascade" },
+      { "icon": "TrendingUp", "label": "LBPH" },
+      { "icon": "ClipboardList", "label": "Attendance" }
+    ],
+    "techStack": ["Python", "OpenCV", "Flask", "Haar Cascade", "LBPH", "HTML/CSS/JS"],
+    "differentiators": [
+      "Lightweight — no GPU dependency",
+      "Fully transparent recognition logic (classical CV, not deep learning)",
+      "Web-based interface with real-time statistics",
+      "CSV-based attendance log, easy to export"
+    ],
+    "github": "https://github.com/Rishav408/facemark"
+  },
+  {
+    "id": 14,
+    "title": "India Economic Dashboard – IndianPulse",
+    "category": "data",
+    "featured": false,
+    "tags": ["Data Analysis", "Visualization", "Streamlit", "Plotly"],
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+    "description": "Interactive economic dashboard for India with 11 key indicators, time-series filtering, and exportable charts — built with Streamlit and Plotly.",
+    "concept": "Transforms complex economic indicators into understandable, interactive visualisations for policy analysis and research. Provides real-time data exploration with multiple chart types and theme support.",
+    "architecture": "Streamlit frontend with Plotly charts. Data processing with Pandas and NumPy. CSV data generation utilities. Modular design with separate data processor and comparison modules.",
+    "archSteps": [
+      { "icon": "Database", "label": "Data Sources" },
+      { "icon": "GitMerge", "label": "ETL" },
+      { "icon": "PieChart", "label": "Normalisation" },
+      { "icon": "BarChart", "label": "Visualisation" }
+    ],
+    "techStack": ["Python", "Pandas", "NumPy", "Streamlit", "Plotly", "CSV"],
+    "differentiators": [
+      "11 economic indicators with category filtering",
+      "Interactive charts: line, area, bar, scatter",
+      "Dark/light theme with persistent storage",
+      "Chart export as PNG and statistics cards"
+    ],
+    "github": "https://github.com/Rishav408/india-economic-dashboard"
+  },
+  {
+    "id": 15,
+    "title": "BMMCT – Community Platform",
+    "category": "web",
+    "featured": false,
+    "tags": ["Community", "Firebase", "Events", "Responsive"],
+    "image": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=400&fit=crop",
+    "description": "Official website for Bihar Mitra Mandal Charitable Trust — a community organisation preserving Bihari culture in Gujarat since 2005.",
+    "concept": "Provides a digital platform for cultural events, management profiles, donation, and volunteer registration. Features year-based event galleries with modal viewer and lightbox, showcasing 20+ years of community service.",
+    "architecture": "Static-first, performance-optimised architecture with Firebase Hosting. Year-indexed event archival with sticky navigation. Custom modals and lightbox for media viewing. Fully responsive with glassmorphism effects.",
+    "archSteps": [
+      { "icon": "Home", "label": "Home" },
+      { "icon": "Calendar", "label": "Our Work" },
+      { "icon": "Users", "label": "Management" },
+      { "icon": "Heart", "label": "Donate" },
+      { "icon": "Hand", "label": "Join Us" }
+    ],
+    "techStack": ["HTML5", "CSS3", "JavaScript", "Firebase Hosting", "Font Awesome", "Google Fonts"],
+    "differentiators": [
+      "Year-indexed event archive with modal gallery viewer",
+      "Performance-optimised static architecture",
+      "GPay QR integration for donations",
+      "Built for a real client — 20+ years of community history digitised"
+    ],
+    "github": "https://github.com/Rishav408/bmmct"
+  },
+  {
+    "id": 16,
+    "title": "Pal Classes – Learning Platform",
+    "category": "web",
+    "featured": false,
+    "tags": ["EdTech", "Curriculum", "Responsive"],
+    "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop",
+    "description": "Curriculum-aligned learning platform with concept-first content structuring for deeper understanding.",
+    "concept": "Provides a curriculum-aligned learning platform that organises content by concepts rather than chapters, enabling deeper understanding and exam-aligned pedagogy.",
+    "architecture": "Concept-first content structuring with progressive difficulty layering. Exam-aligned pedagogy. Fully responsive static site.",
+    "archSteps": [
+      { "icon": "BookOpen", "label": "Concept" },
+      { "icon": "TrendingUp", "label": "Progression" },
+      { "icon": "CheckCircle", "label": "Exam Align" }
+    ],
+    "techStack": ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    "differentiators": [
+      "Exam-aligned pedagogy",
+      "Concept-first content structuring",
+      "Student-centric learning paths"
+    ],
+    "github": "https://github.com/Rishav408/pal-classes"
+  },
+  {
+    "id": 17,
+    "title": "Godfather Chatbot",
+    "category": "ai",
+    "featured": false,
+    "tags": ["LLM", "GenAI", "Persona"],
+    "image": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=600&h=400&fit=crop",
+    "description": "Persona-faithful conversational AI using LLaMA 3 and Ollama — maintains character voice through prompt engineering.",
+    "concept": "Maintains faithful character representation through advanced prompt engineering and temperature tuning, delivering immersive conversational experiences.",
+    "architecture": "Prompt-engineered persona locking with controlled randomness via temperature tuning. LangChain for conversation memory.",
+    "archSteps": [
+      { "icon": "User", "label": "Persona Lock" },
+      { "icon": "Bot", "label": "LLaMA 3" },
+      { "icon": "MessageCircle", "label": "Conversation" }
+    ],
+    "techStack": ["LLaMA 3", "Ollama", "LangChain", "Prompt Engineering"],
+    "differentiators": [
+      "Narrative-consistent AI responses via persona locking",
+      "Temperature-tuned character voice",
+      "LangChain conversation memory across turns"
+    ],
+    "github": "https://github.com/Rishav408/godfather-chatbot"
+  },
+  {
+    "id": 18,
+    "title": "Aeron Systems – Weather & Data Utilities",
+    "category": "data",
+    "featured": false,
+    "tags": ["Flask", "Streamlit", "Weather", "Data Analytics", "Gemini AI"],
+    "image": "https://s3-us-west-2.amazonaws.com/issuewireassets/primg/129368/og_aeron-logo-new1931535268.png",
+    "description": "Two-in-one utility: a Flask-based weather intelligence app with forecasts and maps, and a Streamlit-based CSV analytics dashboard with AI-generated insights.",
+    "concept": "Provides live weather information (current, hourly, weekly) with AI-powered insights, plus a data analytics tool for CSV upload, smart preprocessing, visualisation, and Gemini-generated summaries.",
+    "architecture": "Weather: Flask app with OpenWeatherMap API, Gemini fallback, Chart.js for charts, Leaflet for maps. Data: Streamlit app with Pandas, Plotly, and Gemini API for summary insights. Both utilities are independent but bundled in one repository.",
+    "archSteps": [
+      { "icon": "Cloud", "label": "Weather Input" },
+      { "icon": "Map", "label": "Forecast & Maps" },
+      { "icon": "Upload", "label": "CSV Upload" },
+      { "icon": "BarChart", "label": "Analytics & AI Insight" }
+    ],
+    "techStack": ["Python", "Flask", "Streamlit", "requests", "Pandas", "Plotly", "Chart.js", "Leaflet", "Google Gemini AI"],
+    "differentiators": [
+      "Two independent utilities in one repo",
+      "Weather: live forecasts, interactive maps, AI insights via Gemini",
+      "Data: CSV profiling, multiple chart types, Gemini-generated summaries",
+      "Both with Gemini integration and fallback mechanisms"
+    ],
+    "github": ""
+  }
+]
