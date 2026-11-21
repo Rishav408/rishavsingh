@@ -27,7 +27,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-16 md:py-24 border-t border-stone-200 dark:border-stone-800 scroll-mt-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 text-left">
@@ -77,10 +77,10 @@ export default function Projects() {
           </span>
         </div>
 
-        {/* Projects Grid */}
+        {/* Projects Grid - 4 Columns */}
         <motion.div 
           layout
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5"
         >
           <AnimatePresence>
             {projects.map((project, index) => (
@@ -88,7 +88,7 @@ export default function Projects() {
                 key={project.id}
                 project={project}
                 onSelect={setSelectedProject}
-                priority={index < 3}
+                priority={index < 4}
               />
             ))}
           </AnimatePresence>

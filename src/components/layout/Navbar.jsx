@@ -34,35 +34,35 @@ export default function Navbar({ darkMode, setDarkMode }) {
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${
         isScrolled
-          ? 'bg-white/90 dark:bg-stone-900/90 backdrop-blur-md border-b border-stone-200 dark:border-stone-800 shadow-xs py-3'
-          : 'bg-transparent py-4'
+          ? 'bg-white/95 dark:bg-stone-900/95 backdrop-blur-md border-b border-stone-200 dark:border-stone-800 shadow-sm py-3.5'
+          : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Brand Logo */}
         <Link 
           to="/" 
-          className="flex items-center gap-2.5 font-semibold text-stone-900 dark:text-stone-100 hover:opacity-80 transition-opacity"
+          className="flex items-center gap-3 font-semibold text-stone-900 dark:text-stone-100 hover:opacity-85 transition-opacity"
         >
           <img 
             src={logoImg} 
             alt="Rishav Singh Logo" 
-            className="w-7 h-7 rounded-md object-cover border border-stone-200 dark:border-stone-700" 
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg object-cover border border-stone-200 dark:border-stone-700 shadow-2xs" 
           />
-          <span className="text-sm tracking-tight font-medium">Rishav Singh</span>
+          <span className="text-base sm:text-lg tracking-tight font-bold">Rishav Singh</span>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6">
-          <nav className="flex items-center gap-5 text-xs font-medium tracking-wider text-stone-600 dark:text-stone-400">
+        <div className="hidden md:flex items-center gap-7">
+          <nav className="flex items-center gap-6 text-sm font-semibold tracking-wide text-stone-600 dark:text-stone-300">
             {navLinks.map((link) => {
               if (link.isRoute) {
                 return (
                   <Link
                     key={link.name}
                     to={link.href}
-                    className={`hover:text-stone-950 dark:hover:text-white transition-colors ${
-                      location.pathname === link.href ? 'text-blue-600 dark:text-blue-400 font-semibold' : ''
+                    className={`hover:text-blue-600 dark:hover:text-blue-400 transition-colors ${
+                      location.pathname === link.href ? 'text-blue-600 dark:text-blue-400 font-bold' : ''
                     }`}
                   >
                     {link.name}
@@ -73,7 +73,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="hover:text-stone-950 dark:hover:text-white transition-colors"
+                  className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                 >
                   {link.name}
                 </a>
@@ -81,20 +81,20 @@ export default function Navbar({ darkMode, setDarkMode }) {
             })}
           </nav>
 
-          <div className="h-4 w-px bg-stone-200 dark:bg-stone-800" />
+          <div className="h-5 w-px bg-stone-200 dark:border-stone-700 bg-stone-300 dark:bg-stone-700" />
 
           {/* Theme Toggle */}
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-1.5 rounded-lg text-stone-500 hover:text-stone-900 dark:text-stone-400 dark:hover:text-stone-100 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
+            className="p-2 rounded-xl text-stone-600 hover:text-stone-900 dark:text-stone-300 dark:hover:text-white hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors cursor-pointer"
             aria-label="Toggle theme"
           >
-            {darkMode ? <Sun size={17} /> : <Moon size={17} />}
+            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
 
           {/* Status Dot */}
-          <div className="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-400 border border-emerald-200/60 dark:border-emerald-800/60">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 dark:bg-emerald-950/50 dark:text-emerald-400 border border-emerald-200/80 dark:border-emerald-800/80">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             Open to work
           </div>
 
@@ -103,36 +103,36 @@ export default function Navbar({ darkMode, setDarkMode }) {
             href={resumePdf}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 hover:opacity-90 transition-opacity shadow-xs"
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-xl bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 hover:bg-stone-800 dark:hover:bg-white transition-all shadow-sm active:scale-98"
           >
             <span>Resume</span>
-            <Download size={13} />
+            <Download size={15} />
           </a>
         </div>
 
         {/* Mobile menu trigger */}
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex md:hidden items-center gap-2.5">
           <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-lg text-stone-600 dark:text-stone-400"
+            className="p-2.5 rounded-xl text-stone-600 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
             aria-label="Toggle theme"
           >
-            {darkMode ? <Sun size={18} /> : <Moon size={18} />}
+            {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800"
+            className="p-2.5 rounded-xl text-stone-700 dark:text-stone-200 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
             aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-stone-900 border-b border-stone-200 dark:border-stone-800 px-6 py-5 space-y-4 shadow-lg animate-in fade-in slide-in-from-top-4">
-          <div className="flex flex-col gap-3 text-sm font-medium">
+        <div className="md:hidden bg-white/98 dark:bg-stone-900/98 backdrop-blur-md border-b border-stone-200 dark:border-stone-800 px-6 py-6 space-y-5 shadow-xl animate-in fade-in slide-in-from-top-4">
+          <div className="flex flex-col gap-3.5 text-base font-semibold">
             {navLinks.map((link) => {
               if (link.isRoute) {
                 return (
@@ -140,7 +140,7 @@ export default function Navbar({ darkMode, setDarkMode }) {
                     key={link.name}
                     to={link.href}
                     onClick={handleLinkClick}
-                    className="text-stone-700 dark:text-stone-300 hover:text-blue-600 py-1"
+                    className="text-stone-700 dark:text-stone-200 hover:text-blue-600 dark:hover:text-blue-400 py-1"
                   >
                     {link.name}
                   </Link>
@@ -151,26 +151,26 @@ export default function Navbar({ darkMode, setDarkMode }) {
                   key={link.name}
                   href={link.href}
                   onClick={handleLinkClick}
-                  className="text-stone-700 dark:text-stone-300 hover:text-blue-600 py-1"
+                  className="text-stone-700 dark:text-stone-200 hover:text-blue-600 dark:hover:text-blue-400 py-1"
                 >
                   {link.name}
                 </a>
               );
             })}
           </div>
-          <div className="pt-3 border-t border-stone-100 dark:border-stone-800 flex items-center justify-between">
-            <div className="flex items-center gap-2 text-xs text-emerald-600 dark:text-emerald-400 font-medium">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              Open to work · 2027
+          <div className="pt-4 border-t border-stone-200 dark:border-stone-800 flex items-center justify-between">
+            <div className="flex items-center gap-2 text-xs text-emerald-600 dark:text-emerald-400 font-semibold">
+              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+              Open to work · Class of 2027
             </div>
             <a
               href={resumePdf}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900"
+              className="inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-xl bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900"
             >
               Resume PDF
-              <Download size={13} />
+              <Download size={14} />
             </a>
           </div>
         </div>

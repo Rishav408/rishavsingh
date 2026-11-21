@@ -41,14 +41,14 @@ export default function ProjectCard({ project, onSelect, priority = false }) {
       </div>
 
       {/* Body */}
-      <div className="p-5 flex flex-col flex-grow justify-between">
+      <div className="p-4 sm:p-4.5 flex flex-col flex-grow justify-between">
         <div>
           {/* Header */}
           <div className="flex items-start justify-between gap-2 mb-2">
-            <h3 className="text-base font-semibold text-stone-900 dark:text-stone-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
+            <h3 className="text-[15px] sm:text-base font-semibold text-stone-900 dark:text-stone-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 leading-snug">
               {project.title}
             </h3>
-            <div className="flex items-center gap-1.5 shrink-0 text-stone-400 group-hover:text-stone-700 dark:group-hover:text-stone-200 pt-0.5">
+            <div className="flex items-center gap-1 shrink-0 text-stone-400 group-hover:text-stone-700 dark:group-hover:text-stone-200 pt-0.5">
               {project.github && (
                 <a
                   href={project.github}
@@ -58,7 +58,7 @@ export default function ProjectCard({ project, onSelect, priority = false }) {
                   className="p-1 hover:text-stone-900 dark:hover:text-white transition-colors"
                   aria-label="GitHub repository"
                 >
-                  <Github size={16} />
+                  <Github size={15} />
                 </a>
               )}
               {project.live && (
@@ -70,27 +70,27 @@ export default function ProjectCard({ project, onSelect, priority = false }) {
                   className="p-1 hover:text-stone-900 dark:hover:text-white transition-colors"
                   aria-label="Live application"
                 >
-                  <ExternalLink size={16} />
+                  <ExternalLink size={15} />
                 </a>
               )}
-              <ArrowUpRight size={16} className="text-stone-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              <ArrowUpRight size={15} className="text-stone-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </div>
           </div>
 
           {/* Description */}
-          <p className="text-sm text-stone-600 dark:text-stone-400 line-clamp-3 mb-4 leading-relaxed">
+          <p className="text-xs sm:text-[13px] text-stone-600 dark:text-stone-300 line-clamp-3 mb-3 leading-relaxed">
             {project.description}
           </p>
         </div>
 
         {/* Tags */}
-        <div className="flex flex-wrap gap-1.5 pt-3 border-t border-stone-100 dark:border-stone-800/80">
-          {(project.tags || []).slice(0, 4).map((tag) => (
-            <Tag key={tag}>{tag}</Tag>
+        <div className="flex flex-wrap gap-1 pt-2.5 border-t border-stone-100 dark:border-stone-800/80">
+          {(project.tags || []).slice(0, 3).map((tag) => (
+            <Tag key={tag} className="text-[11px] px-1.5 py-0.5">{tag}</Tag>
           ))}
-          {(project.tags || []).length > 4 && (
-            <span className="text-xs text-stone-400 self-center">
-              +{project.tags.length - 4}
+          {(project.tags || []).length > 3 && (
+            <span className="text-[11px] font-mono text-stone-400 self-center">
+              +{project.tags.length - 3}
             </span>
           )}
         </div>
