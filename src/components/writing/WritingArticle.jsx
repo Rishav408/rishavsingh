@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Calendar, Tag as TagIcon, ExternalLink } from 'lucide-react';
+import { ArrowLeft, Calendar } from 'lucide-react';
 import Tag from '../ui/Tag';
 
 export default function WritingArticle({ post, onBack }) {
@@ -9,23 +9,23 @@ export default function WritingArticle({ post, onBack }) {
     <div className="max-w-3xl mx-auto text-left py-6">
       <button
         onClick={onBack}
-        className="inline-flex items-center gap-2 text-xs font-medium text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 mb-8 cursor-pointer group"
+        className="inline-flex items-center gap-2 text-xs font-mono font-medium text-stone-500 hover:text-stone-900 dark:hover:text-stone-100 mb-8 cursor-pointer group"
       >
         <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
         <span>Back to all writing</span>
       </button>
 
       <header className="mb-8">
-        <div className="flex items-center gap-2 text-xs text-stone-400 mb-3">
+        <div className="flex items-center gap-2 text-xs font-mono text-stone-400 mb-3">
           <Calendar size={13} />
           <time>{post.date}</time>
           <span>·</span>
-          <span className="uppercase text-[11px] tracking-wider text-blue-600 dark:text-blue-400 font-semibold">
+          <span className="uppercase text-[11px] tracking-wider text-amber-800 dark:text-amber-400 font-semibold">
             {post.category}
           </span>
         </div>
 
-        <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-50 mb-4 leading-tight">
+        <h1 className="text-3xl sm:text-4xl font-serif font-bold tracking-tight text-stone-900 dark:text-stone-50 mb-4 leading-tight">
           {post.title}
         </h1>
 
@@ -36,7 +36,7 @@ export default function WritingArticle({ post, onBack }) {
         </div>
 
         {post.image && (
-          <div className="aspect-video w-full rounded-2xl overflow-hidden bg-stone-100 dark:bg-stone-800 mb-8">
+          <div className="aspect-video w-full rounded-2xl overflow-hidden bg-stone-100 dark:bg-stone-800 mb-8 border border-[#E7E2DA] dark:border-[#2A2724]">
             <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
           </div>
         )}

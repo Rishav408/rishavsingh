@@ -13,11 +13,11 @@ export default function Writing() {
         {!selectedPost ? (
           <div>
             <div className="text-left mb-10">
-              <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-2">
+              <div className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-amber-800 dark:text-amber-400 uppercase tracking-widest mb-2">
                 <BookOpen size={14} />
                 Technical Notes &amp; Papers
               </div>
-              <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-50">
+              <h1 className="text-3xl sm:text-4xl font-serif font-bold tracking-tight text-stone-900 dark:text-stone-50">
                 Writing
               </h1>
               <p className="text-stone-600 dark:text-stone-400 text-sm sm:text-base mt-2 max-w-xl">

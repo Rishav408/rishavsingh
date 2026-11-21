@@ -21,7 +21,7 @@ export default function Layout({ children }) {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 selection:bg-blue-500 selection:text-white transition-colors duration-200">
+    <div className="min-h-screen flex flex-col bg-[#FBF9F5] dark:bg-[#0E0D0C] text-stone-900 dark:text-[#EDE8E3] selection:bg-amber-200 selection:text-stone-900 dark:selection:bg-amber-950 dark:selection:text-amber-200 transition-colors duration-250 font-sans">
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <main className="flex-grow pt-20">
         {children}

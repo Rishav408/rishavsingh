@@ -21,7 +21,6 @@ export default function Contact() {
     }
 
     setSubmitting(true);
-    // Simulate or integrate submission
     setTimeout(() => {
       setSubmitting(false);
       setStatus({ type: 'success', message: 'Thank you! Your message has been sent.' });
@@ -30,16 +29,16 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 border-t border-stone-200 dark:border-stone-800 scroll-mt-12">
+    <section id="contact" className="py-16 md:py-24 border-t border-[#E7E2DA] dark:border-[#2A2724] scroll-mt-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
         <div className="text-left mb-12">
-          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-2">
+          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-amber-800 dark:text-amber-400 uppercase tracking-widest mb-2">
             <Mail size={14} />
             Reach Out
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-50">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold tracking-tight text-stone-900 dark:text-stone-50">
             Get In Touch
           </h2>
           <p className="text-stone-600 dark:text-stone-400 text-sm sm:text-base mt-2 max-w-xl">
@@ -51,8 +50,8 @@ export default function Contact() {
           
           {/* Left Column (Direct Contacts) */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6 shadow-xs">
-              <h3 className="font-bold text-stone-900 dark:text-stone-100 text-base mb-1">
+            <div className="bg-white dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] rounded-2xl p-6 shadow-xs">
+              <h3 className="font-serif font-bold text-stone-900 dark:text-stone-100 text-lg mb-1">
                 Direct Contact
               </h3>
               <p className="text-xs text-stone-500 dark:text-stone-400 mb-5">
@@ -62,9 +61,9 @@ export default function Contact() {
               <div className="space-y-4">
                 <a
                   href="mailto:rishav4805@gmail.com"
-                  className="flex items-center gap-3 text-sm text-stone-700 dark:text-stone-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="flex items-center gap-3 text-sm text-stone-700 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
                 >
-                  <div className="p-2 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">
+                  <div className="p-2 rounded-xl bg-[#F4F0E8] dark:bg-[#181614] text-stone-600 dark:text-stone-300 border border-[#E7E2DA] dark:border-[#2A2724]">
                     <Mail size={16} />
                   </div>
                   <span>rishav4805@gmail.com</span>
@@ -74,9 +73,9 @@ export default function Contact() {
                   href="https://linkedin.com/in/rishavsingh408"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-stone-700 dark:text-stone-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="flex items-center gap-3 text-sm text-stone-700 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
                 >
-                  <div className="p-2 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">
+                  <div className="p-2 rounded-xl bg-[#F4F0E8] dark:bg-[#181614] text-stone-600 dark:text-stone-300 border border-[#E7E2DA] dark:border-[#2A2724]">
                     <Linkedin size={16} />
                   </div>
                   <span>linkedin.com/in/rishavsingh408</span>
@@ -86,9 +85,9 @@ export default function Contact() {
                   href="https://github.com/Rishav408"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-stone-700 dark:text-stone-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="flex items-center gap-3 text-sm text-stone-700 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
                 >
-                  <div className="p-2 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">
+                  <div className="p-2 rounded-xl bg-[#F4F0E8] dark:bg-[#181614] text-stone-600 dark:text-stone-300 border border-[#E7E2DA] dark:border-[#2A2724]">
                     <Github size={16} />
                   </div>
                   <span>github.com/Rishav408</span>
@@ -98,9 +97,9 @@ export default function Contact() {
                   href={resumePdf}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 text-sm text-stone-700 dark:text-stone-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="flex items-center gap-3 text-sm text-stone-700 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
                 >
-                  <div className="p-2 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-600 dark:text-stone-300">
+                  <div className="p-2 rounded-xl bg-[#F4F0E8] dark:bg-[#181614] text-stone-600 dark:text-stone-300 border border-[#E7E2DA] dark:border-[#2A2724]">
                     <FileText size={16} />
                   </div>
                   <span>Download Resume PDF</span>
@@ -108,7 +107,7 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="p-4 rounded-xl bg-stone-100 dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-xs text-stone-600 dark:text-stone-400">
+            <div className="p-4 rounded-xl bg-[#F4F0E8]/70 dark:bg-[#181614]/80 border border-[#E7E2DA] dark:border-[#2A2724] text-xs text-stone-600 dark:text-stone-400">
               <span className="font-semibold block text-stone-800 dark:text-stone-200 mb-0.5">Availability Status</span>
               Actively interviewing for 2026/2027 internships &amp; fresher roles in AI / GenAI, Data Analytics, and Full-Stack development.
             </div>
@@ -116,9 +115,9 @@ export default function Contact() {
 
           {/* Right Column (Form) */}
           <div className="lg:col-span-7">
-            <form onSubmit={handleSubmit} className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6 sm:p-8 shadow-xs space-y-4">
+            <form onSubmit={handleSubmit} className="bg-white dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] rounded-2xl p-6 sm:p-8 shadow-xs space-y-4">
               <div>
-                <label className="block text-xs font-semibold text-stone-700 dark:text-stone-300 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-mono font-semibold text-stone-700 dark:text-stone-300 uppercase tracking-wider mb-1.5">
                   Your Name
                 </label>
                 <input
@@ -127,12 +126,12 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="e.g. Alex Sharma"
-                  className="w-full px-4 py-2.5 rounded-xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-100 placeholder:text-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F4F0E8]/50 dark:bg-[#181614] border border-[#E7E2DA] dark:border-[#2A2724] text-stone-900 dark:text-stone-100 placeholder:text-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-600 dark:focus:ring-amber-500"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-stone-700 dark:text-stone-300 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-mono font-semibold text-stone-700 dark:text-stone-300 uppercase tracking-wider mb-1.5">
                   Your Email
                 </label>
                 <input
@@ -141,12 +140,12 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="alex@company.com"
-                  className="w-full px-4 py-2.5 rounded-xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-100 placeholder:text-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F4F0E8]/50 dark:bg-[#181614] border border-[#E7E2DA] dark:border-[#2A2724] text-stone-900 dark:text-stone-100 placeholder:text-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-600 dark:focus:ring-amber-500"
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-semibold text-stone-700 dark:text-stone-300 uppercase tracking-wider mb-1.5">
+                <label className="block text-xs font-mono font-semibold text-stone-700 dark:text-stone-300 uppercase tracking-wider mb-1.5">
                   Message
                 </label>
                 <textarea
@@ -155,15 +154,15 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="What are you building? Let's connect."
-                  className="w-full px-4 py-2.5 rounded-xl bg-stone-50 dark:bg-stone-800/60 border border-stone-200 dark:border-stone-700 text-stone-900 dark:text-stone-100 placeholder:text-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                  className="w-full px-4 py-2.5 rounded-xl bg-[#F4F0E8]/50 dark:bg-[#181614] border border-[#E7E2DA] dark:border-[#2A2724] text-stone-900 dark:text-stone-100 placeholder:text-stone-400 text-sm focus:outline-none focus:ring-2 focus:ring-amber-600 dark:focus:ring-amber-500 resize-none"
                 />
               </div>
 
               {status.message && (
                 <div className={`p-3 rounded-lg text-xs flex items-center gap-2 ${
                   status.type === 'success' 
-                    ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-400' 
-                    : 'bg-red-50 text-red-700 dark:bg-red-950/60 dark:text-red-400'
+                    ? 'bg-emerald-50 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800' 
+                    : 'bg-red-50 text-red-800 dark:bg-red-950/60 dark:text-red-400 border border-red-200 dark:border-red-800'
                 }`}>
                   {status.type === 'success' ? <CheckCircle2 size={16} /> : <AlertCircle size={16} />}
                   <span>{status.message}</span>
@@ -173,7 +172,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm transition-colors shadow-sm disabled:opacity-50 cursor-pointer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-amber-700 hover:bg-amber-800 text-white dark:bg-amber-500 dark:hover:bg-amber-400 dark:text-stone-950 font-semibold text-sm transition-colors shadow-xs disabled:opacity-50 cursor-pointer"
               >
                 <span>{submitting ? 'Sending...' : 'Send Message'}</span>
                 <Send size={15} />

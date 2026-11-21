@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Calendar, ArrowRight, BookOpen } from 'lucide-react';
+import { Calendar, ArrowRight } from 'lucide-react';
 import Tag from '../ui/Tag';
 
 export default function WritingList({ posts, onSelectPost }) {
@@ -11,19 +10,19 @@ export default function WritingList({ posts, onSelectPost }) {
           <article
             key={post.id}
             onClick={() => onSelectPost(post)}
-            className="group cursor-pointer bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6 shadow-xs hover:border-stone-400 dark:hover:border-stone-700 hover:shadow-md transition-all flex flex-col justify-between"
+            className="group cursor-pointer bg-white dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] rounded-2xl p-6 shadow-xs hover:border-amber-400/80 dark:hover:border-amber-700/80 hover:shadow-md transition-all flex flex-col justify-between"
           >
             <div>
-              <div className="flex items-center gap-2 text-xs text-stone-400 mb-3">
+              <div className="flex items-center gap-2 text-xs font-mono text-stone-400 mb-3">
                 <Calendar size={13} />
                 <time>{post.date}</time>
                 <span>·</span>
-                <span className="uppercase text-[10px] tracking-wider text-blue-600 dark:text-blue-400 font-semibold">
+                <span className="uppercase text-[10px] tracking-wider text-amber-800 dark:text-amber-400 font-semibold">
                   {post.category}
                 </span>
               </div>
 
-              <h3 className="font-bold text-lg text-stone-900 dark:text-stone-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2 leading-snug">
+              <h3 className="font-serif font-bold text-xl text-stone-900 dark:text-stone-100 group-hover:text-amber-800 dark:group-hover:text-amber-400 transition-colors mb-2 leading-snug">
                 {post.title}
               </h3>
 
@@ -33,13 +32,13 @@ export default function WritingList({ posts, onSelectPost }) {
             </div>
 
             <div>
-              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-stone-100 dark:border-stone-800 mb-4">
+              <div className="flex flex-wrap gap-1.5 pt-4 border-t border-[#E7E2DA] dark:border-[#2A2724] mb-4">
                 {(post.tags || []).map((tag) => (
                   <Tag key={tag}>{tag}</Tag>
                 ))}
               </div>
 
-              <div className="flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform">
+              <div className="flex items-center gap-1.5 text-xs font-semibold text-amber-800 dark:text-amber-400 group-hover:translate-x-1 transition-transform">
                 <span>Read technical note</span>
                 <ArrowRight size={13} />
               </div>

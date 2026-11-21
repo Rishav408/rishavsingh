@@ -5,16 +5,16 @@ import Badge from '../ui/Badge';
 
 export default function Research() {
   return (
-    <section id="research" className="py-16 md:py-20 border-t border-stone-200 dark:border-stone-800 scroll-mt-12 bg-stone-50/50 dark:bg-stone-900/30">
+    <section id="research" className="py-16 md:py-20 border-t border-[#E7E2DA] dark:border-[#2A2724] scroll-mt-12 bg-[#F4F0E8]/30 dark:bg-[#151311]/40">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section Header */}
         <div className="text-left mb-8">
-          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-2">
+          <div className="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-amber-800 dark:text-amber-400 uppercase tracking-widest mb-2">
             <BookOpen size={14} />
             Academic Research
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-50">
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold tracking-tight text-stone-900 dark:text-stone-50">
             Research &amp; Publications
           </h2>
           <p className="text-stone-600 dark:text-stone-400 text-sm sm:text-base mt-2 max-w-2xl">
@@ -23,18 +23,18 @@ export default function Research() {
         </div>
 
         {/* Paper Feature Card */}
-        <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-6 sm:p-8 shadow-sm text-left">
+        <div className="bg-white dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] rounded-2xl p-6 sm:p-8 shadow-xs text-left">
           <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
             <Badge variant="info" className="text-xs">
               IEEE Conference Publication
             </Badge>
-            <div className="flex items-center gap-2 text-xs font-medium text-emerald-600 dark:text-emerald-400">
+            <div className="flex items-center gap-2 text-xs font-medium text-emerald-700 dark:text-emerald-400">
               <CheckCircle2 size={15} />
               <span>Status: Accepted (Revisions in Progress)</span>
             </div>
           </div>
 
-          <h3 className="text-xl sm:text-2xl font-bold text-stone-900 dark:text-stone-100 leading-snug mb-3">
+          <h3 className="text-xl sm:text-2xl font-serif font-bold text-stone-900 dark:text-stone-100 leading-snug mb-3">
             A Real-time Multilingual Hate Speech Analysis Framework for Penta Language Corpus
           </h3>
 
@@ -47,9 +47,9 @@ export default function Research() {
           </p>
 
           {/* Highlights grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 pt-4 border-t border-stone-100 dark:border-stone-800">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 pt-4 border-t border-[#E7E2DA] dark:border-[#2A2724]">
             <div className="flex items-start gap-3">
-              <div className="p-2 rounded-lg bg-blue-50 dark:bg-blue-950 text-blue-600 dark:text-blue-400 shrink-0">
+              <div className="p-2 rounded-lg bg-amber-100/70 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 shrink-0">
                 <Languages size={18} />
               </div>
               <div>
@@ -61,7 +61,7 @@ export default function Research() {
             </div>
 
             <div className="flex items-start gap-3">
-              <div className="p-2 rounded-lg bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 shrink-0">
+              <div className="p-2 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 shrink-0">
                 <ShieldCheck size={18} />
               </div>
               <div>
@@ -73,7 +73,7 @@ export default function Research() {
             </div>
 
             <div className="flex items-start gap-3">
-              <div className="p-2 rounded-lg bg-purple-50 dark:bg-purple-950 text-purple-600 dark:text-purple-400 shrink-0">
+              <div className="p-2 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 shrink-0">
                 <Cpu size={18} />
               </div>
               <div>
@@ -91,7 +91,7 @@ export default function Research() {
               href="https://github.com/Rishav408/justify-ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-stone-900 hover:bg-stone-800 text-white dark:bg-stone-100 dark:hover:bg-white dark:text-stone-900 text-xs sm:text-sm font-medium transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-white dark:bg-stone-100 dark:hover:bg-white dark:text-stone-900 text-xs sm:text-sm font-medium transition-colors shadow-xs"
             >
               <Github size={16} />
               <span>View Framework Repository</span>

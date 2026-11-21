@@ -26,20 +26,20 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-16 md:py-24 border-t border-stone-200 dark:border-stone-800 scroll-mt-12">
+    <section id="projects" className="py-16 md:py-24 border-t border-[#E7E2DA] dark:border-[#2A2724] scroll-mt-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 text-left">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-2">
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-800 dark:text-amber-400 uppercase tracking-widest mb-2 font-mono">
               <Sparkles size={14} />
               Portfolio Work
             </div>
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900 dark:text-stone-50">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-stone-900 dark:text-[#EDE8E3] font-serif">
               Selected Projects
             </h2>
-            <p className="text-stone-600 dark:text-stone-400 text-sm sm:text-base mt-2 max-w-xl">
+            <p className="text-stone-600 dark:text-[#9E988E] text-sm sm:text-base mt-2 max-w-xl">
               18 technical systems built with grounded RAG pipelines, local offline LLM inference, and data-driven analytical dashboards.
             </p>
           </div>
@@ -52,7 +52,7 @@ export default function Projects() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search by tech or title..."
-              className="w-full pl-9 pr-4 py-2 text-xs sm:text-sm rounded-xl bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 text-stone-900 dark:text-stone-100 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full pl-9 pr-4 py-2 text-xs sm:text-sm rounded-xl bg-white dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] text-stone-900 dark:text-[#EDE8E3] placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-amber-500/70"
             />
           </div>
         </div>
@@ -63,16 +63,16 @@ export default function Projects() {
             <button
               key={f.id}
               onClick={() => setActiveFilter(f.id)}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+              className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all cursor-pointer font-mono ${
                 activeFilter === f.id
-                  ? 'bg-stone-900 text-white dark:bg-stone-100 dark:text-stone-900 shadow-xs'
-                  : 'bg-white dark:bg-stone-900 text-stone-600 dark:text-stone-400 border border-stone-200 dark:border-stone-800 hover:border-stone-400'
+                  ? 'bg-amber-600 text-white dark:bg-amber-500 dark:text-stone-950 font-semibold shadow-2xs'
+                  : 'bg-white dark:bg-[#151311] text-stone-700 dark:text-[#D6D0C7] border border-[#E7E2DA] dark:border-[#2A2724] hover:border-amber-500/50'
               }`}
             >
               {f.label}
             </button>
           ))}
-          <span className="text-xs text-stone-400 ml-auto hidden sm:inline">
+          <span className="text-xs text-stone-400 font-mono ml-auto hidden sm:inline">
             Showing {filteredCount} of {totalCount}
           </span>
         </div>
@@ -96,11 +96,11 @@ export default function Projects() {
 
         {/* Empty Search State */}
         {projects.length === 0 && (
-          <div className="py-16 text-center text-stone-500 dark:text-stone-400">
+          <div className="py-16 text-center text-stone-500 dark:text-[#9E988E]">
             <p className="text-sm">No projects match "{searchQuery}".</p>
             <button
               onClick={() => { setSearchQuery(''); setActiveFilter('all'); }}
-              className="mt-3 text-xs text-blue-600 dark:text-blue-400 hover:underline"
+              className="mt-3 text-xs text-amber-700 dark:text-amber-400 hover:underline font-mono"
             >
               Clear filters
             </button>

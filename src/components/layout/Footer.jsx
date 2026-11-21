@@ -7,14 +7,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950 py-12 transition-colors">
+    <footer className="border-t border-[#E7E2DA] dark:border-[#2A2724] bg-[#F4F0E8]/50 dark:bg-[#0E0D0C] py-12 transition-colors">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left */}
         <div className="text-center md:text-left">
-          <p className="text-base font-semibold text-stone-900 dark:text-stone-100">
+          <p className="text-lg font-serif font-bold text-stone-900 dark:text-stone-100">
             Rishav Singh
           </p>
-          <p className="text-xs text-stone-500 dark:text-stone-400 mt-1">
+          <p className="text-xs text-stone-500 dark:text-stone-400 mt-1 font-mono">
             AI &amp; GenAI Engineer · Data Analyst · Pune, India · &copy; {currentYear}
           </p>
         </div>
@@ -26,7 +26,7 @@ export default function Footer() {
               href="https://github.com/Rishav408"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-stone-900 dark:hover:text-white transition-colors"
+              className="hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
               aria-label="GitHub Profile"
             >
               <Github size={18} />
@@ -35,7 +35,7 @@ export default function Footer() {
               href="https://linkedin.com/in/rishavsingh408"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-stone-900 dark:hover:text-white transition-colors"
+              className="hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
               aria-label="LinkedIn Profile"
             >
               <Linkedin size={18} />
@@ -44,7 +44,7 @@ export default function Footer() {
               href="https://x.com/RishavSingh408"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-stone-900 dark:hover:text-white transition-colors"
+              className="hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
               aria-label="Twitter Profile"
             >
               <Twitter size={18} />
@@ -53,14 +53,14 @@ export default function Footer() {
               href={resumePdf}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-stone-900 dark:hover:text-white transition-colors inline-flex items-center gap-1 text-xs font-medium"
+              className="hover:text-amber-700 dark:hover:text-amber-400 transition-colors inline-flex items-center gap-1 text-xs font-mono font-medium"
               aria-label="Download Resume PDF"
             >
               <FileText size={16} />
               <span>Resume</span>
             </a>
           </div>
-          <span className="text-xs text-stone-400 dark:text-stone-500">
+          <span className="text-xs font-mono text-stone-400 dark:text-stone-500">
             React 18 · Tailwind CSS · Vite
           </span>
         </div>
