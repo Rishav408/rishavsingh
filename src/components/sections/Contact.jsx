@@ -133,7 +133,7 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://rishavsingh4805.web.app/"
+                  href="https://rishavsingh408.in/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm text-stone-700 dark:text-stone-300 hover:text-amber-700 dark:hover:text-amber-400 transition-colors"
@@ -141,7 +141,7 @@ export default function Contact() {
                   <div className="p-2 rounded-xl bg-[#F4F0E8] dark:bg-[#181614] text-stone-600 dark:text-stone-300 border border-[#E7E2DA] dark:border-[#2A2724]">
                     <Globe size={16} />
                   </div>
-                  <span>rishavsingh4805.web.app</span>
+                  <span>rishavsingh408.in</span>
                 </a>
               </div>
             </div>

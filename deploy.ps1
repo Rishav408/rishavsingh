@@ -1,4 +1,4 @@
-# ========================================
+﻿# ========================================
 # Firebase Deployment Script
 # Portfolio Website - Rishav Singh
 # ========================================
@@ -69,8 +69,8 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "================================" -ForegroundColor Green
     Write-Host ""
     Write-Host "🌍 Your website is live at:" -ForegroundColor Cyan
-    Write-Host "https://rishavsingh4805.web.app" -ForegroundColor White
-    Write-Host "https://rishavsingh4805.firebaseapp.com" -ForegroundColor White
+    Write-Host "https://rishavsingh408.in" -ForegroundColor White
+    Write-Host "https://rishavsingh4805.web.app" -ForegroundColor Gray
     Write-Host ""
     Write-Host "📊 View in Firebase Console:" -ForegroundColor Cyan
     Write-Host "https://console.firebase.google.com/project/rishavsingh4805" -ForegroundColor White
