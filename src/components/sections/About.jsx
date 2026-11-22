@@ -22,29 +22,50 @@ export default function About() {
           
           {/* Left Column (Prose) */}
           <div className="lg:col-span-7 space-y-5 text-stone-700 dark:text-stone-300 text-left text-sm sm:text-base leading-relaxed">
+            {/* Mobile Identity Strip - condensed representation on small screens */}
+            <div className="lg:hidden flex items-center gap-3.5 p-3.5 rounded-2xl bg-white dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] shadow-2xs mb-4">
+              <img
+                src={rksPhoto}
+                alt="Rishav Singh"
+                className="w-12 h-12 rounded-xl object-cover border border-[#E7E2DA] dark:border-[#2A2724] shrink-0"
+              />
+              <div className="text-left">
+                <h3 className="font-serif font-bold text-stone-900 dark:text-stone-100 text-base leading-tight">
+                  Rishav Singh
+                </h3>
+                <p className="text-xs text-stone-500 dark:text-stone-400 font-mono mt-0.5">
+                  MIT-WPU · CGPA 7.60 · Pune, India
+                </p>
+                <div className="flex items-center gap-1.5 text-[11px] text-emerald-700 dark:text-emerald-400 font-medium mt-1 font-mono">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                  Open to internships &amp; fresher roles
+                </div>
+              </div>
+            </div>
+
             <p>
               I got into AI engineering because too many ML projects never escape the notebook: a high validation score, a couple of charts, and zero actual software around them. I focus on building systems that people can actually run: turning models into offline-first tools, grounded RAG assistants, and data-driven analytical platforms.
             </p>
             <p>
               My recent work focuses on three core projects:
             </p>
-            <ul className="space-y-3.5 pl-2">
-              <li className="flex items-start gap-3">
-                <span className="font-serif font-bold text-amber-700 dark:text-amber-400 text-lg leading-none shrink-0 mt-0.5">1.</span>
+            <ul className="space-y-3 pl-1">
+              <li className="flex items-start gap-2.5">
+                <span className="font-serif font-bold text-amber-700 dark:text-amber-400 text-base leading-none shrink-0 mt-0.5">1.</span>
                 <span>
-                  <strong className="text-stone-900 dark:text-stone-100 font-medium">Jurista:</strong> An Indian legal intelligence copilot on LangChain and Gemini with session-isolated memory and a dynamic search router to verify live judicial records only when statutory texts are insufficient.
+                  <strong className="text-stone-900 dark:text-stone-100 font-medium">Jurista:</strong> Indian legal intelligence copilot on LangChain and Gemini with session-isolated memory and dynamic search router.
                 </span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="font-serif font-bold text-amber-700 dark:text-amber-400 text-lg leading-none shrink-0 mt-0.5">2.</span>
+              <li className="flex items-start gap-2.5">
+                <span className="font-serif font-bold text-amber-700 dark:text-amber-400 text-base leading-none shrink-0 mt-0.5">2.</span>
                 <span>
-                  <strong className="text-stone-900 dark:text-stone-100 font-medium">VeeraServe AI:</strong> An agentic AI waiter on LangGraph with 12 tools for cart management and order execution. Runs locally via LM Studio with Chroma RAG, achieving 0% hallucinated prices in measured evaluations.
+                  <strong className="text-stone-900 dark:text-stone-100 font-medium">VeeraServe AI:</strong> Agentic AI waiter on LangGraph with 12 tools for cart and order actions, local LM Studio inference, 0% hallucinated prices.
                 </span>
               </li>
-              <li className="flex items-start gap-3">
-                <span className="font-serif font-bold text-amber-700 dark:text-amber-400 text-lg leading-none shrink-0 mt-0.5">3.</span>
+              <li className="flex items-start gap-2.5">
+                <span className="font-serif font-bold text-amber-700 dark:text-amber-400 text-base leading-none shrink-0 mt-0.5">3.</span>
                 <span>
-                  <strong className="text-stone-900 dark:text-stone-100 font-medium">Local AI Dashcam:</strong> A 5-phase offline pipeline using YOLO11 and Farneback optical flow to flag incidents first, cutting expensive VLM calls by about 80% without any cloud dependency.
+                  <strong className="text-stone-900 dark:text-stone-100 font-medium">Local AI Dashcam:</strong> 5-phase offline pipeline using YOLO11 and Farneback optical flow, cutting VLM calls by ~80% offline.
                 </span>
               </li>
             </ul>
@@ -53,8 +74,8 @@ export default function About() {
             </p>
           </div>
 
-          {/* Right Column (Photo & Fact Card) */}
-          <div className="lg:col-span-5 flex flex-col gap-5 text-left">
+          {/* Right Column (Photo & Fact Card) - Visible on lg+ screens */}
+          <div className="hidden lg:flex lg:col-span-5 flex-col gap-5 text-left">
             <div className="bg-white dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] rounded-2xl p-6 shadow-xs">
               <div className="flex items-center gap-4 mb-5">
                 <img

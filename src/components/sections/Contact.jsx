@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Mail, FileText, Send, CheckCircle2, AlertCircle, Globe } from 'lucide-react';
-import { Github, Linkedin, Twitter } from '../ui/Icons';
+import { Github, Linkedin } from '../ui/Icons';
 import resumePdf from '../../assets/img/Rishav_Singh_Resume.pdf';
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState({ type: null, message: '' });
   const [submitting, setSubmitting] = useState(false);
+  const [activeTab, setActiveTab] = useState('contact');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -46,10 +47,36 @@ export default function Contact() {
           </p>
         </div>
 
+        {/* Mobile Tab Switcher */}
+        <div className="lg:hidden mb-6">
+          <div className="flex border border-[#E7E2DA] dark:border-[#2A2724] rounded-xl overflow-hidden">
+            <button
+              className={`flex-1 py-2.5 text-sm font-semibold transition-colors ${
+                activeTab === 'contact'
+                  ? 'bg-amber-600 text-white dark:bg-amber-500 dark:text-stone-950'
+                  : 'bg-white dark:bg-[#151311] text-stone-600 dark:text-stone-300'
+              }`}
+              onClick={() => setActiveTab('contact')}
+            >
+              Contact Info
+            </button>
+            <button
+              className={`flex-1 py-2.5 text-sm font-semibold transition-colors ${
+                activeTab === 'message'
+                  ? 'bg-amber-600 text-white dark:bg-amber-500 dark:text-stone-950'
+                  : 'bg-white dark:bg-[#151311] text-stone-600 dark:text-stone-300'
+              }`}
+              onClick={() => setActiveTab('message')}
+            >
+              Send Message
+            </button>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 text-left">
           
           {/* Left Column (Direct Contacts) */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className={`${activeTab === 'contact' ? 'block' : 'hidden'} lg:block lg:col-span-5 space-y-6`}>
             <div className="bg-white dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] rounded-2xl p-6 shadow-xs">
               <h3 className="font-serif font-bold text-stone-900 dark:text-stone-100 text-lg mb-1">
                 Direct Contact
@@ -126,7 +153,7 @@ export default function Contact() {
           </div>
 
           {/* Right Column (Form) */}
-          <div className="lg:col-span-7">
+          <div className={`${activeTab === 'message' ? 'block' : 'hidden'} lg:block lg:col-span-7`}>
             <form onSubmit={handleSubmit} className="bg-white dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] rounded-2xl p-6 sm:p-8 shadow-xs space-y-4">
               <div>
                 <label className="block text-xs font-mono font-semibold text-stone-700 dark:text-stone-300 uppercase tracking-wider mb-1.5">

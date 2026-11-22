@@ -46,9 +46,9 @@ export default function Research() {
             This work presents a framework for hate-speech analysis across five Indian languages (English, Hindi, Marathi, Bhojpuri, and Marwari) designed around transparent risk scoring. Rather than relying on black-box neural networks, the system implements a classical NLP pipeline that combines lexical matching with severity spans, rule-based causality extraction, and demographic bias auditing into an auditable composite score.
           </p>
 
-          {/* Highlights grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 pt-4 border-t border-[#E7E2DA] dark:border-[#2A2724]">
-            <div className="flex items-start gap-3">
+          {/* Highlights */}
+          <div className="flex overflow-x-auto scrollbar-hide gap-3 pb-3 pt-4 border-t border-[#E7E2DA] dark:border-[#2A2724] mb-8 snap-x sm:grid sm:grid-cols-3 sm:overflow-visible sm:gap-4 sm:pb-0">
+            <div className="flex items-start gap-3 min-w-[230px] flex-shrink-0 snap-start sm:min-w-0 sm:flex-shrink p-3 sm:p-0 rounded-xl sm:rounded-none bg-[#F4F0E8]/40 dark:bg-[#181614]/40 sm:bg-transparent dark:sm:bg-transparent border border-[#E7E2DA]/60 dark:border-[#2A2724]/60 sm:border-0">
               <div className="p-2 rounded-lg bg-amber-100/70 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 shrink-0">
                 <Languages size={18} />
               </div>
@@ -60,7 +60,7 @@ export default function Research() {
               </div>
             </div>
 
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-3 min-w-[230px] flex-shrink-0 snap-start sm:min-w-0 sm:flex-shrink p-3 sm:p-0 rounded-xl sm:rounded-none bg-[#F4F0E8]/40 dark:bg-[#181614]/40 sm:bg-transparent dark:sm:bg-transparent border border-[#E7E2DA]/60 dark:border-[#2A2724]/60 sm:border-0">
               <div className="p-2 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 shrink-0">
                 <ShieldCheck size={18} />
               </div>
@@ -72,7 +72,7 @@ export default function Research() {
               </div>
             </div>
 
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-3 min-w-[230px] flex-shrink-0 snap-start sm:min-w-0 sm:flex-shrink p-3 sm:p-0 rounded-xl sm:rounded-none bg-[#F4F0E8]/40 dark:bg-[#181614]/40 sm:bg-transparent dark:sm:bg-transparent border border-[#E7E2DA]/60 dark:border-[#2A2724]/60 sm:border-0">
               <div className="p-2 rounded-lg bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 shrink-0">
                 <Cpu size={18} />
               </div>

@@ -46,20 +46,25 @@ export default function ProjectModal({ project, onClose }) {
   return (
     <AnimatePresence>
       <div 
-        className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-xs overflow-y-auto"
+        className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-6 bg-black/75 backdrop-blur-xs overflow-y-auto"
         onClick={onClose}
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title"
       >
         <motion.div
-          initial={{ opacity: 0, scale: 0.96, y: 12 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.96, y: 12 }}
-          transition={{ duration: 0.2 }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 40 }}
+          transition={{ duration: 0.25, ease: 'easeOut' }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-3xl max-h-[90vh] flex flex-col bg-[#FBF9F5] dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] rounded-3xl shadow-2xl overflow-hidden my-auto"
+          className="relative w-full max-w-3xl max-h-[92vh] sm:max-h-[90vh] flex flex-col bg-[#FBF9F5] dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] rounded-t-3xl sm:rounded-3xl shadow-2xl overflow-hidden mt-auto sm:my-auto"
         >
+          {/* Mobile drag handle indicator */}
+          <div className="sm:hidden flex justify-center pt-3 pb-1 absolute top-0 left-0 right-0 z-20 pointer-events-none">
+            <div className="w-10 h-1 rounded-full bg-white/70 shadow-xs" />
+          </div>
+
           {/* Close button */}
           <button
             onClick={onClose}
@@ -92,7 +97,7 @@ export default function ProjectModal({ project, onClose }) {
           </div>
 
           {/* Content Body */}
-          <div className="p-6 sm:p-8 overflow-y-auto space-y-6 text-stone-700 dark:text-[#D6D0C7] text-left">
+          <div className="p-6 sm:p-8 overflow-y-auto space-y-6 text-stone-700 dark:text-[#D6D0C7] text-left pb-10 sm:pb-8">
             {/* Problem & Concept */}
             <div>
               <h3 className="text-xs uppercase tracking-wider font-semibold text-amber-800 dark:text-amber-400 mb-2 font-mono">

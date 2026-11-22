@@ -78,3 +78,51 @@
 .dark ::-webkit-scrollbar-thumb {
   background: #38332e;
 }
+
+/* Mobile utility: hide scrollbar while keeping functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile safe area bottom padding */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Snap scroll for mobile carousels */
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+.snap-start {
+  scroll-snap-align: start;
+}
+.snap-mandatory {
+  scroll-snap-type: x mandatory;
+}
+
+/* Mobile bottom sheet animation */
+@keyframes slideUpSheet {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.slide-up-sheet {
+  animation: slideUpSheet 0.3s ease-out;
+}
+
+/* Touch action for swipeable carousels */
+.touch-pan-x {
+  touch-action: pan-x;
+}
+.touch-pan-y {
+  touch-action: pan-y;
+}
+
+/* Prevent text selection during swipe */
+.select-none {
+  user-select: none;
+  -webkit-user-select: none;
+}

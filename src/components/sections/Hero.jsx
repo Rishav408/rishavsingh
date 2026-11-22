@@ -10,7 +10,156 @@ export default function Hero({ projectCount = 18 }) {
   return (
     <section className="relative py-12 md:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+        {/* ── MOBILE-ONLY REDESIGNED HERO ── */}
+        <div className="md:hidden flex flex-col gap-4 text-left">
+
+          {/* Top Status & Class Pill */}
+          <div className="flex items-center justify-between gap-2 w-full">
+            <Badge variant="accent" className="text-[11px] font-mono py-1 px-3">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              Open to AI &amp; Full-Stack Roles
+            </Badge>
+            <span className="text-[11px] font-mono text-stone-500 dark:text-stone-400 font-semibold">
+              Class of 2027
+            </span>
+          </div>
+
+          {/* Hero Name & Title */}
+          <div>
+            <h1 className="text-3xl font-bold font-serif tracking-tight text-stone-900 dark:text-[#EDE8E3] leading-tight">
+              Rishav Singh
+            </h1>
+            <p className="text-sm font-semibold text-amber-700 dark:text-amber-400 mt-0.5">
+              AI &amp; GenAI Engineer · Data Analyst · Pune, India
+            </p>
+          </div>
+
+          {/* Featured Visual Portrait Card (High-Impact Showcase) */}
+          <div className="relative w-full rounded-2xl overflow-hidden bg-white dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] shadow-sm">
+            {/* Cinematic Portrait with Glass Overlays */}
+            <div className="relative aspect-[16/11] w-full overflow-hidden bg-[#F4F0E8] dark:bg-[#181614]">
+              <img
+                src={heroImg}
+                alt="Rishav Singh - AI & GenAI Engineer"
+                className="w-full h-full object-cover object-top"
+              />
+              {/* Vignette Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+
+              {/* Floating Status Glass Pill (Top Left) */}
+              <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/45 backdrop-blur-md text-white text-[11px] font-mono font-medium border border-white/20 shadow-xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Available</span>
+              </div>
+
+              {/* Education Pill (Top Right) */}
+              <div className="absolute top-3 right-3 px-2 py-0.5 rounded-lg bg-black/45 backdrop-blur-md text-stone-200 text-[10px] font-mono border border-white/15">
+                MIT-WPU · 7.60 CGPA
+              </div>
+
+              {/* Identity & Focus Anchor (Bottom Left) */}
+              <div className="absolute bottom-3 left-3 right-3 text-left">
+                <p className="text-white font-serif font-bold text-lg leading-tight drop-shadow-xs">
+                  Rishav Singh
+                </p>
+                <p className="text-stone-300 text-[11px] font-mono mt-0.5 drop-shadow-2xs">
+                  Offline AI Systems · Grounded RAG · Agentic Workflows
+                </p>
+              </div>
+            </div>
+
+            {/* Integrated Stats Strip directly under photo */}
+            <div className="grid grid-cols-4 divide-x divide-[#E7E2DA] dark:divide-[#2A2724] bg-[#F4F0E8]/70 dark:bg-[#181614]/80 border-t border-[#E7E2DA] dark:border-[#2A2724] text-center py-2.5">
+              <div>
+                <div className="text-lg font-bold font-mono text-stone-900 dark:text-[#EDE8E3] leading-none">{projectCount}</div>
+                <div className="text-[10px] text-stone-500 dark:text-[#9E988E] uppercase tracking-wider font-medium mt-1">Projects</div>
+              </div>
+              <div>
+                <div className="text-lg font-bold font-mono text-stone-900 dark:text-[#EDE8E3] leading-none">3</div>
+                <div className="text-[10px] text-stone-500 dark:text-[#9E988E] uppercase tracking-wider font-medium mt-1">Offline AI</div>
+              </div>
+              <div>
+                <div className="text-lg font-bold font-mono text-stone-900 dark:text-[#EDE8E3] leading-none">5</div>
+                <div className="text-[10px] text-stone-500 dark:text-[#9E988E] uppercase tracking-wider font-medium mt-1">Langs</div>
+              </div>
+              <div>
+                <div className="text-lg font-bold font-mono text-amber-700 dark:text-amber-400 leading-none">1</div>
+                <div className="text-[10px] text-stone-500 dark:text-[#9E988E] uppercase tracking-wider font-medium mt-1">IEEE Paper</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Bio text */}
+          <p className="text-[13px] text-stone-700 dark:text-[#D6D0C7] leading-relaxed">
+            I build AI systems that work offline, understand Indian languages, and stay grounded in source facts without hallucinating. 18 projects spanning agentic LangGraph workflows, local VLM pipelines, and analytical dashboards.
+          </p>
+
+          {/* Dual CTAs (Side by Side) */}
+          <div className="grid grid-cols-2 gap-2.5 w-full pt-1">
+            <a
+              href="#projects"
+              className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white dark:bg-amber-500 dark:hover:bg-amber-400 dark:text-stone-950 font-semibold text-xs transition-all shadow-xs active:scale-98"
+            >
+              <span>View Projects</span>
+              <ArrowDown size={14} />
+            </a>
+            <a
+              href={resumePdf}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#F4F0E8] hover:bg-[#EAE4D8] text-stone-800 dark:bg-[#181614] dark:hover:bg-[#211E1B] dark:text-[#EDE8E3] font-medium text-xs border border-[#E7E2DA] dark:border-[#2A2724] transition-all active:scale-98"
+            >
+              <span>Resume PDF</span>
+              <Download size={14} />
+            </a>
+          </div>
+
+          {/* Social Connect Bar */}
+          <div className="flex items-center justify-between px-3.5 py-2 rounded-xl bg-white dark:bg-[#151311] border border-[#E7E2DA] dark:border-[#2A2724] text-stone-500 dark:text-[#9E988E] w-full">
+            <span className="text-xs font-mono font-medium text-stone-400 dark:text-stone-500">Profiles:</span>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://github.com/Rishav408"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 rounded-lg hover:bg-[#F4F0E8] dark:hover:bg-[#181614] hover:text-stone-900 dark:hover:text-[#EDE8E3] transition-colors"
+                aria-label="GitHub"
+              >
+                <Github size={18} />
+              </a>
+              <a
+                href="https://linkedin.com/in/rishavsingh408"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 rounded-lg hover:bg-[#F4F0E8] dark:hover:bg-[#181614] hover:text-stone-900 dark:hover:text-[#EDE8E3] transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={18} />
+              </a>
+              <a
+                href="https://x.com/RishavSingh408"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 rounded-lg hover:bg-[#F4F0E8] dark:hover:bg-[#181614] hover:text-stone-900 dark:hover:text-[#EDE8E3] transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter size={18} />
+              </a>
+              <a
+                href="mailto:rishav4805@gmail.com"
+                className="p-1.5 rounded-lg hover:bg-[#F4F0E8] dark:hover:bg-[#181614] hover:text-stone-900 dark:hover:text-[#EDE8E3] transition-colors"
+                aria-label="Email"
+              >
+                <Mail size={18} />
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        {/* ── DESKTOP LAYOUT (unchanged, hidden on mobile) ── */}
+        <div className="hidden md:grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
           {/* Left Column (Content) */}
           <motion.div 
@@ -157,7 +306,7 @@ export default function Hero({ projectCount = 18 }) {
             </div>
           </motion.div>
 
-        </div>
+        </div>{/* end desktop grid */}
       </div>
     </section>
   );
